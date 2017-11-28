@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1511913388 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+
+1511913070 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\pizza.cpp
+	"Pizza.h"
+
+1511913070 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\pizza.h
+	<iostream>
+	<string>
+	<vector>
+
+1511907539 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\user.h
+	<iostream>
+
+1511907539 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\user.cpp
+	"User.h"
+
