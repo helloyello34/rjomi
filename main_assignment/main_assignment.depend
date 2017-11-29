@@ -64,3 +64,56 @@
 1511977321 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\managerui.cpp
 	"ManagerUI.h"
 
+1511982669 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	"MainUI.h"
+
+1511982669 c:\users\oskar\documents\3vikna\rjomi\main_assignment\include\mainui.h
+	<stdlib.h>
+	<iostream>
+	"ManagerUI.h"
+	"SalesmanUI.h"
+	"BakerUI.h"
+	"CashierUI.h"
+
+1511982669 c:\users\oskar\documents\3vikna\rjomi\main_assignment\include\managerui.h
+	<stdlib.h>
+	<iostream>
+	<string>
+
+1511982669 c:\users\oskar\documents\3vikna\rjomi\main_assignment\include\salesmanui.h
+	<stdlib.h>
+	<iostream>
+
+1511982669 c:\users\oskar\documents\3vikna\rjomi\main_assignment\include\bakerui.h
+	<stdlib.h>
+	<iostream>
+
+1511982669 c:\users\oskar\documents\3vikna\rjomi\main_assignment\include\cashierui.h
+	<stdlib.h>
+	<iostream>
+
+1511983611 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\bakerui.cpp
+	"BakerUI.h"
+
+1511983565 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\cashierui.cpp
+	"CashierUI.h"
+
+1511982669 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\location.cpp
+	"Location.h"
+
+1511982669 c:\users\oskar\documents\3vikna\rjomi\main_assignment\include\location.h
+	<iostream>
+	<string>
+
+1511982669 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\managerui.cpp
+	"ManagerUI.h"
+
+1511982669 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\salesmanui.cpp
+	"SalesmanUI.h"
+
+1511983214 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\mainui.cpp
+	"MainUI.h"
+
