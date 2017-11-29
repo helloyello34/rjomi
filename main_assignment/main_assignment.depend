@@ -27,9 +27,10 @@
 	"BakerUI.h"
 	"CashierUI.h"
 
-1511959175 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\managerui.h
+1511977616 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\managerui.h
 	<stdlib.h>
 	<iostream>
+	<string>
 
 1511959175 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\salesmanui.h
 	<stdlib.h>
@@ -48,4 +49,18 @@
 
 1511959309 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\bakerui.cpp
 	"BakerUI.h"
+
+1511959341 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\cashierui.cpp
+	"CashierUI.h"
+
+1511959341 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\salesmanui.cpp
+	"SalesmanUI.h"
+
+1511977075 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\location.cpp
+	"Location.h"
+
+1511977075 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\location.h
+
+1511977321 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\managerui.cpp
+	"ManagerUI.h"
 

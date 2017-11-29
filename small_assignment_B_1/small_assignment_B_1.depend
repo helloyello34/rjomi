@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1511863773 source:c:\users\helloyello\documents\codeblocks_test\small_assignment_b_1\main.cpp
+	<iostream>
+	"SuperHero.h"
+
+1511785906 c:\users\helloyello\documents\codeblocks_test\small_assignment_b_1\include\superhero.h
+	<iostream>
+	<fstream>
+	<string>
+
+1511863784 source:c:\users\helloyello\documents\codeblocks_test\small_assignment_b_1\src\superhero.cpp
+	"SuperHero.h"
+

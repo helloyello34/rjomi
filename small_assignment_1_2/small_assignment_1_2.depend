@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1511782530 source:c:\users\helloyello\documents\codeblocks_test\small_assignment_1_2\main.cpp
+	<iostream>
+	<fstream>
+
