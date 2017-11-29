@@ -2,10 +2,11 @@
 
 Order::Order()
 {
-    //ctor
+
 }
 
 Order::~Order()
 {
-    //dtor
+    delete[] this->orders;
 }
+
