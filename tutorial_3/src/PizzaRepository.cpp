@@ -11,7 +11,7 @@ PizzaRepository::~PizzaRepository()
 }
 
 
-void PizzaRepository::store_Pizza(Pizza pizza)
+void PizzaRepository::store_Pizza(const Pizza& pizza)
 {
     ofstream fout;
     fout.open("pizzas.txt");
