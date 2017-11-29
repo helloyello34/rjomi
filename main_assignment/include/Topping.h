@@ -7,10 +7,9 @@ class Topping
     public:
         Topping();
         virtual ~Topping();
-
-    protected:
-
     private:
+        char name[32];
+        double price;
 };
 
 #endif // TOPPING_H

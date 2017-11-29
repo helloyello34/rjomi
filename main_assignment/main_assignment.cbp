@@ -41,7 +41,9 @@
 		<Unit filename="include/ManagerUI.h" />
 		<Unit filename="include/Order.h" />
 		<Unit filename="include/OrderUI.h" />
+		<Unit filename="include/Pizza.h" />
 		<Unit filename="include/SalesmanUI.h" />
+		<Unit filename="include/Topping.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/BakerUI.cpp" />
 		<Unit filename="src/CashierUI.cpp" />
@@ -50,7 +52,9 @@
 		<Unit filename="src/ManagerUI.cpp" />
 		<Unit filename="src/Order.cpp" />
 		<Unit filename="src/OrderUI.cpp" />
+		<Unit filename="src/Pizza.cpp" />
 		<Unit filename="src/SalesmanUI.cpp" />
+		<Unit filename="src/Topping.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />

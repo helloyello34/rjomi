@@ -20,7 +20,7 @@ void CashierUI::startUI()
     cout << " |1. Your location  |" << endl;
     cout << " |2. Back           |" << endl;
     cout << " +------------------+" << endl;
-    cout << " (1-3): ";
+    cout << " (1-2): ";
     cin >> choice;
     }
 }
