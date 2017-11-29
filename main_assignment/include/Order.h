@@ -1,7 +1,10 @@
 #ifndef ORDER_H
 #define ORDER_H
 
-#include "Pizza.h"
+#include <iostream>
+
+using namespace std;
+
 //#include "Drink.h"
 //#include "Side.h"
 
@@ -9,7 +12,7 @@ class Order
 {
     public:
         Order();
-        void add_pizza(Pizza pizza);
+       /// void add_pizza(Pizza pizza);
         //void add_drink(Drink drink);
         //void add_sides(Side side);
         friend istream& operator >> (istream& in, Order& order);
@@ -17,7 +20,7 @@ class Order
         virtual ~Order();
     private:
         double price;
-        Pizza* pizza;
+        ///Pizza* pizza;
         //Drink* drink;
         //Side* side;
         int numberOfPizza;

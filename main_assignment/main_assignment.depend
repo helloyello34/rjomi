@@ -66,7 +66,7 @@
 1511979159 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\managerui.cpp
 	"ManagerUI.h"
 
-1511982669 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\main.cpp
+1511984510 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\main.cpp
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -110,12 +110,18 @@
 	<iostream>
 	<string>
 
-1511982669 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\managerui.cpp
+1511985522 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\managerui.cpp
 	"ManagerUI.h"
 
-1511982669 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\salesmanui.cpp
+1511985682 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\salesmanui.cpp
 	"SalesmanUI.h"
 
 1511983214 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\mainui.cpp
 	"MainUI.h"
+
+1511984510 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\order.cpp
+	"Order.h"
+
+1511985439 c:\users\oskar\documents\3vikna\rjomi\main_assignment\include\order.h
+	<iostream>
 

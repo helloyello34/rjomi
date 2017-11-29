@@ -12,19 +12,27 @@ SalesmanUI::~SalesmanUI()
 
 void SalesmanUI::startUI()
 {
-    char choice = '\0';
-    while(choice != 'b') {
+    char user = '\0';
+    while(user != '4') {
     system("CLS");
-    int choice;
     cout << "Salesman: " << endl;
     cout << " +------------------+" << endl;
     cout << " |1. Make order     |" << endl;
-    cout << " |2. Charge order   |" << endl;
+    cout << " |2. Change order   |" << endl;
     cout << " |3. Comments       |" << endl;
     cout << " |4. Back           |" << endl;
-    cout << " |5. Quit           |" << endl;
     cout << " +------------------+" << endl;
-    cout << " (1-5): ";
-    cin >> choice;
+    cout << " (1-4): ";
+    cin >> user;
+
+
+    if(user == '1'){
+            ///Make Order
+        } else if (user == '2') {
+            ///Change order
+        } else if (user == '3') {
+            ///Comments
+        }
+
     }
 }
