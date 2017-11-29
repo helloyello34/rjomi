@@ -2,6 +2,7 @@
 #define PIZZAUI_H
 
 #include "Pizza.h"
+#include "PizzaRepository.h"
 
 #include <IOSTREAM>
 

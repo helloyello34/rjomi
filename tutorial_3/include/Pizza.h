@@ -14,6 +14,8 @@ class Pizza
         ~Pizza();
 
         void addTopping(Topping topping);
+        void init(int numberOfToppings);
+        void clean_mem();
 
         friend ostream& operator << (ostream& out, const Pizza& pizza);
         friend istream& operator >> (istream& in, Pizza& pizza);

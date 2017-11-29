@@ -22,17 +22,17 @@ Topping::Topping(char *name, double price)
 ostream& operator << (ostream& out, const Topping& topping)
 {
 
-    out << topping.name << " : " << topping.price;
+    out << topping.name << " " << topping.price << endl;
 
     return out;
 }
 
 istream& operator >> (istream& in , Topping& topping){
 
-    cout << "Name: ";
+    //cout << "Name: ";
     in >> topping.name;
 
-    cout << "Price: ";
+    //cout << "Price: ";
     in >> topping.price;
 
     return in;
