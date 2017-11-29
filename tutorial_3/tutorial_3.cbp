@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,7 +34,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="MAIN.CPP" />
+		<Unit filename="include/MainUI.h" />
+		<Unit filename="include/Pizza.h" />
+		<Unit filename="include/PizzaRepository.h" />
+		<Unit filename="include/PizzaUI.h" />
+		<Unit filename="include/Topping.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/MainUI.cpp" />
+		<Unit filename="src/Pizza.cpp" />
+		<Unit filename="src/PizzaRepository.cpp" />
+		<Unit filename="src/PizzaUI.cpp" />
+		<Unit filename="src/Topping.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
