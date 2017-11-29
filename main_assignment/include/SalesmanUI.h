@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <iostream>
 
+#include "OrderUI.h"
+
 using namespace std;
 
 class SalesmanUI

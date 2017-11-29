@@ -7,6 +7,6 @@ Order::Order()
 
 Order::~Order()
 {
-    delete[] this->orders;
+
 }
 

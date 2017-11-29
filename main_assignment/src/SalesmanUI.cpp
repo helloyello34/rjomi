@@ -13,18 +13,23 @@ SalesmanUI::~SalesmanUI()
 void SalesmanUI::startUI()
 {
     char choice = '\0';
-    while(choice != 'b') {
-    system("CLS");
-    int choice;
-    cout << "Salesman: " << endl;
-    cout << " +------------------+" << endl;
-    cout << " |1. Make order     |" << endl;
-    cout << " |2. Charge order   |" << endl;
-    cout << " |3. Comments       |" << endl;
-    cout << " |4. Back           |" << endl;
-    cout << " |5. Quit           |" << endl;
-    cout << " +------------------+" << endl;
-    cout << " (1-5): ";
-    cin >> choice;
+    while(choice != '3') {
+        system("CLS");
+        cout << "Salesman: " << endl;
+        cout << " +------------------+" << endl;
+        cout << " |1. Orders         |" << endl;
+        cout << " |2. Comments       |" << endl;
+        cout << " |3. Back           |" << endl;
+        cout << " +------------------+" << endl;
+        cout << " (1-4): ";
+        cin >> choice;
+
+        if(choice == '1') {
+            OrderUI orders;
+            orders.startUI();
+        } else if(choice == '2') {
+
+        }
+
     }
 }

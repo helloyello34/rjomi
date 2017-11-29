@@ -32,9 +32,10 @@
 	<iostream>
 	<string>
 
-1511959175 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\salesmanui.h
+1511985901 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\salesmanui.h
 	<stdlib.h>
 	<iostream>
+	"OrderUI.h"
 
 1511959175 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\bakerui.h
 	<stdlib.h>
@@ -53,7 +54,7 @@
 1511984462 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\cashierui.cpp
 	"CashierUI.h"
 
-1511959341 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\salesmanui.cpp
+1511986656 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\salesmanui.cpp
 	"SalesmanUI.h"
 
 1511980457 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\location.cpp
@@ -63,7 +64,7 @@
 	<iostream>
 	<string>
 
-1511979159 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\managerui.cpp
+1511985879 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\managerui.cpp
 	"ManagerUI.h"
 
 1511982669 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\main.cpp
@@ -118,4 +119,18 @@
 
 1511983214 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\mainui.cpp
 	"MainUI.h"
+
+1511985523 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\order.cpp
+	"Order.h"
+
+1511985179 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\order.h
+	<iostream>
+
+1511986656 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\orderui.cpp
+	"OrderUI.h"
+
+1511985707 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\orderui.h
+	<stdlib.h>
+	<iostream>
+	"Order.h"
 

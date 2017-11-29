@@ -30,7 +30,17 @@ void ManagerUI::startUI()
 
         choice = cin.get();
 
+        if(choice == '1'){
 
+        } else if(choice == '2') {
+
+        } else if(choice == '3') {
+
+        } else if(choice == '4') {
+
+        } else if(choice == '6') {
+
+        }
 
     }
 }

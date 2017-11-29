@@ -2,24 +2,44 @@
 
 OrderUI::OrderUI()
 {
-
+    this->numberOfOrders = 0;
+    this->orders = new Order[this->numberOfOrders];
 }
 
 OrderUI::~OrderUI()
 {
-    //dtor
+    delete[] this->orders;
 }
 
-void OrderUI::startUI(){
+void OrderUI::startUI()
+{
     char choice = '\0';
-    while(choice != '2') {
-    system("CLS");
-    cout << "Baker: " << endl;
-    cout << " +------------------+" << endl;
-    cout << " |1. Your location  |" << endl;
-    cout << " |2. Back           |" << endl;
-    cout << " +------------------+" << endl;
-    cout << " (1-2): ";
-    cin >> choice;
+    while(choice != '3') {
+        system("CLS");
+        cout << "Order: " << endl;
+        cout << " +------------------+" << endl;
+        cout << " |1. Show orders    |" << endl;
+        cout << " |2. Make orders    |" << endl;
+        cout << " |3. Back           |" << endl;
+        cout << " +------------------+" << endl;
+        cout << " (1-3): ";
+        cin >> choice;
+
+        if(choice == '1'){
+            show_order();
+        }else if(choice == '2'){
+            make_order();
+        }
     }
+}
+
+void OrderUI::make_order()
+{
+    /// Create a new order
+
+}
+
+void OrderUI::show_order()
+{
+    /// Show orders that have yet been carried out
 }
