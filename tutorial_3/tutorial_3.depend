@@ -1,0 +1,34 @@
+# depslib dependency file v1.0
+1511951237 source:c:\users\helloyello\documents\3viknaafangi\rjomi\tutorial_3\main.cpp
+	<iostream>
+	"MainUI.h"
+
+1511952674 c:\users\helloyello\documents\3viknaafangi\rjomi\tutorial_3\include\mainui.h
+	"PizzaUI.h"
+	<iostream>
+	<fstream>
+
+1511952674 source:c:\users\helloyello\documents\3viknaafangi\rjomi\tutorial_3\src\mainui.cpp
+	"MainUI.h"
+
+1511952818 source:c:\users\helloyello\documents\3viknaafangi\rjomi\tutorial_3\src\topping.cpp
+	"Topping.h"
+
+1511952818 c:\users\helloyello\documents\3viknaafangi\rjomi\tutorial_3\include\topping.h
+	<iostream>
+	<string.h>
+
+1511952674 source:c:\users\helloyello\documents\3viknaafangi\rjomi\tutorial_3\src\pizza.cpp
+	"Pizza.h"
+
+1511952674 c:\users\helloyello\documents\3viknaafangi\rjomi\tutorial_3\include\pizza.h
+	<iostream>
+	"Topping.h"
+
+1511952674 c:\users\helloyello\documents\3viknaafangi\rjomi\tutorial_3\include\pizzaui.h
+	"Pizza.h"
+	<IOSTREAM>
+
+1511953043 source:c:\users\helloyello\documents\3viknaafangi\rjomi\tutorial_3\src\pizzaui.cpp
+	"PizzaUI.h"
+
