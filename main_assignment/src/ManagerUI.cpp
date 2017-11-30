@@ -13,9 +13,8 @@ ManagerUI::~ManagerUI()
 
 void ManagerUI::startUI()
 {
-    char user1 = '\0';
     char choice = '\0';
-    while(user1 != '5') {
+    while(choice != '5') {
         system("CLS");
         cout << "Manager: " << endl;
         cout << " +------------------+" << endl;

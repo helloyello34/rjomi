@@ -1,11 +1,9 @@
 #ifndef ORDER_H
 #define ORDER_H
 
-//<<<<<<< HEAD
 #include <iostream>
 
 using namespace std;
-
 
 
 #include <iostream>
@@ -22,9 +20,7 @@ class Order
         Order();
 
        /// void add_pizza(Pizza pizza);
-
         //void add_pizza(Pizza pizza);
-
         //void add_drink(Drink drink);
         //void add_sides(Side side);
         friend istream& operator >> (istream& in, Order& order);
@@ -36,7 +32,6 @@ class Order
         ///Pizza* pizza;
 
         //Pizza* pizza;
-
         //Drink* drink;
         //Side* side;
         int numberOfPizza;
