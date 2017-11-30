@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 
+#include "ToppingUI.h"
+
 using namespace std;
 
 class ManagerUI
