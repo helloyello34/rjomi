@@ -1,8 +1,15 @@
 #ifndef TOPPING_H
+<<<<<<< HEAD
 #define TOPPING_H
 
 #include <iostream>
 
+=======
+#define TOPPING_H
+
+#include <iostream>
+
+>>>>>>> bd4fe9044ed99aab036e96921a5fa56b5df0651d
 using namespace std;
 
 class Topping

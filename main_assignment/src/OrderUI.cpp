@@ -14,15 +14,16 @@ OrderUI::~OrderUI()
 void OrderUI::startUI()
 {
     char choice = '\0';
-    while(choice != '3') {
+    while(choice != '4') {
         system("CLS");
         cout << "Order: " << endl;
         cout << " +------------------+" << endl;
         cout << " |1. Show orders    |" << endl;
         cout << " |2. Make orders    |" << endl;
-        cout << " |3. Back           |" << endl;
+        cout << " |3. Change orders  |" << endl;
+        cout << " |4. Back           |" << endl;
         cout << " +------------------+" << endl;
-        cout << " (1-3): ";
+        cout << " (1-4): ";
         cin >> choice;
 
         if(choice == '1'){

@@ -13,14 +13,15 @@ CashierUI::~CashierUI()
 void CashierUI::startUI()
 {
     char choice = '\0';
-    while(choice != '2') {
-    system("CLS");
-    cout << "Cashier: " << endl;
-    cout << " +------------------+" << endl;
-    cout << " |1. Your location  |" << endl;
-    cout << " |2. Back           |" << endl;
-    cout << " +------------------+" << endl;
-    cout << " (1-2): ";
-    cin >> choice;
+    while(choice != '3') {
+        system("CLS");
+        cout << "Cashier: " << endl;
+        cout << " +------------------+" << endl;
+        cout << " |1. Your location  |" << endl;
+        cout << " |2. Charge order   |" << endl;
+        cout << " |3. Back           |" << endl;
+        cout << " +------------------+" << endl;
+        cout << " (1-3): ";
+        cin >> choice;
     }
 }
