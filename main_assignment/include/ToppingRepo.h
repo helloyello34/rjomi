@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 #include "Topping.h"
 #include "ToppingUI.h"
@@ -17,8 +18,8 @@ class ToppingRepo
     public:
         ToppingRepo();
         virtual ~ToppingRepo();
-        void store_toppings();
-        Topping get_toppings();
+        void store_toppings(Topping& newTop);
+        vector<Topping> get_toppings();
     private:
 };
 

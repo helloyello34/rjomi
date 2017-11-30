@@ -4,6 +4,7 @@
 #include <iostream>
 #include <VECTOR>
 
+#include "ToppingRepo.h"
 #include "Topping.h"
 
 using namespace std;
@@ -16,7 +17,7 @@ class ToppingUI
         void startUI();
         void add_new_topping();
         void delete_topping();
-        void store_topping();
+        void store_topping(Topping& newTop);
         void retrive_topping();
         void view_toppings();
         void list_toppings();
@@ -24,6 +25,7 @@ class ToppingUI
         Topping getTopping(int id);
     private:
         vector<Topping>toppings;
+        int numberOfToppings;
 };
 
 #endif // TOPPINGUI_H

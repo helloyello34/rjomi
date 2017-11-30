@@ -24,21 +24,12 @@ void ManagerUI::startUI()
         cout << " |4. Location       |" << endl;
         cout << " |5. Back           |" << endl;
         cout << " +------------------+" << endl;
-<<<<<<< HEAD
-        cout << " (1-6): ";
 
         cout << " (1-5): ";
 
-        cin >> user1;
-
-        if(user1 == '1'){
-=======
-        cout << " (1-5): ";
-
-        choice = cin.get();
+        cin >> choice;
 
         if(choice == '1'){
->>>>>>> bd4fe9044ed99aab036e96921a5fa56b5df0651d
             ///Current orders
         } else if(choice == '2') {
             ///Old orders
@@ -46,12 +37,9 @@ void ManagerUI::startUI()
             ///Edit menu
         } else if(choice == '4') {
             ///Location
-<<<<<<< HEAD
-        } else if (user1 == '7') {
+        } else if (choice == '7') {
             ToppingUI toppingui;
             toppingui.startUI();
-=======
->>>>>>> bd4fe9044ed99aab036e96921a5fa56b5df0651d
         }
     }
 }

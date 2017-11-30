@@ -14,10 +14,6 @@ SalesmanUI::~SalesmanUI()
 
 void SalesmanUI::startUI()
 {
-<<<<<<< HEAD
-=======
-
->>>>>>> bd4fe9044ed99aab036e96921a5fa56b5df0651d
     char choice = '\0';
     while(choice != '3') {
         system("CLS");
@@ -34,12 +30,9 @@ void SalesmanUI::startUI()
             PizzaUI pizzaui;
             pizzaui.startUI();
         } else if(choice == '2') {
-<<<<<<< HEAD
 
         }
-=======
 
         }
->>>>>>> bd4fe9044ed99aab036e96921a5fa56b5df0651d
     }
-}
+
