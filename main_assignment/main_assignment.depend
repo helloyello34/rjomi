@@ -120,7 +120,8 @@
 1511983214 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\mainui.cpp
 	"MainUI.h"
 
-<<<<<<< HEAD
+1511983214 D
+
 1511985523 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\order.cpp
 	"Order.h"
 
@@ -135,11 +136,95 @@
 	<iostream>
 	"Order.h"
 
-=======
+1511985707 
+
 1511984510 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\order.cpp
 	"Order.h"
 
 1511985439 c:\users\oskar\documents\3vikna\rjomi\main_assignment\include\order.h
 	<iostream>
 
->>>>>>> 9f470b07c31e34cd568712454043094db96f8835
+1511985439 70b07c31e34cd568712454043094db96f8835
+
+1512034446 source:c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	"MainUI.h"
+
+1512034446 c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\include\mainui.h
+	<stdlib.h>
+	<iostream>
+	"ManagerUI.h"
+	"SalesmanUI.h"
+	"BakerUI.h"
+	"CashierUI.h"
+
+1512034446 c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\include\managerui.h
+	<stdlib.h>
+	<iostream>
+	<string>
+
+1512034446 c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\include\salesmanui.h
+	<stdlib.h>
+	<iostream>
+	"OrderUI.h"
+
+1512034446 c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\include\orderui.h
+	<stdlib.h>
+	<iostream>
+	"Order.h"
+
+1512036749 c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\include\order.h
+	<iostream>
+	<iostream>
+
+1512034446 c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\include\bakerui.h
+	<stdlib.h>
+	<iostream>
+
+1512034446 c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\include\cashierui.h
+	<stdlib.h>
+	<iostream>
+
+1512034446 source:c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\src\bakerui.cpp
+	"BakerUI.h"
+
+1512036896 source:c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\src\cashierui.cpp
+	"CashierUI.h"
+
+1512034446 source:c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\src\location.cpp
+	"Location.h"
+
+1512034446 c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\include\location.h
+	<iostream>
+	<string>
+
+1512036828 source:c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\src\mainui.cpp
+	"MainUI.h"
+
+1512038244 source:c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\src\managerui.cpp
+	"ManagerUI.h"
+
+1512034446 source:c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\src\order.cpp
+	"Order.h"
+
+1512034446 source:c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\src\orderui.cpp
+	"OrderUI.h"
+
+1512034446 source:c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\src\pizza.cpp
+	"Pizza.h"
+
+1512034446 c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\include\pizza.h
+	<iostream>
+	"Topping.h"
+
+1512036100 c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\include\topping.h
+	<iostream>
+
+1512037162 source:c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\src\salesmanui.cpp
+	"SalesmanUI.h"
+
+1512038244 source:c:\users\siljadögg\desktop\3viknaafangi\rjomi\main_assignment\src\topping.cpp
+	"Topping.h"
+
