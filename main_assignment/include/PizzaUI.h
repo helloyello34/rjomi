@@ -3,8 +3,10 @@
 
 #include <stdlib.h>
 #include <iostream>
+#include <vector>
 
 #include "Pizza.h"
+#include "PizzaRepo.h"
 
 class PizzaUI
 {
@@ -12,6 +14,9 @@ class PizzaUI
         PizzaUI();
         virtual ~PizzaUI();
         void startUI();
+        void add_temp_pizza();
+        void view_pizza_menu();
+        void retrieve_pizza();
     private:
         vector<Pizza>pizzas;
 };

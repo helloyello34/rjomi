@@ -1,6 +1,5 @@
 #include "PizzaUI.h"
 
-#include "Pizza.h"
 
 using namespace std;
 
@@ -19,7 +18,7 @@ void PizzaUI::startUI()
 {
     char choice = '\0';
     while(choice != '3') {
-        system("CLS");
+        //system("CLS");
         cout << "Pizza: " << endl;
         cout << " +------------------+" << endl;
         cout << " |1. View Pizzas    |" << endl;
@@ -30,12 +29,32 @@ void PizzaUI::startUI()
         cin >> choice;
 
         if(choice == '1') {
-            /// View avaliable pizzas
+            view_pizza_menu();
         } else if (choice == '2') {
-            Pizza pizza;
-            cin >> pizza;
-            cout << pizza;
-            cin >> choice;
+            add_temp_pizza();
         }
     }
 }
+
+void PizzaUI::add_temp_pizza()
+{
+    Pizza pizza;
+    cin >> pizza;
+    PizzaRepo pizzarepo;
+    pizzarepo.write_pizza(pizza);
+}
+
+void PizzaUI::view_pizza_menu()
+{
+    retrieve_pizza();
+    for(unsigned int i = 0; i < this->pizzas.size(); i++){
+        cout << this->pizzas[i] << endl;
+    }
+}
+
+void PizzaUI::retrieve_pizza()
+{
+    PizzaRepo fill_array;
+    this->pizzas = fill_array.read_pizza();
+}
+

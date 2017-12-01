@@ -6,7 +6,7 @@
 
 #include <fstream>
 #include <iostream>
-
+#include <string.h>
 
 using namespace std;
 
@@ -17,6 +17,7 @@ class Topping
         virtual ~Topping();
         void read(fstream& file);
         void write(fstream& file);
+        bool valid_topping();
         friend ostream& operator << (ostream& out, const Topping& topping);
         friend istream& operator >> (istream& in, Topping& topping);
 

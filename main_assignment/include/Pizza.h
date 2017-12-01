@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <vector>
+#include <fstream>
+
+
 
 #include "Topping.h"
 #include "ToppingUI.h"
@@ -19,6 +22,9 @@ class Pizza
         void make_pizza();
         void store_pizza();
         double get_price();
+        void read(fstream& file);
+        void write(fstream& file);
+
         friend ostream& operator << (ostream& out, const Pizza& pizza);
         friend istream& operator >> (istream& in, Pizza& pizza);
 
