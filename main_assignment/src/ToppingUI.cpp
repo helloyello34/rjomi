@@ -14,7 +14,7 @@ void ToppingUI::startUI()
 {
     char choice = '\0';
 
-    while(choice != '4'){
+    while(choice != '4') {
         cout << "1: add new topping" << endl;
         cout << "2: delete topping" << endl;
         cout << "3: view topping" << endl;
@@ -22,11 +22,11 @@ void ToppingUI::startUI()
 
         cin >> choice;
 
-        if(choice == '1'){
+        if(choice == '1') {
             add_new_topping();
-        }else if(choice == '2'){
+        } else if(choice == '2') {
             delete_topping();
-        }else if(choice == '3'){
+        } else if(choice == '3') {
             list_toppings();
         }
     }
@@ -58,9 +58,9 @@ void ToppingUI::retrive_topping()
 
 Topping ToppingUI::getTopping(int id)
 {
-    if((unsigned)id <= this->toppings.size()){
+    if((unsigned)id <= this->toppings.size() - 1) {
         return this->toppings[id-1];
-    }else{
+    } else {
         cout << "Invalid choice" << endl;
         Topping temp;
         return temp;
@@ -71,7 +71,7 @@ void ToppingUI::list_toppings()
 {
     retrive_topping();
     cout << "Avalable toppings " << endl;
-    for(unsigned int i = 0; i < this->toppings.size(); i++){
+    for(unsigned int i = 0; i < this->toppings.size() - 1; i++) {
         cout << i+1 << ". "<< this->toppings[i] << endl;
     }
 }

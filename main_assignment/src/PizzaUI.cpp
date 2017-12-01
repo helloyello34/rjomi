@@ -36,13 +36,17 @@ void PizzaUI::startUI()
     }
 }
 
+
+
 void PizzaUI::add_temp_pizza()
 {
     Pizza pizza;
     cin >> pizza;
+    cout << pizza;
     PizzaRepo pizzarepo;
     pizzarepo.write_pizza(pizza);
 }
+
 
 void PizzaUI::view_pizza_menu()
 {

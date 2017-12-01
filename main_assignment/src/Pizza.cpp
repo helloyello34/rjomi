@@ -14,7 +14,7 @@ Pizza::~Pizza()
 void Pizza::add_topping(Topping topping)
 {
     if(topping.valid_topping()){
-    this->toppings.push_back(topping);
+        this->toppings.push_back(topping);
     }
 }
 
@@ -35,28 +35,32 @@ double Pizza::get_price()
 
 void Pizza::read(fstream& file)
 {
+    /*
     file >> this->name;
-    file >> this->price;
-    int size;
-    file >> size;
+    //file >> this->price;
+    int size = 3;
+    //file >> size;
+    Topping temp;
     for(int i = 0; i < size; i++){
-        Topping temp;
-        temp.read(file);
-        this->toppings.push_back(temp);
+        //temp.read(file);
+        //this->toppings.push_back(temp);
+        //cout << "lykkja";
     }
+    */
 
-    file.close();
 }
+/*
 
 void Pizza::write(fstream& file)
 {
-    file << endl << this->name << " ";
-    file << endl << this->price << " ";
-    file << endl << this->toppings.size();
+    file << this->name << " ";
+    file << this->price << " ";
+    file << this->toppings.size() << " ";
     for(unsigned int i = 0; i < this->toppings.size(); i++){
         this->toppings[i].write(file);
     }
 }
+*/
 
 
 
