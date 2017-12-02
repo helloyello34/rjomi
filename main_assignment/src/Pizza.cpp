@@ -35,6 +35,30 @@ double Pizza::get_price()
 
 void Pizza::read(fstream& file)
 {
+    cout << endl << endl << "Reading PIzza Chechk " << endl;
+
+    file.read(this->name, sizeof(name));
+    cout << this->name << endl;
+
+    file.read((char*)(&this->price), sizeof(this->price));
+    cout << this->price << endl;
+
+    unsigned int size;
+    file.read((char*)(&size), sizeof(size));
+    cout << size << endl;
+
+    vector<Topping>temp_toppings;
+    for(unsigned int i = 0; i < size; i++){
+        Topping temp;
+        temp.read(file);
+        temp_toppings.push_back(temp);
+        cout << temp << endl;
+    }
+
+    this->toppings = temp_toppings;
+
+    cout << "=======================" << endl;
+
     /*
     file >> this->name;
     //file >> this->price;
@@ -49,18 +73,40 @@ void Pizza::read(fstream& file)
     */
 
 }
-/*
+
 
 void Pizza::write(fstream& file)
 {
+    cout << endl << endl << "Writing PIzza Chechk " << endl;
+    file.write(this->name, sizeof(name));
+    cout << this->name << endl;
+
+    file.write((char*)(&this->price), sizeof(this->price));
+    cout << this->price << endl;
+
+    unsigned int size = this->toppings.size();
+    file.write((char*)(&size), sizeof(size));
+    cout << size << endl;
+
+
+    for(unsigned    int i = 0; i < size; i++){
+        this->toppings[i].write(file);
+        cout << this->toppings[i] << endl;
+    }
+
+    cout << "=====================" << endl;
+
+
+    /*
     file << this->name << " ";
     file << this->price << " ";
     file << this->toppings.size() << " ";
     for(unsigned int i = 0; i < this->toppings.size(); i++){
         this->toppings[i].write(file);
     }
+    */
 }
-*/
+
 
 
 

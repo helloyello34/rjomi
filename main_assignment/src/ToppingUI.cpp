@@ -58,7 +58,7 @@ void ToppingUI::retrive_topping()
 
 Topping ToppingUI::getTopping(int id)
 {
-    if((unsigned)id <= this->toppings.size() - 1) {
+    if((unsigned)id <= this->toppings.size()) {
         return this->toppings[id-1];
     } else {
         cout << "Invalid choice" << endl;
@@ -71,7 +71,7 @@ void ToppingUI::list_toppings()
 {
     retrive_topping();
     cout << "Avalable toppings " << endl;
-    for(unsigned int i = 0; i < this->toppings.size() - 1; i++) {
+    for(unsigned int i = 0; i < this->toppings.size(); i++) {
         cout << i+1 << ". "<< this->toppings[i] << endl;
     }
 }

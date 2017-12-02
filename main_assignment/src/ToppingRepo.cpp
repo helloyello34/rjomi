@@ -14,12 +14,12 @@ void ToppingRepo::store_toppings(Topping& newTop)
 {
     fstream file;
     file.open("Topping.dat", ios::app|ios::in|ios::out|ios::binary);
-    //if(file.is_open()) {
-        //newTop.write(file);
-        file.write((char*)(&newTop), sizeof(Topping));
-    //} else {
-    //    cout << "File did not open" << endl;
-    //}
+    if(file.is_open()) {
+    newTop.write(file);
+    //file.write((char*)(&newTop), sizeof(Topping));
+    } else {
+        cout << "File did not open" << endl;
+    }
 
     file.close();
 }
@@ -37,10 +37,12 @@ vector<Topping> ToppingRepo::get_toppings()
             if(file.eof()) {
                 break;
             }
-            file.read((char*)(&temp), sizeof(Topping));
-            //temp.read(file);
+            //file.read((char*)(&temp), sizeof(Topping));
+            temp.read(file);
             newTop.push_back(temp);
         }
+        newTop.pop_back();
+
         file.close();
     } else {
         cout << "File did not open" << endl;

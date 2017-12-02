@@ -15,11 +15,16 @@ Topping::~Topping()
 
 void Topping::read(fstream& file)
 {
+    file.read(this->name, sizeof(this->name));
+    file.read((char*)(&this->price), sizeof(this->price));
     //file >> this->name >> this->price;
 }
 
 void Topping::write(fstream& file)
 {
+
+    file.write(this->name, sizeof(this->name));
+    file.write((char*)(&this->price), sizeof(this->price));
     /*
     if(valid_topping()){
         file << endl << this->name << " ";

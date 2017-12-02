@@ -52,7 +52,7 @@ void PizzaUI::view_pizza_menu()
 {
     retrieve_pizza();
     for(unsigned int i = 0; i < this->pizzas.size(); i++){
-        cout << this->pizzas[i] << endl;
+        cout << i + 1 << ". " <<  this->pizzas[i] << endl;
     }
 }
 
