@@ -42,7 +42,7 @@ void PizzaUI::add_temp_pizza()
 {
     Pizza pizza;
     cin >> pizza;
-    cout << pizza;
+    //cout << pizza;
     PizzaRepo pizzarepo;
     pizzarepo.write_pizza(pizza);
 }
@@ -51,7 +51,7 @@ void PizzaUI::add_temp_pizza()
 void PizzaUI::view_pizza_menu()
 {
     retrieve_pizza();
-    for(unsigned int i = 0; i < this->pizzas.size(); i++){
+    for( int i = 0; i < this->pizzas.size(); i++){
         cout << i + 1 << ". " <<  this->pizzas[i] << endl;
     }
 }
