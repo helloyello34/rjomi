@@ -40,12 +40,13 @@ void PizzaUI::startUI()
 
 void PizzaUI::add_temp_pizza()
 {
+    //PizzaService pizza_service;
     Pizza pizza;
     cin >> pizza;
     //cout << pizza;
     //PizzaRepo pizzarepo;
     //pizzarepo.write_pizza(pizza);
-    this->pizza_service.newPizza(pizza);
+    pizza_service.newPizza(pizza);
 }
 
 
@@ -59,7 +60,7 @@ void PizzaUI::view_pizza_menu()
 
 void PizzaUI::retrieve_pizza()
 {
-    PizzaRepo fill_array;
-    this->pizzas = fill_array.read_pizza();
+    PizzaService get_pizza;
+    get_pizza.readPizza(this->pizzas);
 }
 

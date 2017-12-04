@@ -35,11 +35,11 @@ void PizzaRepo::write_pizza(const Pizza& pizza)
 }
 
 
-vector<Pizza> PizzaRepo::read_pizza()
+void PizzaRepo::read_pizza(vector<Pizza>&vector_of_pizzas)
 {
     fstream file;
     file.open("Pizza_Menu.txt", ios::binary|ios::in);
-    vector<Pizza>vector_of_pizzas;
+    //vector<Pizza>vector_of_pizzas;
     Pizza temp_pizza;
 
     //int Pizza_count;
@@ -98,5 +98,5 @@ vector<Pizza> PizzaRepo::read_pizza()
     }
 
 
-    return vector_of_pizzas;
+    //return vector_of_pizzas;
 }

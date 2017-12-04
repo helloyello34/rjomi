@@ -15,10 +15,10 @@ class PizzaRepo
     public:
         PizzaRepo();
         virtual ~PizzaRepo();
-        vector<Pizza> read_pizza();
+        void read_pizza(vector<Pizza>&vector_of_pizza);
         void write_pizza(const Pizza& pizza);
     private:
-        int number_of_pizzas;
+        //int number_of_pizzas;
 };
 
 #endif // PIZZAREPO_H
