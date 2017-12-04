@@ -7,6 +7,7 @@
 
 #include "Pizza.h"
 #include "PizzaRepo.h"
+#include "PizzaService.h"
 
 class PizzaUI
 {
@@ -19,6 +20,7 @@ class PizzaUI
         void retrieve_pizza();
     private:
         vector<Pizza>pizzas;
+        PizzaService pizza_service;
 };
 
 #endif // PIZZAUI_H

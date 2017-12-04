@@ -8,7 +8,7 @@ using namespace std;
 
 
 
-#include "../PIZZA/Pizza.h"
+#include "Pizza.h"
 #include <iostream>
 
 //#include "Pizza.h"

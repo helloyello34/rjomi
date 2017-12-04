@@ -3,7 +3,6 @@
 MainUI::MainUI()
 {
     welcom_screen();
-    startUI();
 }
 
 MainUI::~MainUI()

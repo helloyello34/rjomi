@@ -7,8 +7,8 @@
 
 
 
-#include "../TOPPING/Topping.h"
-#include "../TOPPING/ToppingUI.h"
+#include "Topping.h"
+#include "ToppingUI.h"
 
 using namespace std;
 
@@ -23,7 +23,7 @@ class Pizza
         void store_pizza();
         double get_price();
         void read(fstream& file);
-        void write(fstream& file);
+        void write(fstream& file) const;
 
         friend ostream& operator << (ostream& out, const Pizza& pizza);
         friend istream& operator >> (istream& in, Pizza& pizza);

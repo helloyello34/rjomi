@@ -24,7 +24,7 @@ void Topping::read(fstream& file)
     file >> this->name >> this->price ;
 }
 
-void Topping::write(fstream& file)
+void Topping::write(fstream& file) const
 {
     //Writing in binary
     /*
@@ -40,7 +40,7 @@ void Topping::write(fstream& file)
 }
 
 
-bool Topping::valid_topping()
+bool Topping::valid_topping() const
 {
     if(strcmp(this->name, "nothing")) {
         return true;

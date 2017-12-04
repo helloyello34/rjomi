@@ -1,5 +1,6 @@
 #include "PizzaRepo.h"
 
+
 PizzaRepo::PizzaRepo()
 {
     //ctor
@@ -12,7 +13,7 @@ PizzaRepo::~PizzaRepo()
 
 
 
-void PizzaRepo::write_pizza(Pizza& pizza)
+void PizzaRepo::write_pizza(const Pizza& pizza)
 {
     fstream file;
     file.open("Pizza_Menu.txt", ios::binary|ios::out|ios::app);

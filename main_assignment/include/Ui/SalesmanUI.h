@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <iostream>
 
-#include "../PIZZA/PizzaUI.h"
+#include "PizzaUI.h"
 #include "OrderUI.h"
 
 using namespace std;

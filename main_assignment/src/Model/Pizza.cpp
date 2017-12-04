@@ -81,7 +81,7 @@ void Pizza::read(fstream& file)
 }
 
 
-void Pizza::write(fstream& file)
+void Pizza::write(fstream& file) const
 {
     /*  Writing in binary
 
@@ -110,7 +110,7 @@ void Pizza::write(fstream& file)
     //file << this->price << " ";
     int size = this->toppings.size();
     file << size << " ";
-    for(unsigned int i = 0; i < size; i++){
+    for(int i = 0; i < size; i++){
         this->toppings[i].write(file);
     }
 
