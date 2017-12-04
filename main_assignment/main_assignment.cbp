@@ -34,35 +34,35 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/BakerUI.h" />
-		<Unit filename="include/CashierUI.h" />
+		<Unit filename="PIZZA/Pizza.cpp" />
+		<Unit filename="PIZZA/Pizza.h" />
+		<Unit filename="PIZZA/PizzaRepo.cpp" />
+		<Unit filename="PIZZA/PizzaRepo.h" />
+		<Unit filename="PIZZA/PizzaUI.cpp" />
+		<Unit filename="PIZZA/PizzaUI.h" />
+		<Unit filename="TOPPING/Topping.cpp" />
+		<Unit filename="TOPPING/Topping.h" />
+		<Unit filename="TOPPING/ToppingRepo.cpp" />
+		<Unit filename="TOPPING/ToppingRepo.h" />
+		<Unit filename="TOPPING/ToppingUI.cpp" />
+		<Unit filename="TOPPING/ToppingUI.h" />
+		<Unit filename="USERUI/BakerUI.cpp" />
+		<Unit filename="USERUI/BakerUI.h" />
+		<Unit filename="USERUI/CashierUI.cpp" />
+		<Unit filename="USERUI/CashierUI.h" />
+		<Unit filename="USERUI/MainUI.cpp" />
+		<Unit filename="USERUI/MainUI.h" />
+		<Unit filename="USERUI/ManagerUI.cpp" />
+		<Unit filename="USERUI/ManagerUI.h" />
+		<Unit filename="USERUI/SalesmanUI.cpp" />
+		<Unit filename="USERUI/SalesmanUI.h" />
 		<Unit filename="include/Location.h" />
-		<Unit filename="include/MainUI.h" />
-		<Unit filename="include/ManagerUI.h" />
 		<Unit filename="include/Order.h" />
 		<Unit filename="include/OrderUI.h" />
-		<Unit filename="include/Pizza.h" />
-		<Unit filename="include/PizzaRepo.h" />
-		<Unit filename="include/PizzaUI.h" />
-		<Unit filename="include/SalesmanUI.h" />
-		<Unit filename="include/Topping.h" />
-		<Unit filename="include/ToppingRepo.h" />
-		<Unit filename="include/ToppingUI.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/BakerUI.cpp" />
-		<Unit filename="src/CashierUI.cpp" />
 		<Unit filename="src/Location.cpp" />
-		<Unit filename="src/MainUI.cpp" />
-		<Unit filename="src/ManagerUI.cpp" />
 		<Unit filename="src/Order.cpp" />
 		<Unit filename="src/OrderUI.cpp" />
-		<Unit filename="src/Pizza.cpp" />
-		<Unit filename="src/PizzaRepo.cpp" />
-		<Unit filename="src/PizzaUI.cpp" />
-		<Unit filename="src/SalesmanUI.cpp" />
-		<Unit filename="src/Topping.cpp" />
-		<Unit filename="src/ToppingRepo.cpp" />
-		<Unit filename="src/ToppingUI.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
