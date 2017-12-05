@@ -5,19 +5,27 @@ PizzaService::PizzaService()
     //ctor
 }
 
-
-void PizzaService::newPizza(const Pizza& pizza)
+void PizzaService::new_pizza()
 {
-    PizzaRepo pizzarepository;
-    pizzarepository.write_pizza(pizza);
-    //pizza_repo.write(pizza);
-    //pizzaRepository.write_pizza(pizza);
+    Pizza pizza;
+    cin >> pizza;
+    store_pizza(pizza);
 }
 
-
-
-void PizzaService::readPizza(vector<Pizza>&pizzas)
+void PizzaService::store_pizza(const Pizza& pizza)
 {
-    PizzaRepo pizza_repo;
-    pizza_repo.read_pizza(pizzas);
+    this->pizza_repo.write(pizza);
+}
+
+void PizzaService::retrive_pizza()
+{
+    this->pizza_repo.read(this->pizzas);
+}
+
+void PizzaService::list_pizza()
+{
+    retrive_pizza();
+    for(unsigned int i = 0; i < this->pizzas.size(); i++){
+        cout << this->pizzas[i] << endl;
+    }
 }

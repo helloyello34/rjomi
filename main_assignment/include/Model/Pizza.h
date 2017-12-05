@@ -3,9 +3,6 @@
 
 #include <iostream>
 #include <vector>
-#include <fstream>
-
-
 
 #include "Topping.h"
 #include "ToppingUI.h"
@@ -16,22 +13,17 @@ class Pizza
 {
     public:
         Pizza();
-        virtual ~Pizza();
-        void add_topping(Topping topping);
-        void create_pizza();
-        void make_pizza();
-        void store_pizza();
-        double get_price();
-        void read(fstream& file);
-        void write(fstream& file) const;
-
+        void read(fstream& file); // member function that reads in the pizza from file
+        void write(fstream& file); // member function that writes the pizza in file
+        void add_topping(Topping& topping);
         friend ostream& operator << (ostream& out, const Pizza& pizza);
         friend istream& operator >> (istream& in, Pizza& pizza);
-
     private:
-        vector<Topping>toppings;
         char name[32];
-        double price;
+        int price;
+        vector<Topping>toppings;
+        ToppingUI top;
+
 };
 
 #endif // PIZZA_H

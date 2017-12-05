@@ -13,7 +13,7 @@ Order::~Order()
 void Order::add_pizza(Pizza pizza)
 {
     this->pizzas.push_back(pizza);
-    this->price += pizza.get_price();
+    //this->price += pizza.get_price();
 }
 
 ostream& operator << (ostream& out, const Order& order)
