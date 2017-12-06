@@ -7,6 +7,28 @@ Salary::Salary()
     this->year = 0;
 }
 
+Salary::Salary(char* name, char* ssn, int salary, int month, int year)
+{
+    this->salary = salary;
+    this->month = month;
+    this->year = year;
+}
+
+int Salary::get_month()
+{
+    return this->month;
+}
+
+int Salary::get_year()
+{
+    return this->year;
+}
+
+string Salary::get_employe_name()
+{
+    return this->employe.get_name();
+}
+
 void Salary::write(fstream& file) const
 {
     //writing txt
@@ -23,35 +45,38 @@ void Salary::read(fstream& file)
 
     //writing txt
 
-    cout << "Reading Employe" << endl;
+//    cout << "Reading Employe" << endl;
     this->employe.read(file);
-    cout << "Done reading Employe" << endl;
     file >> this->salary;
     file >> this->month;
     file >> this->year;
-    cout << "Done reading everything" << endl;
+//    cout << "Done reading everything" << endl;
 
 }
 
-unsigned int Salary::get_employe_ssn()
+string Salary::get_employe_ssn()
 {
-    return this->employe.get_ssn();
+    return employe.get_ssn();
 }
 
 istream& operator >> (istream& in, Salary& salary)
 {
-    if(salary.employe.get_ssn() == 0){
-        in >> salary.employe;
-    }
+    in >> salary.employe;
 
     cout << "Salary: ";
     in >> salary.salary;
 
     cout << "Month (1-12): ";
     in >> salary.month;
+    if(salary.month < 1 || salary.month > 12){
+        throw InvalidMonthExceptions("Error: Wrong month");
+    }
 
-    cout << "Year (-2017): ";
+    cout << "Year (1900-2017): ";
     in >> salary.year;
+    if(salary.year < 1900 || salary.year > 2017){
+       throw InvalidYearExceptions("Error: Wrong year");
+    }
 
     return in;
 }
@@ -60,13 +85,14 @@ istream& operator >> (istream& in, Salary& salary)
 ostream& operator << (ostream& out, const Salary& salary)
 {
     out << endl;
-    out << "Name: " << salary.employe.get_name() << endl;
 
-    out << "SSN: " << salary.employe.get_ssn() << endl;
+    out << salary.employe << endl;
 
     out << "Salary: " << salary.salary << endl;
 
+    if(salary.month > 0){
     out << "Month: " << salary.month << endl;
+    }
 
     out << "Year: " << salary.year << endl;
     out << endl;
@@ -74,16 +100,45 @@ ostream& operator << (ostream& out, const Salary& salary)
     return out;
 }
 
-int operator == (const Salary& salary1, const Salary& salary2)
+int operator == (Salary& salary1, Salary& salary2)
 {
-    if(salary1.employe.get_ssn() != salary2.employe.get_ssn()){
+    if(salary1.get_employe_ssn() == salary2.get_employe_ssn()){
+        //cout << "Same person" << endl;
+        if(salary1.get_employe_name() != salary2.get_employe_name()){
+            throw WrongNameException();
+        }
+        if(salary1.year == salary2.year){
+        if(salary1.month == salary2.month){
+        return 1;
+        }
+        }
+    }
+    return 0;
+    /*
+    string name1, name2;
+    name1 = salary1.get_employe_ssn();
+    name2 = salary2.get_employe_ssn();
+    if(strcmp(name1, name2)){
+        cout << "Ekki sama manneskja" << endl;
         return 0;   // Ekki sama manneskjan
     } else {
         if(salary1.year == salary2.year){
             if(salary1.month == salary2.month){
+                cout << "Overwrite" << endl;
                 return 1;   //sama faersla og tharf ad yfirskrifa
             }
         }
+        cout << "Elsid" << endl;
         return 0;   // sama manneskjan en bara baeta vid
     }
+    */
+}
+
+Salary& operator + (const Salary& salary1, const Salary& salary2)
+{
+    Salary temp;
+    temp.employe = salary2.employe;
+    temp.year = salary2.year;
+    temp.salary = salary1.salary + salary2.salary;
+    return temp;
 }

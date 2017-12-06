@@ -3,49 +3,58 @@
 	<iostream>
 	"MainUI.h"
 
-1512395536 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\ui\mainui.h
+1512473578 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\ui\mainui.h
 	"Salary.h"
 	"SalaryService.h"
+	<iostream>
+	<string.h>
 
-1512412170 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\model\salary.h
+1512568362 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\model\salary.h
 	<iostream>
 	<fstream>
 	<string>
+	<string.h>
+	<cstring>
 	"Employe.h"
+	"InvalidMonthExceptions.h"
+	"InvalidYearExceptions.h"
 
-1512412851 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\model\salary.cpp
+1512569076 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\model\salary.cpp
 	"Salary.h"
 
-1512400610 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\ui\mainui.cpp
+1512569320 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\ui\mainui.cpp
 	"MainUI.h"
 
-1512412851 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\services\salaryservice.h
+1512568362 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\services\salaryservice.h
 	<vector>
 	<iostream>
+	<string>
 	"SalaryRepository.h"
 	"Salary.h"
 
-1512412204 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\repositories\salaryrepository.h
+1512494922 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\repositories\salaryrepository.h
 	<iostream>
 	<vector>
 	<fstream>
 	"Salary.h"
 
-1512412170 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\repositories\salaryrepository.cpp
+1512567457 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\repositories\salaryrepository.cpp
 	"SalaryRepository.h"
 
-1512412881 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\services\salaryservice.cpp
+1512569522 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\services\salaryservice.cpp
 	"SalaryService.h"
 
-1512410126 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\model\employe.h
+1512510002 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\model\employe.h
 	<string>
 	<string.h>
 	<fstream>
 	<iostream>
+	"InvalidSsnExceptions.h"
 
-1512410190 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\model\employe.cpp
+1512563729 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\model\employe.cpp
 	"Employe.h"
 
+<<<<<<< HEAD
 1512566434 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\main.cpp
 	<iostream>
 	"MainUI.h"
@@ -89,4 +98,40 @@
 
 1512566434 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\ui\mainui.cpp
 	"MainUI.h"
+=======
+1512470561 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\exeptions\invalidmonth.h
+	<iostream>
+	<string>
+
+1512470817 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\exeptions\invalidyear.h
+	<iostream>
+	<string>
+
+1512470802 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\exeptions\invalidmonth.cpp
+	"InvalidMonth.h"
+
+1512470817 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\exeptions\invalidyear.cpp
+	"InvalidYear.h"
+
+1512472591 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\exceptions\invalidmonthexceptions.h
+	<iostream>
+	<string>
+
+1512472591 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\exceptions\invalidssnexceptions.h
+	<iostream>
+	<string>
+
+1512472591 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\exceptions\invalidyearexceptions.h
+	<iostream>
+	<string>
+
+1512472591 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\exceptions\invalidmonthexceptions.cpp
+	"InvalidMonthExceptions.h"
+
+1512472591 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\exceptions\invalidssnexceptions.cpp
+	"InvalidSsnExceptions.h"
+
+1512472591 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\exceptions\invalidyearexceptions.cpp
+	"InvalidYearExceptions.h"
+>>>>>>> c43bd20d518441355d6a318d16a090016afde9d8
 

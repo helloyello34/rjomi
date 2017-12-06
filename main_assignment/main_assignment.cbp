@@ -70,7 +70,7 @@
 		<Unit filename="src/Model/Pizza.cpp" />
 		<Unit filename="src/Model/Topping.cpp" />
 		<Unit filename="src/Repository/DrinkRepository.cpp" />
-		<Unit filename="src/Repository/PizzaRepo.cpp" />
+		<Unit filename="src/Repository/PizzaRepository.cpp" />
 		<Unit filename="src/Repository/ToppingRepo.cpp" />
 		<Unit filename="src/Service/DrinkService.cpp" />
 		<Unit filename="src/Service/PizzaService.cpp" />

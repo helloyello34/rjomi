@@ -6,7 +6,7 @@ Pizza::Pizza()
     this->price = 1000;
 }
 
-void Pizza::read(fstream& file)
+void Pizza::read(ifstream& file)
 {
     // txt file
     /*
@@ -27,15 +27,23 @@ void Pizza::read(fstream& file)
     unsigned int size;
     file.read((char*)(&size), sizeof(size));
     Topping temp;
+    this->toppings.clear();
     for(unsigned int i = 0; i < size; i++){
         temp.read(file);
+        if(temp.get_name() == "Nothing"){
+            break;
+        }
+
+        //file.read((char*)(&temp), sizeof(Topping));
+
         this->toppings.push_back(temp);
     }
 
 
+
 }
 
-void Pizza::write(fstream& file)
+void Pizza::write(ofstream& file) const
 {
     // txt file
     /*
@@ -54,6 +62,7 @@ void Pizza::write(fstream& file)
     unsigned int size = this->toppings.size();
     file.write((char*)(&size), sizeof(size));
     for(unsigned int i = 0; i < this->toppings.size(); i++){
+        //file.write((char*)(&this->toppings[i]), sizeof(Topping));
         this->toppings[i].write(file);
     }
 
@@ -61,6 +70,7 @@ void Pizza::write(fstream& file)
 
 void  Pizza::add_topping(Topping& topping)
 {
+    this->price += topping.get_price();
     this->toppings.push_back(topping);
 }
 
@@ -74,7 +84,6 @@ ostream& operator << (ostream& out, const Pizza& pizza)
     for(unsigned int i = 0; i < pizza.toppings.size(); i++){
         out << i+1 << ". " << pizza.toppings[i] << endl;
     }
-    out << "End of reading ostream pizza" << endl;
 
     return out;
 }
@@ -93,9 +102,10 @@ istream& operator >> (istream& in, Pizza& pizza)
             break;
         }
         Topping temp;
-        pizza.top.list_toppings();
+        ToppingUI ui;
+        ui.list_toppings();
         in >> toppingId;
-        temp = pizza.top.getTopping(toppingId);
+        temp = ui.getTopping(toppingId);
         pizza.add_topping(temp);
     }
 

@@ -2,7 +2,7 @@
 
 Topping::Topping()
 {
-    strcpy(name,"nothing");
+    strcpy(name,"Nothing");
     this->price = 0;
 }
 
@@ -13,7 +13,7 @@ Topping::~Topping()
 
 
 
-void Topping::read(fstream& file)
+void Topping::read(ifstream& file)
 {
     //Writing in binary
 
@@ -26,7 +26,7 @@ void Topping::read(fstream& file)
     */
 }
 
-void Topping::write(fstream& file) const
+void Topping::write(ofstream& file) const
 {
     //Writing in binary
 
@@ -51,6 +51,16 @@ bool Topping::valid_topping() const
     } else {
         return false;
     }
+}
+
+string Topping::get_name()
+{
+    return (string)this->name;
+}
+
+double Topping::get_price()
+{
+    return this->price;
 }
 
 ostream& operator << (ostream& out, const Topping& topping)

@@ -6,24 +6,27 @@
 #include <fstream>
 #include <iostream>
 
+#include "InvalidSsnExceptions.h"
+
 using namespace std;
 
 class Employe
 {
     public:
         Employe();
+        Employe(char* name, char* ssn);
 
-        string get_name() const;
-        unsigned int get_ssn() const;
+        string get_name() ;
+        string get_ssn() ;
 
         void write(fstream& file) const;
         void read(fstream& file);
 
         friend istream& operator >> (istream& in, Employe& employe);
-        friend ostream& operator << (ostream& out, const Employe employe);
+        friend ostream& operator << (ostream& out, const Employe& employe);
     private:
         char name[100];
-        unsigned int ssn;
+        char ssn[20];
 };
 
 #endif // EMPLOYE_H

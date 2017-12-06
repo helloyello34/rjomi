@@ -7,12 +7,15 @@ PizzaRepository::PizzaRepository()
 
 void PizzaRepository::write(const Pizza& pizza)
 {
+    cout << "Writing to file" << endl;
     ofstream file;
     file.open("Pizza.dat", ios::binary|ios::app);
 
     if(file.is_open()){
-        cout << sizeof(Pizza) << endl;
-        file.write((char*)(&pizza), sizeof(Pizza));
+        //cout << sizeof(Pizza) << endl;
+        //file.write((char*)(&pizza), sizeof(Pizza));
+        pizza.write(file);
+        file.close();
     } else {
         cout << "File could not open! " << endl;
     }
@@ -25,13 +28,16 @@ void PizzaRepository::read(vector<Pizza>&pizzas)
 
     if(file.is_open()){
         Pizza temp_pizza;
-        while(!(file.eof())){
-            cout << sizeof(Pizza) << endl;
-            file.read((char*)(&temp_pizza), sizeof(Pizza));
+        pizzas.clear();
+        while(!file.eof()){
+//cout << "readnig pizza" << endl;
+            temp_pizza.read(file);
             pizzas.push_back(temp_pizza);
-            //cout << "readnig pizza" << endl;
+
         }
-        //pizzas.pop_back();
+        //cout << "while end" << endl;
+        file.close();
+        pizzas.pop_back();
     } else {
         cout << "File could not open! " << endl;
     }

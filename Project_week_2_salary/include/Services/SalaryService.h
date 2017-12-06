@@ -3,9 +3,12 @@
 
 #include <vector>
 #include <iostream>
+#include <string>
 
 #include "SalaryRepository.h"
 #include "Salary.h"
+
+class FirstTimeWritingException { };
 
 using namespace std;
 
@@ -13,10 +16,11 @@ class SalaryService
 {
     public:
         SalaryService();
-        void add_salary(const Salary& salary);
-        void get_salary();
-        void print_salary(unsigned int this_ssn);
+        void add_salary( Salary& salary);
+        void print_salary(string this_ssn);
+        void print_year(string this_ssn, int this_year);
     private:
+        void get_salary();
         SalaryRepository salary_repo;
         vector<Salary>salary;
 
