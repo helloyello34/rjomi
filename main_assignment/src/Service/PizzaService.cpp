@@ -25,9 +25,12 @@ void PizzaService::retrive_pizza()
 void PizzaService::list_pizza()
 {
     retrive_pizza();
-    cout << "before loop" << endl;
+    //cout << "before loop" << endl;
     for(unsigned int i = 0; i < this->pizzas.size(); i++){
-        cout << "Loop" << endl;
+        //cout << "Loop" << endl;
+        cout << " Pizza " << i+1 << endl;
+        cout << "------------------------" << endl;
         cout << this->pizzas[i] << endl;
+        cout << "------------------------" << endl << endl;
     }
 }
