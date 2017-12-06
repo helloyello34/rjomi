@@ -4,6 +4,11 @@
 #include "Salary.h"
 #include "SalaryService.h"
 
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
 class MainUI
 {
     public:

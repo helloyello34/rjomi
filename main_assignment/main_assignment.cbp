@@ -50,7 +50,7 @@
 		<Unit filename="include/Model/Pizza.h" />
 		<Unit filename="include/Model/Topping.h" />
 		<Unit filename="include/Repository/DrinkRepository.h" />
-		<Unit filename="include/Repository/PizzaRepo.h" />
+		<Unit filename="include/Repository/PizzaRepository.h" />
 		<Unit filename="include/Repository/ToppingRepo.h" />
 		<Unit filename="include/Service/DrinkService.h" />
 		<Unit filename="include/Service/PizzaService.h" />
@@ -70,7 +70,7 @@
 		<Unit filename="src/Model/Pizza.cpp" />
 		<Unit filename="src/Model/Topping.cpp" />
 		<Unit filename="src/Repository/DrinkRepository.cpp" />
-		<Unit filename="src/Repository/PizzaRepo.cpp" />
+		<Unit filename="src/Repository/PizzaRepository.cpp" />
 		<Unit filename="src/Repository/ToppingRepo.cpp" />
 		<Unit filename="src/Service/DrinkService.cpp" />
 		<Unit filename="src/Service/PizzaService.cpp" />
