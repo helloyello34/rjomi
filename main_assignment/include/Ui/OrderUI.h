@@ -1,7 +1,12 @@
 #ifndef ORDERUI_H
 #define ORDERUI_H
 
+#include <stdlib.h>
+#include <iostream>
+
 #include "Order.h"
+
+using namespace std;
 
 class OrderUI
 {
@@ -9,6 +14,8 @@ class OrderUI
         OrderUI();
         virtual ~OrderUI();
         void startUI();
+        void make_order();
+        void show_order();
     private:
         Order *orders;
         int numberOfOrders;

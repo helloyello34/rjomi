@@ -1,17 +1,17 @@
 #ifndef ORDER_H
 #define ORDER_H
 
-<<<<<<< HEAD
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-=======
 
+
+#include "Pizza.h"
 #include <iostream>
 
 //#include "Pizza.h"
->>>>>>> 77c9730c6de5653b87f3cc3bfc0cc5e2eda3fd9a
 //#include "Drink.h"
 //#include "Side.h"
 
@@ -21,11 +21,7 @@ class Order
 {
     public:
         Order();
-<<<<<<< HEAD
-       /// void add_pizza(Pizza pizza);
-=======
-        //void add_pizza(Pizza pizza);
->>>>>>> 77c9730c6de5653b87f3cc3bfc0cc5e2eda3fd9a
+        void add_pizza(Pizza pizza);
         //void add_drink(Drink drink);
         //void add_sides(Side side);
         friend istream& operator >> (istream& in, Order& order);
@@ -33,19 +29,10 @@ class Order
         virtual ~Order();
     private:
         double price;
-<<<<<<< HEAD
-        ///Pizza* pizza;
-=======
-        //Pizza* pizza;
->>>>>>> 77c9730c6de5653b87f3cc3bfc0cc5e2eda3fd9a
+        vector<Pizza>pizzas;
         //Drink* drink;
         //Side* side;
-        int numberOfPizza;
-        //int numberOfDrinks;
-        //int numberOfSides;
-        int currentNumberOfPizza;
-        //int currentNumberOfDrinks;
-        //int currentNumberOfSides;
+
 };
 
 #endif // ORDER_H

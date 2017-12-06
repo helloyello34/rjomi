@@ -5,6 +5,9 @@
 #include <iostream>
 #include <string>
 
+#include "ToppingUI.h"
+
+
 using namespace std;
 
 class ManagerUI
@@ -14,6 +17,12 @@ class ManagerUI
         virtual ~ManagerUI();
 
         void startUI();
+        void editMenuUI();
+        void LocationUI();
+        void pizza();
+        void toppings();
+        void drinks();
+        void sides();
 
     private:
 };

@@ -1,0 +1,92 @@
+# depslib dependency file v1.0
+1512394723 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\main.cpp
+	<iostream>
+	"MainUI.h"
+
+1512395536 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\ui\mainui.h
+	"Salary.h"
+	"SalaryService.h"
+
+1512412170 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\model\salary.h
+	<iostream>
+	<fstream>
+	<string>
+	"Employe.h"
+
+1512412851 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\model\salary.cpp
+	"Salary.h"
+
+1512400610 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\ui\mainui.cpp
+	"MainUI.h"
+
+1512412851 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\services\salaryservice.h
+	<vector>
+	<iostream>
+	"SalaryRepository.h"
+	"Salary.h"
+
+1512412204 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\repositories\salaryrepository.h
+	<iostream>
+	<vector>
+	<fstream>
+	"Salary.h"
+
+1512412170 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\repositories\salaryrepository.cpp
+	"SalaryRepository.h"
+
+1512412881 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\services\salaryservice.cpp
+	"SalaryService.h"
+
+1512410126 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\model\employe.h
+	<string>
+	<string.h>
+	<fstream>
+	<iostream>
+
+1512410190 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\model\employe.cpp
+	"Employe.h"
+
+1512566434 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\main.cpp
+	<iostream>
+	"MainUI.h"
+
+1512566434 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\ui\mainui.h
+	"Salary.h"
+	"SalaryService.h"
+
+1512566434 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\model\salary.h
+	<iostream>
+	<fstream>
+	<string>
+	"Employe.h"
+
+1512566434 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\model\employe.h
+	<string>
+	<string.h>
+	<fstream>
+	<iostream>
+
+1512566434 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\services\salaryservice.h
+	<vector>
+	<iostream>
+	"SalaryRepository.h"
+	"Salary.h"
+
+1512566434 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\repositories\salaryrepository.h
+	<iostream>
+	<vector>
+	<fstream>
+	"Salary.h"
+
+1512566434 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\model\employe.cpp
+	"Employe.h"
+
+1512566434 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\model\salary.cpp
+	"Salary.h"
+
+1512566434 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\services\salaryservice.cpp
+	"SalaryService.h"
+
+1512566434 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\ui\mainui.cpp
+	"MainUI.h"
+

@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 # depslib dependency file v1.0
 1512041454 source:c:\users\oskar\documents\forritun\progress\ui\main.cpp
 	<iostream>
 
+=======
+# depslib dependency file v1.0
+1512041454 source:c:\users\oskar\documents\forritun\progress\ui\main.cpp
+	<iostream>
+
+>>>>>>> d1dfd1adde663b72d0b7f57b2532a8590e478c1f
