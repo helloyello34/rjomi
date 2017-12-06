@@ -13,16 +13,16 @@ class Pizza
 {
     public:
         Pizza();
-        void read(fstream& file); // member function that reads in the pizza from file
-        void write(fstream& file); // member function that writes the pizza in file
+        void read(ifstream& file); // member function that reads in the pizza from file
+        void write(ofstream& file) const; // member function that writes the pizza in file
         void add_topping(Topping& topping);
         friend ostream& operator << (ostream& out, const Pizza& pizza);
         friend istream& operator >> (istream& in, Pizza& pizza);
     private:
         char name[32];
-        int price;
+        double price;
         vector<Topping>toppings;
-        ToppingUI top;
+        //ToppingUI top;
 
 };
 

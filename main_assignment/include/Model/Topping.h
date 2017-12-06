@@ -15,9 +15,11 @@ class Topping
     public:
         Topping();
         virtual ~Topping();
-        void read(fstream& file);
-        void write(fstream& file) const;
+        void read(ifstream& file);
+        void write(ofstream& file) const;
         bool valid_topping() const;
+        string get_name();
+        double get_price();
         friend ostream& operator << (ostream& out, const Topping& topping);
         friend istream& operator >> (istream& in, Topping& topping);
 
