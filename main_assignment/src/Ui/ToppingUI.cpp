@@ -36,6 +36,7 @@ void ToppingUI::startUI()
             delete_topping();
         } else if(input == '4'){
             list_toppings();
+            system("pause");
         }
     }
 }
@@ -85,5 +86,4 @@ void ToppingUI::list_toppings()
             cout << "  " << i+1 << ". "<< this->toppings[i] << endl;
         }
         cout << " ==========================" << endl << endl;
-        system("pause");
 }

@@ -77,6 +77,10 @@ void  Pizza::add_topping(Topping& topping)
 
 ostream& operator << (ostream& out, const Pizza& pizza)
 {
+<<<<<<< HEAD
+=======
+    //out << "Pizza ostream read: " << endl;
+>>>>>>> 823a7cca4a861a39252154c428fd33cce324f1a6
     out << "Name: " << pizza.name << endl;
     out << "Price: " << pizza.price << endl;
     out << "Topping: " << endl;

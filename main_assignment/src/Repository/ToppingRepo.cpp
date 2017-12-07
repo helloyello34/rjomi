@@ -19,6 +19,7 @@ void ToppingRepo::store_toppings(Topping& newTop)
     //file.write((char*)(&newTop), sizeof(Topping));
     } else {
         cout << "File did not open" << endl;
+
     }
 
     file.close();
