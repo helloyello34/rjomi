@@ -9,7 +9,7 @@ void PizzaRepository::write(const Pizza& pizza)
 {
     cout << "Writing to file" << endl;
     ofstream file;
-    file.open("Pizza.dat", ios::binary|ios::app);
+    file.open("binaries\\Menu\\pizza.dat", ios::binary|ios::app);
 
     if(file.is_open()){
         //cout << sizeof(Pizza) << endl;
@@ -24,7 +24,7 @@ void PizzaRepository::write(const Pizza& pizza)
 void PizzaRepository::read(vector<Pizza>&pizzas)
 {
     ifstream file;
-    file.open("Pizza.dat", ios::binary);
+    file.open("binaries\\Menu\\pizza.dat", ios::binary);
 
     if(file.is_open()){
         Pizza temp_pizza;

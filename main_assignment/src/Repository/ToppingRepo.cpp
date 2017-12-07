@@ -13,7 +13,7 @@ ToppingRepo::~ToppingRepo()
 void ToppingRepo::store_toppings(Topping& newTop)
 {
     ofstream file;
-    file.open("Topping.dat  ", ios::app|ios::in|ios::out|ios::binary);
+    file.open("binaries\\Menu\\toppings\\topping.dat", ios::app|ios::in|ios::out|ios::binary);
     if(file.is_open()) {
     newTop.write(file);
     //file.write((char*)(&newTop), sizeof(Topping));
@@ -27,7 +27,7 @@ void ToppingRepo::store_toppings(Topping& newTop)
 vector<Topping> ToppingRepo::get_toppings()
 {
     ifstream file;
-    file.open("Topping.dat", ios::out|ios::in|ios::binary);
+    file.open("binaries\\Menu\\toppings\\topping.dat", ios::out|ios::in|ios::binary);
     vector<Topping>newTop;
     Topping temp;
 

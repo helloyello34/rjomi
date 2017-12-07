@@ -29,14 +29,11 @@ void SalaryRepository::read_salary(vector<Salary>&salary)
     Salary temp;
     if(file.is_open()) {
         salary.clear();
-<<<<<<< HEAD
         while(/*!(file.eof())*/file.read((char*)(&temp), sizeof(Salary))){
             //temp.read(file);
 //            file.read((char*)(&temp), sizeof(Salary));
-=======
         //temp.read(file);
         while(file.read((char*)(&temp), sizeof(Salary))) {
->>>>>>> c43bd20d518441355d6a318d16a090016afde9d8
             salary.push_back(temp);
             //cout << "READ" << endl;
         }

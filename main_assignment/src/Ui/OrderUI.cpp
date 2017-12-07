@@ -36,7 +36,7 @@ void OrderUI::startUI()
 
 void OrderUI::make_order()
 {
-    /// Create a new order
+
 
 }
 

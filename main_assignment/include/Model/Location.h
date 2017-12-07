@@ -3,6 +3,10 @@
 
 #include <iostream>
 #include <string>
+#include <string.h>
+#include <fstream>
+
+#include "InvalidNameException.h"
 
 using namespace std;
 
@@ -10,11 +14,14 @@ class Location
 {
     public:
         Location();
-        virtual ~Location();
+
+        void read(ifstream& file);
+        void write(ofstream& file);
+
         friend istream& operator >> (istream& in, Location& location);
         friend ostream& operator << (ostream& out, const Location& location);
     private:
-        string name;
+        char name[32];
 };
 
 #endif // LOCATION_H

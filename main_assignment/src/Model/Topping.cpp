@@ -6,9 +6,10 @@ Topping::Topping()
     this->price = 0;
 }
 
-Topping::~Topping()
+Topping::Topping(char* name, double price)
 {
-    //dtor
+    strcpy(this->name, name);
+    this->price = price;
 }
 
 

@@ -14,7 +14,7 @@ class Topping
 {
     public:
         Topping();
-        virtual ~Topping();
+        Topping(char* name, double price);
         void read(ifstream& file);
         void write(ofstream& file) const;
         bool valid_topping() const;

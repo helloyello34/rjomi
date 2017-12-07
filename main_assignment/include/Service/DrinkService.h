@@ -1,16 +1,22 @@
 #ifndef DRINKSERVICE_H
 #define DRINKSERVICE_H
 
+#include "Drink.h"
+#include "DrinkRepository.h"
+
 
 class DrinkService
 {
     public:
         DrinkService();
-        virtual ~DrinkService();
-
-    protected:
-
+        void addDrink();
+        void list_drinks();
+        void edit_drinks();
+        void delet_drinks();
+        Drink get_drink();
     private:
+        vector<Drink>drinks;
+        DrinkRepository drink_repo;
 };
 
 #endif // DRINKSERVICE_H

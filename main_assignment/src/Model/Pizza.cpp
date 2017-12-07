@@ -3,7 +3,7 @@
 Pizza::Pizza()
 {
     this->name[0] = '\0';
-    this->price = 1000;
+    this->price = 1500;
 }
 
 void Pizza::read(ifstream& file)
@@ -77,7 +77,6 @@ void  Pizza::add_topping(Topping& topping)
 
 ostream& operator << (ostream& out, const Pizza& pizza)
 {
-    out << "Pizza ostream read: " << endl;
     out << "Name: " << pizza.name << endl;
     out << "Price: " << pizza.price << endl;
     out << "Topping: " << endl;
@@ -95,16 +94,20 @@ istream& operator >> (istream& in, Pizza& pizza)
 
     char choice = '\0';
     int toppingId;
+    ToppingUI ui;
+    ui.list_toppings();
+    cout << "Enter a series of numbers together (Example: 1 5 6 7 0)" << endl;
+    cout << "Enter the index number of topping to add it to the pizza" << endl;
+    cout << "Enter '0' To quit" << endl;
+
+    cout << "Input: ";
     while(true){
-        cout << "Add new topping? ";
-        in >> choice;
-        if(choice == 'n'){
+        Topping temp;
+
+        in >> toppingId;
+        if(toppingId == 0){
             break;
         }
-        Topping temp;
-        ToppingUI ui;
-        ui.list_toppings();
-        in >> toppingId;
         temp = ui.getTopping(toppingId);
         pizza.add_topping(temp);
     }
