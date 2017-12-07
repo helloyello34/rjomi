@@ -12,7 +12,7 @@ class DrinkService
         void addDrink();
         void list_drinks();
         void edit_drinks();
-        void delet_drinks();
+        void delete_drinks();
         Drink get_drink();
     private:
         vector<Drink>drinks;

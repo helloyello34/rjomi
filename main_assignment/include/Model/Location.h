@@ -7,6 +7,7 @@
 #include <fstream>
 
 #include "InvalidNameException.h"
+#include "InvalidIdException.h"
 
 using namespace std;
 

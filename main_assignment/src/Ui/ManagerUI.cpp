@@ -141,7 +141,7 @@ void ManagerUI::drinks()
             this->drink_service.edit_drinks();
         } else if(input == '3') {
             system("CLS");
-            this->drink_service.delet_drinks();
+            this->drink_service.delete_drinks();
         } else if(input == '4'){
             system("CLS");
             this->drink_service.list_drinks();
@@ -231,8 +231,16 @@ void ManagerUI::LocationUI()
             system("CLS");
         } else if(input == '2') {
             ///Edit Location
+            system("CLS");
+            location_service.edit_location();
+            system("pause");
+            system("CLS");
         } else if(input == '3') {
             ///Delete Location
+            system("CLS");
+            location_service.delete_location();
+            system("pause");
+            system("CLS");
         } else if(input == '4'){
             ///View Location
             system("CLS");

@@ -35,12 +35,79 @@ void LocationService::list_location()
 
 void LocationService::edit_location()
 {
+    list_location();
+    unsigned int id;
+    cout << "  Edit location" << endl;
+    cout << " ------------------------------------------" << endl;
+    cout << "  Whitch location would you like to edit? " << endl;
+    cout << "  Press '0' To exit" << endl;
+    cout << "  Id: ";
+    try{
+
+        cin >> id;
+
+        if(cin.fail()){
+            cin.clear();
+            throw InvalidIdException();
+        }
+        if(id == 0){
+            return;
+        }
+        if(id > this->locations.size() || id < 0){
+            throw InvalidIdException();
+        }
+        cin.ignore();
+        cin >> locations[id-1];
+
+        location_repo.overwrite_locations(this->locations);
+        cout << "Location Edited successfully" << endl;
+    }
+    catch(InvalidIdException) {
+        cout << "Error: Invalid id! " << endl;
+    }
+    catch(InvalidNameException) {
+        cout << "Error: Invalid name" << endl;
+    }
+    catch(UnableToOpenFileException) {
+        cout << "Error: Unable to edit location!" << endl;
+    }
 
 }
 
-void LocationService::delet_location()
+void LocationService::delete_location()
 {
+    list_location();
+    unsigned int id;
+    cout << "  Delete location" << endl;
+    cout << "------------------------------------------" << endl;
+    cout << "  Whitch location would you like to delete? " << endl;
+    cout << "  Press '0' To exit" << endl;
+    cout << "  Id: ";
+    try{
 
+        cin >> id;
+
+        if(cin.fail()){
+            cin.clear();
+            throw InvalidIdException();
+        }
+        if(id == 0){
+            return;
+        }
+        if(id > this->locations.size() || id < 0){
+            throw InvalidIdException();
+        }
+        locations.erase(locations.begin() + (id-1));
+
+        location_repo.overwrite_locations(this->locations);
+        cout << "Location Deleted successfully" << endl;
+    }
+    catch(InvalidIdException) {
+        cout << "Error: Invalid id! " << endl;
+    }
+    catch(UnableToOpenFileException) {
+        cout << "Error: Unable to edit location!" << endl;
+    }
 }
 
 //Location LocationService::get_location()

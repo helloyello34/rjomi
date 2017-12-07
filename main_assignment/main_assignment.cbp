@@ -19,6 +19,7 @@
 					<Add directory="include/Ui" />
 					<Add directory="include/Service" />
 					<Add directory="include/Repository" />
+					<Add directory="include/Exception" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -34,6 +35,7 @@
 					<Add directory="include/Ui" />
 					<Add directory="include/Service" />
 					<Add directory="include/Repository" />
+					<Add directory="include/Exception" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -44,16 +46,26 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Exception/InvalidIdException.h" />
+		<Unit filename="include/Exception/InvalidNameException.h" />
+		<Unit filename="include/Exception/InvalidPriceException.h" />
+		<Unit filename="include/Exception/UnableToOpenFileException.h" />
 		<Unit filename="include/Model/Drink.h" />
 		<Unit filename="include/Model/Location.h" />
 		<Unit filename="include/Model/Order.h" />
 		<Unit filename="include/Model/Pizza.h" />
+		<Unit filename="include/Model/Sides.h" />
 		<Unit filename="include/Model/Topping.h" />
 		<Unit filename="include/Repository/DrinkRepository.h" />
+		<Unit filename="include/Repository/LocationRepository.h" />
 		<Unit filename="include/Repository/PizzaRepo.h" />
+		<Unit filename="include/Repository/SidesRepository.h" />
 		<Unit filename="include/Repository/ToppingRepo.h" />
 		<Unit filename="include/Service/DrinkService.h" />
+		<Unit filename="include/Service/LocationService.h" />
 		<Unit filename="include/Service/PizzaService.h" />
+		<Unit filename="include/Service/SidesService.h" />
+		<Unit filename="include/Service/ToppingService.h" />
 		<Unit filename="include/Ui/BakerUI.h" />
 		<Unit filename="include/Ui/CashierUI.h" />
 		<Unit filename="include/Ui/DrinkUI.h" />
@@ -64,16 +76,26 @@
 		<Unit filename="include/Ui/SalesmanUI.h" />
 		<Unit filename="include/Ui/ToppingUI.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Exception/InvalidIdException.cpp" />
+		<Unit filename="src/Exception/InvalidNameException.cpp" />
+		<Unit filename="src/Exception/InvalidPriceException.cpp" />
+		<Unit filename="src/Exception/UnableToOpenFileException.cpp" />
 		<Unit filename="src/Model/Drink.cpp" />
 		<Unit filename="src/Model/Location.cpp" />
 		<Unit filename="src/Model/Order.cpp" />
 		<Unit filename="src/Model/Pizza.cpp" />
+		<Unit filename="src/Model/Sides.cpp" />
 		<Unit filename="src/Model/Topping.cpp" />
 		<Unit filename="src/Repository/DrinkRepository.cpp" />
+		<Unit filename="src/Repository/LocationRepository.cpp" />
 		<Unit filename="src/Repository/PizzaRepository.cpp" />
+		<Unit filename="src/Repository/SidesRepository.cpp" />
 		<Unit filename="src/Repository/ToppingRepo.cpp" />
 		<Unit filename="src/Service/DrinkService.cpp" />
+		<Unit filename="src/Service/LocationService.cpp" />
 		<Unit filename="src/Service/PizzaService.cpp" />
+		<Unit filename="src/Service/SidesService.cpp" />
+		<Unit filename="src/Service/ToppingService.cpp" />
 		<Unit filename="src/Ui/BakerUI.cpp" />
 		<Unit filename="src/Ui/CashierUI.cpp" />
 		<Unit filename="src/Ui/DrinkUI.cpp" />

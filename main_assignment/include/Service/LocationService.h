@@ -11,7 +11,7 @@ class LocationService
         void add_location();
         void list_location();
         void edit_location();
-        void delet_location();
+        void delete_location();
         Location get_location();
 
     private:

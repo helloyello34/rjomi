@@ -28,8 +28,6 @@ void SalesmanUI::startUI()
 
         if(choice == '1') {
             system("CLS");
-            PizzaUI pizzaui;
-            pizzaui.startUI();
         } else if(choice == '2') {
 
         }

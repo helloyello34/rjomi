@@ -66,15 +66,15 @@ double Topping::get_price()
 
 ostream& operator << (ostream& out, const Topping& topping)
 {
-    out << topping.name << " " << topping.price;
+    out << topping.name << "  " << topping.price << " kr.";
     return out;
 }
 
 istream& operator >> (istream& in, Topping& topping)
 {
-    cout << "Topping name : ";
+    cout << "Name : ";
     in >> topping.name;
-    cout << "Topping price : ";
+    cout << "Price: ";
     in >> topping.price;
     return in;
 }

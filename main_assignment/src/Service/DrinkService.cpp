@@ -71,13 +71,13 @@ void DrinkService::edit_drinks()
 
 }
 
-void DrinkService::delet_drinks()
+void DrinkService::delete_drinks()
 {
     cout << "  Delete drinks" << endl;
     list_drinks();
     unsigned int id;
     cout << "  Which drink would you like to delete? " << endl;
-    cout << "  '0' To exit" << endl;
+    cout << "  Press '0' To exit" << endl;
     cout << "  Id: ";
     try{
     cin >> id;

@@ -1,11 +1,17 @@
 #ifndef PIZZA_H
 #define PIZZA_H
 
+
 #include <iostream>
+#include <fstream>
 #include <vector>
+#include <string>
+#include <string.h>
 
 #include "Topping.h"
-#include "ToppingUI.h"
+
+#include "InvalidNameException.h"
+#include "InvalidIdException.h"
 
 using namespace std;
 
@@ -13,16 +19,20 @@ class Pizza
 {
     public:
         Pizza();
-        void read(ifstream& file); // member function that reads in the pizza from file
-        void write(ofstream& file) const; // member function that writes the pizza in file
-        void add_topping(Topping& topping);
+
+        string get_name();
+        double get_price();
+
+        void write(ofstream& file);
+        void read(ifstream& file);
+        void add_topping(const Topping& topping);
+
         friend ostream& operator << (ostream& out, const Pizza& pizza);
         friend istream& operator >> (istream& in, Pizza& pizza);
     private:
         char name[32];
         double price;
         vector<Topping>toppings;
-        //ToppingUI top;
 
 };
 
