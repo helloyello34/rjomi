@@ -10,6 +10,8 @@ class PizzaService
 {
     public:
         PizzaService();
+        void add_pizza_to_menu();
+        void list_pizza_menu();
 
     private:
         PizzaRepository pizza_repo;

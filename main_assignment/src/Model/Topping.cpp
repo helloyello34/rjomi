@@ -66,16 +66,36 @@ double Topping::get_price()
 
 ostream& operator << (ostream& out, const Topping& topping)
 {
-    out << topping.name << "  " << topping.price << " kr.";
+    out << topping.name << " | " << topping.price << " kr.";
     return out;
 }
 
 istream& operator >> (istream& in, Topping& topping)
 {
     cout << "Name : ";
-    in >> topping.name;
+    in.getline(topping.name, 32);
+    if(strlen(topping.name) == 0) {
+        throw InvalidNameException();
+    }
+    for(size_t i = 0; i < strlen(topping.name); i++) {
+        if(!(isalpha(topping.name[i]))){
+            if(!(topping.name[i] == ' ')) {
+                throw InvalidNameException();
+            }
+        }
+    }
+
     cout << "Price: ";
     in >> topping.price;
+
+    if(in.fail()) {
+        in.clear();
+        throw InvalidPriceException();
+    }
+    if(topping.price < 0 || topping.price > 5000) {
+        throw InvalidPriceException();
+    }
+
     return in;
 }
 

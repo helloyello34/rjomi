@@ -13,9 +13,10 @@ class DrinkService
         void list_drinks();
         void edit_drinks();
         void delete_drinks();
+        vector<Drink> get_vector();
+
         Drink get_drink();
     private:
-        vector<Drink>drinks;
         DrinkRepository drink_repo;
 };
 

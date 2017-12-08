@@ -10,7 +10,7 @@ SalaryRepository::SalaryRepository()
 void SalaryRepository::add_salary(const Salary& salary)
 {
     //cout << "Writing to file " << endl;
-    fstream file;
+    ofstream file;
     file.open("Salary.dat", ios::binary|ios::app);
     if(file.is_open()) {
         //salary.write(file);
@@ -29,10 +29,6 @@ void SalaryRepository::read_salary(vector<Salary>&salary)
     Salary temp;
     if(file.is_open()) {
         salary.clear();
-        while(/*!(file.eof())*/file.read((char*)(&temp), sizeof(Salary))){
-            //temp.read(file);
-//            file.read((char*)(&temp), sizeof(Salary));
-        //temp.read(file);
         while(file.read((char*)(&temp), sizeof(Salary))) {
             salary.push_back(temp);
             //cout << "READ" << endl;
@@ -51,8 +47,8 @@ void SalaryRepository::read_salary(vector<Salary>&salary)
 
 void SalaryRepository::overwrite_salary(vector<Salary>&salary)
 {
-    fstream file;
-    file.open("Salary.dat", ios::binary|ios::out|ios::in);
+    ofstream file;
+    file.open("Salary.dat", ios::binary|ios::out);
 
     if(file.is_open()) {
         for(unsigned int i = 0; i < salary.size(); i++) {

@@ -38,7 +38,7 @@
 	<fstream>
 	"Salary.h"
 
-1512567457 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\repositories\salaryrepository.cpp
+1512739008 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\repositories\salaryrepository.cpp
 	"SalaryRepository.h"
 
 1512569522 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\services\salaryservice.cpp
@@ -54,7 +54,8 @@
 1512563729 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\model\employe.cpp
 	"Employe.h"
 
-<<<<<<< HEAD
+1512563729 D
+
 1512566434 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\main.cpp
 	<iostream>
 	"MainUI.h"
@@ -98,7 +99,9 @@
 
 1512566434 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\ui\mainui.cpp
 	"MainUI.h"
-=======
+
+1512566434 
+
 1512470561 c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\include\exeptions\invalidmonth.h
 	<iostream>
 	<string>
@@ -133,5 +136,6 @@
 
 1512472591 source:c:\users\helloyello\documents\3viknaafangi\rjomi\project_week_2_salary\src\exceptions\invalidyearexceptions.cpp
 	"InvalidYearExceptions.h"
->>>>>>> c43bd20d518441355d6a318d16a090016afde9d8
+
+1512472591 bd20d518441355d6a318d16a090016afde9d8
 

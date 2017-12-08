@@ -42,8 +42,9 @@ void Pizza::read(ifstream& file)
     }
 }
 
-void Pizza::add_topping(const Topping& topping)
+void Pizza::add_topping(Topping& topping)
 {
+    this->price += topping.get_price();
     this->toppings.push_back(topping);
 }
 

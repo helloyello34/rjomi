@@ -19,7 +19,8 @@ class ToppingRepo
         ToppingRepo();
         virtual ~ToppingRepo();
         void store_toppings(Topping& newTop);
-        vector<Topping> get_toppings();
+        void retreve_toppings(vector<Topping>&toppings);
+        void overwrite_toppings(vector<Topping>&toppings);
     private:
 };
 

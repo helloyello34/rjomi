@@ -8,6 +8,11 @@
 #include <iostream>
 #include <string.h>
 
+
+#include "InvalidNameException.h"
+#include "InvalidPriceException.h"
+#include "InvalidIdException.h"
+
 using namespace std;
 
 class Topping

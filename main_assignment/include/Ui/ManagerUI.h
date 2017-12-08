@@ -12,6 +12,7 @@
 #include "SidesService.h"
 #include "PizzaService.h"
 #include "LocationService.h"
+#include "ToppingService.h"
 
 
 
@@ -21,7 +22,6 @@ class ManagerUI
 {
     public:
         ManagerUI();
-        virtual ~ManagerUI();
 
         void startUI();
         void editMenuUI();
@@ -37,6 +37,7 @@ class ManagerUI
         DrinkService drink_service;
         SidesService sides_service;
         PizzaService pizza_service;
+        ToppingService topping_service;
 //        ToppingService topping_service;
 };
 

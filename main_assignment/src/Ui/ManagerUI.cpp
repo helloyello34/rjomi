@@ -6,11 +6,6 @@ ManagerUI::ManagerUI()
     startUI();
 }
 
-ManagerUI::~ManagerUI()
-{
-    //dtor
-}
-
 void ManagerUI::startUI()
 {
     char choice = '\0';
@@ -96,7 +91,7 @@ void ManagerUI::pizza()
         cout << "  5. Toppings       " << endl;
         cout << "  6. Back           " << endl;
         cout << " ====================" << endl;
-        cout << " (1-5): ";
+        cout << " (1-6): ";
         cin >> input;
 
         if(input == '1'){
@@ -108,8 +103,61 @@ void ManagerUI::pizza()
         } else if(input == '4') {
             ///View Pizza
         } else if(input == '5') {
-            ToppingUI toppingui;
-            toppingui.startUI();
+            system("CLS");
+            toppings();
+        }
+    }
+}
+
+void ManagerUI::toppings()
+{
+    char input;
+
+    while(input != '5')
+    {
+
+        cout << "   Topping " << endl;
+        cout << " ====================" << endl;
+        cout << "  1. Add Topping    " << endl;
+        cout << "  2. Edit Toppings  " << endl;
+        cout << "  3. Delete Topping " << endl;
+        cout << "  4. View Toppings  " << endl;
+        cout << "  5. Back           " << endl;
+        cout << " ====================" << endl;
+        cout << " (1-5): ";
+        cin >> input;
+
+        if(input == '1'){
+            ///Add Topping
+
+            system("CLS");
+            topping_service.add_topping();
+            system("pause");
+            system("CLS");
+
+        } else if(input == '2') {
+            ///Edit Topping
+
+            system("CLS");
+            topping_service.edit_topping();
+            system("pause");
+            system("CLS");
+        } else if(input == '3') {
+            ///Delete Topping
+
+            system("CLS");
+            topping_service.delete_topping();
+            system("pause");
+            system("CLS");
+        } else if(input == '4') {
+            ///View Topping
+
+            system("CLS");
+            topping_service.list_topping();
+            system("pause");
+            system("CLS");
+        } else {
+            return;
         }
     }
 }
@@ -127,7 +175,7 @@ void ManagerUI::drinks()
         cout << "  2. Edit Drinks     " << endl;
         cout << "  3. Delete Drinks   " << endl;
         cout << "  4. View Drinks     " << endl;
-        cout << "  5. Back           " << endl;
+        cout << "  5. Back            " << endl;
         cout << " ====================" << endl;
         cout << " (1-5): ";
         cin >> input;
@@ -250,3 +298,5 @@ void ManagerUI::LocationUI()
         }
     }
 }
+
+

@@ -35,7 +35,7 @@ void ToppingUI::startUI()
         } else if(input == '3') {
             delete_topping();
         } else if(input == '4'){
-            list_toppings();
+//            list_toppings();
             system("pause");
         }
     }
@@ -59,11 +59,11 @@ void ToppingUI::store_topping(Topping& newTop)
     newTopping.store_toppings(newTop);
 }
 
-void ToppingUI::retrive_topping()
-{
-    ToppingRepo newVector;
-    this->toppings = newVector.get_toppings();
-}
+//void ToppingUI::retrive_topping()
+//{
+//    ToppingRepo newVector;
+//    this->toppings = newVector.get_toppings();
+//}
 
 Topping ToppingUI::getTopping(int id)
 {
@@ -76,14 +76,14 @@ Topping ToppingUI::getTopping(int id)
     }
 }
 
-void ToppingUI::list_toppings()
-{
-        system("CLS");
-        retrive_topping();
-        cout << "   Avalable toppings " << endl;
-        cout << " =========================" << endl;
-        for(unsigned int i = 0; i < this->toppings.size(); i++) {
-            cout << "  " << i+1 << ". "<< this->toppings[i] << endl;
-        }
-        cout << " ==========================" << endl << endl;
-}
+//void ToppingUI::list_toppings()
+//{
+//        system("CLS");
+//        retrive_topping();
+//        cout << "   Avalable toppings " << endl;
+//        cout << " =========================" << endl;
+//        for(unsigned int i = 0; i < this->toppings.size(); i++) {
+//            cout << "  " << i+1 << ". "<< this->toppings[i] << endl;
+//        }
+//        cout << " ==========================" << endl << endl;
+//}

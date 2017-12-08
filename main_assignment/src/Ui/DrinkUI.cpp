@@ -5,7 +5,9 @@ DrinkUI::DrinkUI()
     //ctor
 }
 
-DrinkUI::~DrinkUI()
+void DrinkUI::add_drink()
 {
-    //dtor
+    Drink newDrink;
+    cin >> newDrink;
+    //drink_service.store_drink(newDrink);
 }
