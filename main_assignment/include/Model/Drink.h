@@ -17,8 +17,8 @@ class Drink
     public:
         Drink();
 
-        string get_name();
-        double get_price();
+        string get_name() const;
+        double get_price() const;
 
         void read(ifstream& file);
         void write(ofstream& file);

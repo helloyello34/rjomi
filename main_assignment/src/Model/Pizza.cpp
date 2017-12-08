@@ -7,12 +7,12 @@ Pizza::Pizza()
 }
 
 
-string Pizza::get_name()
+string Pizza::get_name() const
 {
     return (string)this->name;
 }
 
-double Pizza::get_price()
+double Pizza::get_price() const
 {
     return this->price;
 }

@@ -4,16 +4,9 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
-
-
 #include "Pizza.h"
-#include <iostream>
-
-//#include "Pizza.h"
-//#include "Drink.h"
-//#include "Side.h"
+#include "Sides.h"
+#include "Drink.h"
 
 using namespace std;
 
@@ -22,16 +15,16 @@ class Order
     public:
         Order();
         void add_pizza(Pizza pizza);
-        //void add_drink(Drink drink);
-        //void add_sides(Side side);
+        void add_drink(Drink drink);
+        void add_sides(Sides side);
         friend istream& operator >> (istream& in, Order& order);
         friend ostream& operator << (ostream& out, const Order& order);
         virtual ~Order();
     private:
         double price;
         vector<Pizza>pizzas;
-        //Drink* drink;
-        //Side* side;
+        vector<Drink>drinks;
+        vector<Sides>sides;
 
 };
 

@@ -19,12 +19,12 @@ void Sides::read(ifstream& file)
     file.read((char*)(&this->price), sizeof(this->price));
 }
 
-string Sides::get_name()
+string Sides::get_name() const
 {
     return (string)this->name;
 }
 
-double Sides::get_price()
+double Sides::get_price() const
 {
     return this->price;
 }
