@@ -5,6 +5,7 @@
 #include <iostream>
 
 #include "Order.h"
+#include "OrderService.h"
 
 using namespace std;
 
@@ -12,12 +13,12 @@ class OrderUI
 {
     public:
         OrderUI();
-        virtual ~OrderUI();
         void startUI();
         void make_order();
         void show_order();
+
     private:
-        Order *orders;
+        OrderService order_service;
         int numberOfOrders;
 };
 
