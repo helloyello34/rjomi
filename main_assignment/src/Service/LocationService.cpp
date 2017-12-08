@@ -12,7 +12,7 @@ void LocationService::add_location()
         cin.ignore();
         cin >> newLocation;
         location_repo.store_location(newLocation);
-        cout << " Locatoin stored successfully" << endl;
+        cout << " Location stored successfully" << endl;
     }
     catch(InvalidNameException) {
         cout << " Error: Invalid Name !" << endl;
