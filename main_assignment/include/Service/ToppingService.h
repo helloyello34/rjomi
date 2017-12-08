@@ -8,13 +8,10 @@ class ToppingService
 {
     public:
         ToppingService();
-        void add_topping();
-        void list_topping();
-        void edit_topping();
-        void delete_topping();
-        Topping get_topping();
+        void add_topping(Topping& newTop);
+        vector<Topping> get_topping_vector();
+        void overwrite_topping(vector<Topping>&topping);
     private:
-        vector<Topping>toppings;
         ToppingRepo topping_repo;
 
 };

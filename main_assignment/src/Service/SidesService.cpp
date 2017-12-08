@@ -5,111 +5,24 @@ SidesService::SidesService()
     //ctor
 }
 
-
-void SidesService::addSides()
+void SidesService::add_sides(Sides& newSide)
 {
-    Sides newSide;
-    try{
-    cin.ignore();
-    cin >> newSide;
-    this->sides_repo.store_side(newSide);
-    }
-    catch(InvalidNameException){
-        cout << "Error: Invalid name" << endl;
-    }
-    catch(InvalidPriceException){
-        cout << "Error: Invalid price" << endl;
-    }
+    sides_repo.store_side(newSide);
 }
 
-void SidesService::list_sides()
+void SidesService::delete_sides(vector<Sides>&sides)
 {
-    sides_repo.read_side(this->sides);
-
-    cout << "   Sides" << endl;
-    cout << " -------------------" << endl;
-    for (unsigned int i = 0; i < this->sides.size(); i++) {
-        cout << "Id: " << i+1 << endl;
-        cout << this->sides[i];
-        cout << " -------------------" << endl;
-    }
-    cout << endl;
-}
-
-void SidesService::edit_sides()
-{
-    cout << "   Edit sides" << endl;
-    list_sides();
-    unsigned int id;
-    cout << "  Which drink would you like to edit? " << endl;
-    cout << "  '0' To exit" << endl;
-    cout << "  Id: ";
-
-    try{
-    cin >> id;
-    if(cin.fail()){
-        throw InvalidIdException();
-    }
-    if(id == 0){
-        return;
-    }
-    if(id > this->sides.size()){
-        throw InvalidIdException();
-    }
-    cin.ignore();
-    cin >> this->sides[id-1];
     sides_repo.overwrite_sides(sides);
-    }
-    catch(InvalidIdException){
-        cout << "Error: Invalid id" << endl;
-    }
-    catch (InvalidNameException){
-        cout << "  Error: Invalid name" << endl;
-    }
-    catch (InvalidPriceException){
-        cout << "  Error: Invalid price" << endl;
-    }
 }
 
-void SidesService::delete_sides()
+vector<Sides> SidesService::get_sides_vector()
 {
-    cout << "   Delete sides" << endl;
-    list_sides();
-    unsigned int id;
-    cout << "  Which drink would you like to delete? " << endl;
-    cout << "  '0' To exit" << endl;
-    cout << "  Id: ";
-
-    try{
-    cin >> id;
-    if(cin.fail()){
-        throw InvalidIdException();
-    }
-    if(id == 0){
-        return;
-    }
-    if(id > this->sides.size()){
-        throw InvalidIdException();
-    }
-    cin.ignore();
-    this->sides.erase(this->sides.begin()+(id-1));
-    sides_repo.overwrite_sides(sides);
-    }
-    catch(InvalidIdException){
-        cout << "Error: Invalid id" << endl;
-    }
-    catch (InvalidNameException){
-        cout << "  Error: Invalid name" << endl;
-    }
-    catch (InvalidPriceException){
-        cout << "  Error: Invalid price" << endl;
-    }
-}
-
-Sides SidesService::get_sides()
-{
-    Sides temp;
-
+    vector<Sides>temp;
+    sides_repo.read_side(temp);
     return temp;
 }
 
+void SidesService::overwrite_sides(vector<Sides>&sides)
+{
+    sides_repo.overwrite_sides(sides);
+}

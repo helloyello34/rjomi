@@ -42,7 +42,7 @@ void SidesRepository::read_side(vector<Sides>&sides)
         file.close();
 
     } else {
-        cout << "File could not open !" << endl;
+        throw UnableToOpenFileException();
     }
 
 }

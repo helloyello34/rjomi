@@ -7,12 +7,12 @@ Pizza::Pizza()
 }
 
 
-string Pizza::get_name()
+string Pizza::get_name() const
 {
     return (string)this->name;
 }
 
-double Pizza::get_price()
+double Pizza::get_price() const
 {
     return this->price;
 }
@@ -21,7 +21,7 @@ void Pizza::write(ofstream& file)
 {
     file.write(this->name, sizeof(this->name));
     file.write((char*)(&this->price), sizeof(this->price));
-    unsigned int topping_size = this->toppings.size();
+    size_t topping_size = this->toppings.size();
     file.write((char*)(&topping_size), sizeof(topping_size));
     for(size_t i = 0; i < topping_size; i++) {
         this->toppings[i].write(file);
@@ -30,15 +30,27 @@ void Pizza::write(ofstream& file)
 
 void Pizza::read(ifstream& file)
 {
+//    cout << "name" << endl;
     file.read(this->name, sizeof(this->name));
+//    cout << "price" << endl;
     file.read((char*)(&this->price), sizeof(this->price));
-    unsigned int topping_size;
+//    cout << "size" << endl;
+    size_t topping_size;
     file.read((char*)(&topping_size), sizeof(topping_size));
+//    cout << "topping" << endl;
+    this->toppings.clear();
+    Topping temp;
     for(size_t i = 0; i < topping_size; i++) {
-        if(toppings[i].get_name() == "Nothing"){
+        if(topping_size > 40) {
             return;
         }
-        this->toppings[i].read(file);
+//        cout << "topping no, " << i << endl;
+        temp.read(file);
+        this->toppings.push_back(temp);
+//        if(toppings[i].get_name() == "Nothing"){
+//            return;
+//        }
+
     }
 }
 
@@ -46,6 +58,12 @@ void Pizza::add_topping(Topping& topping)
 {
     this->price += topping.get_price();
     this->toppings.push_back(topping);
+}
+
+void Pizza::clear_toppings()
+{
+    this->toppings.clear();
+    this->price = 1500;
 }
 
 ostream& operator << (ostream& out, const Pizza& pizza)

@@ -21,7 +21,7 @@ class Topping
         Topping();
         Topping(char* name, double price);
         void read(ifstream& file);
-        void write(ofstream& file) const;
+        void write(ofstream& file);
         bool valid_topping() const;
         string get_name();
         double get_price();

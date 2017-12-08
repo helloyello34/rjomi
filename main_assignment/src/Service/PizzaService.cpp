@@ -5,13 +5,18 @@ PizzaService::PizzaService()
     //ctor
 }
 
-void PizzaService::add_pizza_to_menu()
+void PizzaService::add_pizza(Pizza& newPizza)
 {
-    Pizza newPizza;
-    cin >> newPizza;
+    pizza_repo.add_pizza(newPizza);
 }
 
-void PizzaService::list_pizza_menu()
+void PizzaService::retreve_pizza(vector<Pizza>&pizzas)
 {
-
+    pizza_repo.retreve_pizza(pizzas);
 }
+
+void PizzaService::overwrite_pizza(vector<Pizza>&pizzas)
+{
+    pizza_repo.overwrite_pizza(pizzas);
+}
+

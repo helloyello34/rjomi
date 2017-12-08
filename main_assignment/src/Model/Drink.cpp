@@ -7,12 +7,12 @@ Drink::Drink()
 }
 
 
-string Drink::get_name()
+string Drink::get_name() const
 {
     return (string)this->name;
 }
 
-double Drink::get_price()
+double Drink::get_price() const
 {
     return this->price;
 }

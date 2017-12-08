@@ -8,11 +8,11 @@
 #include "ToppingUI.h"
 
 // Invlude for service classes
-#include "DrinkService.h"
-#include "SidesService.h"
-#include "PizzaService.h"
+#include "DrinkUI.h"
+#include "SidesUI.h"
+#include "PizzaUI.h"
 #include "LocationService.h"
-#include "ToppingService.h"
+#include "ToppingUI.h"
 
 
 
@@ -34,10 +34,10 @@ class ManagerUI
     private:
         LocationService location_service;
 
-        DrinkService drink_service;
-        SidesService sides_service;
-        PizzaService pizza_service;
-        ToppingService topping_service;
+        DrinkUI drink_ui;
+        SidesUI sides_ui;
+        PizzaUI pizza_ui;
+        ToppingUI topping_ui;
 //        ToppingService topping_service;
 };
 
