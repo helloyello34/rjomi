@@ -61,21 +61,23 @@ string Salary::get_employe_ssn()
 
 istream& operator >> (istream& in, Salary& salary)
 {
+    cout << "   Add salary record" << endl;
+    cout << " ==========================" << endl;
     in >> salary.employe;
 
-    cout << "Salary: ";
+    cout << "  Salary: ";
     in >> salary.salary;
 
-    cout << "Month (1-12): ";
+    cout << "  Month (1-12): ";
     in >> salary.month;
     if(salary.month < 1 || salary.month > 12){
-        throw InvalidMonthExceptions("Error: Wrong month");
+        throw InvalidMonthExceptions("  Error: Wrong month");
     }
 
-    cout << "Year (1900-2017): ";
+    cout << "  Year (1900-2017): ";
     in >> salary.year;
     if(salary.year < 1900 || salary.year > 2017){
-       throw InvalidYearExceptions("Error: Wrong year");
+       throw InvalidYearExceptions("  Error: Wrong year");
     }
 
     return in;
@@ -86,16 +88,17 @@ ostream& operator << (ostream& out, const Salary& salary)
 {
     out << endl;
 
+    out << "   --------------------------" << endl;
     out << salary.employe << endl;
 
-    out << "Salary: " << salary.salary << endl;
+    out << "    Salary: " << salary.salary << endl;
 
     if(salary.month > 0){
-    out << "Month: " << salary.month << endl;
+    out << "    Month: " << salary.month << endl;
     }
 
-    out << "Year: " << salary.year << endl;
-    out << endl;
+    out << "    Year: " << salary.year << endl;
+    out << "   -------------------------" << endl;
 
     return out;
 }

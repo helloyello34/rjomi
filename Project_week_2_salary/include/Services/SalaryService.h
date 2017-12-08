@@ -4,6 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
 #include "SalaryRepository.h"
 #include "Salary.h"
