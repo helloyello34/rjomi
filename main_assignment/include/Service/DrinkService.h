@@ -9,13 +9,10 @@ class DrinkService
 {
     public:
         DrinkService();
-        void addDrink();
-        void list_drinks();
-        void edit_drinks();
-        void delete_drinks();
-        vector<Drink> get_vector();
-
-        Drink get_drink();
+        void add_drink(Drink& newDrink);
+        void overwrtie_drinks(vector<Drink>&drinks);
+        vector<Drink> get_drinks_vector();
+        Drink get_drink(vector<Drink>&drinks);
     private:
         DrinkRepository drink_repo;
 };

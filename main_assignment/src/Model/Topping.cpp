@@ -16,32 +16,17 @@ Topping::Topping(char* name, double price)
 
 void Topping::read(ifstream& file)
 {
-    //Writing in binary
-
+    /// reading in binary
     file.read(this->name, sizeof(this->name));
     file.read((char*)(&this->price), sizeof(this->price));
-
-    //Writing in txt file
-    /*
-    file >> this->name >> this->price ;
-    */
 }
 
-void Topping::write(ofstream& file) const
+void Topping::write(ofstream& file)
 {
-    //Writing in binary
+    /// Writing in binary
 
     file.write(this->name, sizeof(this->name));
     file.write((char*)(&this->price), sizeof(this->price));
-
-    //Writing in txt file
-    /*
-    if(valid_topping()){
-        file << this->name << " ";
-        file << this->price << " ";
-    }
-    */
-
 }
 
 

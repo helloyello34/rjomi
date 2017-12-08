@@ -271,32 +271,32 @@
 	"BakerUI.h"
 	"CashierUI.h"
 
-1512683748 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\ui\managerui.h
+1512751165 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\ui\managerui.h
 	<stdlib.h>
 	<iostream>
 	<string>
 	"ToppingUI.h"
-	"DrinkService.h"
-	"SidesService.h"
-	"PizzaService.h"
+	"DrinkUI.h"
+	"SidesUI.h"
+	"PizzaUI.h"
 	"LocationService.h"
-	"ToppingService.h"
+	"ToppingUI.h"
 
-1512574612 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\ui\toppingui.h
+1512752402 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\ui\toppingui.h
 	<iostream>
 	<VECTOR>
 	<stdlib.h>
-	"ToppingRepo.h"
+	"ToppingService.h"
 	"Topping.h"
 
-1512684393 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\repository\toppingrepo.h
+1512746654 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\repository\toppingrepo.h
 	<iostream>
 	<fstream>
 	<vector>
 	"Topping.h"
-	"ToppingUI.h"
+	"UnableToOpenFileException.h"
 
-1512684413 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\model\topping.h
+1512754981 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\model\topping.h
 	<fstream>
 	<iostream>
 	<string.h>
@@ -309,14 +309,12 @@
 	<iostream>
 	"OrderUI.h"
 
-1512424621 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\ui\pizzaui.h
-	<stdlib.h>
-	<iostream>
-	<vector>
-	"PizzaService.h"
+1512762270 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\ui\pizzaui.h
+	"ToppingUI.h"
 	"Pizza.h"
+	"PizzaService.h"
 
-1512682753 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\model\pizza.h
+1512763408 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\model\pizza.h
 	<iostream>
 	<fstream>
 	<vector>
@@ -333,10 +331,9 @@
 	<iostream>
 	<vector>
 
-1512681702 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\service\pizzaservice.h
+1512753499 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\service\pizzaservice.h
 	"PizzaRepository.h"
 	"Pizza.h"
-	"ToppingService.h"
 
 1512388340 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\ui\orderui.h
 	<stdlib.h>
@@ -360,13 +357,14 @@
 1512595017 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\model\drink.cpp
 	"Drink.h"
 
-1512686619 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\model\drink.h
+1512742107 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\model\drink.h
 	<iostream>
 	<fstream>
 	<string.h>
 	"InvalidNameException.h"
 	"InvalidPriceException.h"
 	"InvalidIdException.h"
+	"UnableToOpenFileException.h"
 
 1512671703 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\model\location.cpp
 	"Location.h"
@@ -382,10 +380,10 @@
 1512417502 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\model\order.cpp
 	"Order.h"
 
-1512683921 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\model\topping.cpp
+1512754964 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\model\topping.cpp
 	"Topping.h"
 
-1512607370 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\repository\drinkrepository.cpp
+1512741424 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\repository\drinkrepository.cpp
 	"DrinkRepository.h"
 
 1512591426 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\repository\drinkrepository.h
@@ -396,20 +394,20 @@
 1512391753 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\repository\pizzarepo.cpp
 	"PizzaRepo.h"
 
-1512684393 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\repository\toppingrepo.cpp
+1512746654 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\repository\toppingrepo.cpp
 	"ToppingRepo.h"
 
-1512675757 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\service\drinkservice.cpp
+1512742107 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\service\drinkservice.cpp
 	"DrinkService.h"
 
-1512686503 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\service\drinkservice.h
+1512743160 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\service\drinkservice.h
 	"Drink.h"
 	"DrinkRepository.h"
 
-1512682753 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\model\pizza.cpp
+1512763530 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\model\pizza.cpp
 	"Pizza.h"
 
-1512681702 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\service\pizzaservice.cpp
+1512754264 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\service\pizzaservice.cpp
 	"PizzaService.h"
 
 1511984462 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\ui\bakerui.cpp
@@ -418,33 +416,36 @@
 1512042581 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\ui\cashierui.cpp
 	"CashierUI.h"
 
-1512387909 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\ui\drinkui.cpp
+1512742718 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\ui\drinkui.cpp
 	"DrinkUI.h"
 
-1512387909 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\ui\drinkui.h
+1512741137 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\ui\drinkui.h
+	"Drink.h"
+	"DrinkService.h"
 
 1512574612 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\ui\mainui.cpp
 	"MainUI.h"
 
-1512684506 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\ui\managerui.cpp
+1512762878 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\ui\managerui.cpp
 	"ManagerUI.h"
 
 1512595220 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\ui\orderui.cpp
 	"OrderUI.h"
 
-1512671773 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\ui\pizzaui.cpp
+1512763408 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\ui\pizzaui.cpp
 	"PizzaUI.h"
 
 1512679599 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\ui\salesmanui.cpp
 	"SalesmanUI.h"
 
-1512683167 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\ui\toppingui.cpp
+1512753243 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\ui\toppingui.cpp
 	"ToppingUI.h"
 
-1512679447 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\repository\pizzarepository.h
+1512753133 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\repository\pizzarepository.h
 	"Pizza.h"
+	"UnableToOpenFileException.h"
 
-1512679447 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\repository\pizzarepository.cpp
+1512756028 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\repository\pizzarepository.cpp
 	"PizzaRepository.h"
 
 1512566434 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\main.cpp
@@ -604,11 +605,12 @@
 1512574312 source:c:\users\oskar\documents\3vikna\rjomi\main_assignment\src\repository\pizzarepository.cpp
 	"PizzaRepository.h"
 
-1512608292 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\repository\sidesrepository.cpp
+1512744585 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\repository\sidesrepository.cpp
 	"SidesRepository.h"
 
-1512608292 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\repository\sidesrepository.h
+1512744585 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\repository\sidesrepository.h
 	"Sides.h"
+	"UnableToOpenFileException.h"
 	<vector>
 
 1512608373 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\model\sides.h
@@ -619,16 +621,16 @@
 	"InvalidPriceException.h"
 	"InvalidIdException.h"
 
-1512667038 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\service\sidesservice.cpp
+1512745224 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\service\sidesservice.cpp
 	"SidesService.h"
 
-1512608349 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\service\sidesservice.h
+1512744998 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\service\sidesservice.h
 	<vector>
 	"Sides.h"
 	"SidesRepository.h"
 	"InvalidIdException.h"
 
-1512605316 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\model\sides.cpp
+1512745242 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\model\sides.cpp
 	"Sides.h"
 
 1512604481 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\exception\invalidnameexception.h
@@ -661,10 +663,10 @@
 	"LocationRepository.h"
 	"Location.h"
 
-1512685450 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\service\toppingservice.cpp
+1512747246 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\service\toppingservice.cpp
 	"ToppingService.h"
 
-1512682719 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\service\toppingservice.h
+1512762263 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\service\toppingservice.h
 	"Topping.h"
 	"ToppingRepo.h"
 
@@ -672,4 +674,11 @@
 	"UnableToOpenFileException.h"
 
 1512670342 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\exception\unabletoopenfileexception.h
+
+1512743464 c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\include\ui\sidesui.h
+	"Sides.h"
+	"SidesService.h"
+
+1512745286 source:c:\users\helloyello\documents\3viknaafangi\rjomi\main_assignment\src\ui\sidesui.cpp
+	"SidesUI.h"
 

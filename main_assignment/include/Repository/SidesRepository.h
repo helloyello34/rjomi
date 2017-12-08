@@ -2,6 +2,7 @@
 #define SIDESREPOSITORY_H
 
 #include "Sides.h"
+#include "UnableToOpenFileException.h"
 
 #include <vector>
 

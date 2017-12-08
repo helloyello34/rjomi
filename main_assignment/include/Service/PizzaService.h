@@ -3,19 +3,18 @@
 
 #include "PizzaRepository.h"
 #include "Pizza.h"
-#include "ToppingService.h"
 
 
 class PizzaService
 {
     public:
         PizzaService();
-        void add_pizza_to_menu();
-        void list_pizza_menu();
+        void add_pizza(Pizza& newPizza);
+        void retreve_pizza(vector<Pizza>&pizzas);
+        void overwrite_pizza(vector<Pizza>&pizzas);
 
     private:
         PizzaRepository pizza_repo;
-        ToppingService topping_service;
 
 };
 

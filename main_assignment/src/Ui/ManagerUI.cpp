@@ -33,8 +33,7 @@ void ManagerUI::startUI()
             system("CLS");
             LocationUI();
         } else if (choice == '7') {
-            ToppingUI toppingui;
-            toppingui.startUI();
+
         }
     }
 }
@@ -66,8 +65,6 @@ void ManagerUI::editMenuUI()
         system("CLS");
         sides();
     } else if (input == '7') {
-        ToppingUI toppingui;
-        toppingui.startUI();
     }
     }
 
@@ -96,12 +93,36 @@ void ManagerUI::pizza()
 
         if(input == '1'){
             ///Add Pizza
+
+            system("CLS");
+            pizza_ui.add_pizza();
+            system("pause");
+            system("CLS");
+
         } else if(input == '2') {
             ///Edit Pizza
+
+            system("CLS");
+            pizza_ui.edit_pizza();
+            system("pause");
+            system("CLS");
+
         } else if(input == '3') {
             ///Delete Pizza
+
+            system("CLS");
+            pizza_ui.delete_pizza();
+            system("pause");
+            system("CLS");
+
         } else if(input == '4') {
             ///View Pizza
+
+            system("CLS");
+            pizza_ui.view_pizza();
+            system("pause");
+            system("CLS");
+
         } else if(input == '5') {
             system("CLS");
             toppings();
@@ -131,7 +152,7 @@ void ManagerUI::toppings()
             ///Add Topping
 
             system("CLS");
-            topping_service.add_topping();
+            topping_ui.add_topping();
             system("pause");
             system("CLS");
 
@@ -139,21 +160,21 @@ void ManagerUI::toppings()
             ///Edit Topping
 
             system("CLS");
-            topping_service.edit_topping();
+            topping_ui.edit_topping();
             system("pause");
             system("CLS");
         } else if(input == '3') {
             ///Delete Topping
 
             system("CLS");
-            topping_service.delete_topping();
+            topping_ui.delete_topping();
             system("pause");
             system("CLS");
         } else if(input == '4') {
             ///View Topping
 
             system("CLS");
-            topping_service.list_topping();
+            topping_ui.view_topping();
             system("pause");
             system("CLS");
         } else {
@@ -182,17 +203,26 @@ void ManagerUI::drinks()
         cin.ignore();
 
         if(input == '1'){
+            /// Add drink
             system("CLS");
-            this->drink_service.addDrink();
+            drink_ui.add_drink();
+//            this->drink_service.addDrink();
         } else if(input == '2') {
+            /// Edit drink
             system("CLS");
-            this->drink_service.edit_drinks();
+            this->drink_ui.edit_drink();
+            system("pause");
+            system("CLS");
         } else if(input == '3') {
+            /// Delete drink
             system("CLS");
-            this->drink_service.delete_drinks();
+            this->drink_ui.delete_drink();
+            system("pause");
+            system("CLS");
         } else if(input == '4'){
+            /// View drinks
             system("CLS");
-            this->drink_service.list_drinks();
+            drink_ui.view_drinks();
             system("pause");
             system("CLS");
         } else {
@@ -223,28 +253,28 @@ void ManagerUI::sides()
             /// Add Side
 
             system("CLS");
-            this->sides_service.addSides();
+            this->sides_ui.add_sides();
             system("pause");
             system("CLS");
         } else if(input == '2') {
             /// Edit Side
 
             system("CLS");
-            this->sides_service.edit_sides();
+            this->sides_ui.edit_sides();
             system("pause");
             system("CLS");
         } else if(input == '3') {
             /// Delete Side
 
             system("CLS");
-            this->sides_service.delete_sides();
+            this->sides_ui.delete_sides();
             system("pause");
             system("CLS");
         } else if(input == '4'){
             /// List up all sides
 
             system("CLS");
-            this->sides_service.list_sides();
+            this->sides_ui.view_sides();
             system("pause");
             system("CLS");
         } else {

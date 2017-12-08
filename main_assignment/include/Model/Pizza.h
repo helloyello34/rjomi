@@ -25,6 +25,8 @@ class Pizza
 
         void write(ofstream& file);
         void read(ifstream& file);
+
+        void clear_toppings();
         void add_topping(Topping& topping);
 
         friend ostream& operator << (ostream& out, const Pizza& pizza);

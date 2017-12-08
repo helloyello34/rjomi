@@ -19,7 +19,8 @@ void DrinkRepository::store_drink(Drink& drink)
         // Close file
         file.close();
     } else {
-        cout << "'Drink.dat' file could not open! " << endl;
+        throw UnableToOpenFileException();
+        //cout << "'Drink.dat' file could not open! " << endl;
     }
 }
 
@@ -48,7 +49,7 @@ void DrinkRepository::retreve_drink(vector<Drink>&drinks)
         // close the file
         file.close();
     } else {
-        cout << "'Drink.dat' file could not open! " << endl;
+        throw UnableToOpenFileException();
     }
 }
 

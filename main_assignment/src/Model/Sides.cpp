@@ -41,6 +41,9 @@ istream& operator >> (istream& in, Sides& side)
     cout << "===== Writing new side dish =====" << endl;
     cout << "Name: ";
     in.getline(side.name, 32);
+    if(strlen(side.name) == 0){
+        throw InvalidNameException();
+    }
     for(unsigned int i = 0; i < strlen(side.name); i++){
         if(!(isalnum(side.name[i]))){
             if(side.name[i] != ' '){
@@ -54,7 +57,7 @@ istream& operator >> (istream& in, Sides& side)
         in.clear();
         throw InvalidPriceException();
     }
-    if(side.price > 1000 || side.price < 0){
+    if(side.price > 5000 || side.price < 0){
         throw InvalidPriceException();
     }
 

@@ -19,7 +19,7 @@ void ToppingRepo::store_toppings(Topping& newTop)
     file.close();
     //file.write((char*)(&newTop), sizeof(Topping));
     } else {
-        cout << "File did not open" << endl;
+        throw UnableToOpenFileException();
 
     }
 
@@ -43,7 +43,7 @@ void ToppingRepo::retreve_toppings(vector<Topping>&toppings)
         toppings.pop_back();
         file.close();
     } else {
-        cout << "File did not open" << endl;
+        throw UnableToOpenFileException();
     }
 }
 
@@ -57,6 +57,6 @@ void ToppingRepo::overwrite_toppings(vector<Topping>&toppings)
             toppings[i].write(file);
         }
     } else {
-        cout << "File could not open!" << endl;
+        throw UnableToOpenFileException();
     }
 }

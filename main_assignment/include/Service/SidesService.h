@@ -15,14 +15,15 @@ class SidesService
 {
     public:
         SidesService();
-        void addSides();
-        void list_sides();
-        void edit_sides();
-        void delete_sides();
+
+        void add_sides(Sides& newSide);
+        void delete_sides(vector<Sides>&sides);
+        void overwrite_sides(vector<Sides>&sides);
+        vector<Sides> get_sides_vector();
+
         Sides get_sides();
 
     private:
-        vector<Sides>sides;
         SidesRepository sides_repo;
 };
 
