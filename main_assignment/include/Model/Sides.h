@@ -19,8 +19,8 @@ class Sides
         void write(ofstream& file);
         void read(ifstream& file);
 
-        string get_name();
-        double get_price();
+        string get_name() const;
+        double get_price() const;
 
         friend ostream& operator << (ostream& out, const Sides& side);
         friend istream& operator >> (istream& in, Sides& side);

@@ -20,8 +20,8 @@ class Pizza
     public:
         Pizza();
 
-        string get_name();
-        double get_price();
+        string get_name() const;
+        double get_price() const;
 
         void write(ofstream& file);
         void read(ifstream& file);
