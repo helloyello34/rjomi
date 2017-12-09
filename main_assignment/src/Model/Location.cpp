@@ -15,6 +15,11 @@ void Location::write(ofstream& file)
     file.write(this->name, sizeof(this->name));
 }
 
+string Location::get_name()
+{
+    return (string)this->name;
+}
+
 
 istream& operator >> (istream& in, Location& location)
 {

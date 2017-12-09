@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <iostream>
 
+#include "LocationUI.h"
+
 using namespace std;
 
 class BakerUI
@@ -15,6 +17,7 @@ class BakerUI
         void startUI();
 
     private:
+        LocationUI location_ui;
 };
 
 #endif // BAKERUI_H

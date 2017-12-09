@@ -2,13 +2,7 @@
 
 OrderUI::OrderUI()
 {
-    this->numberOfOrders = 0;
-    this->orders = new Order[this->numberOfOrders];
-}
-
-OrderUI::~OrderUI()
-{
-    delete[] this->orders;
+    /// blyat
 }
 
 void OrderUI::startUI()
@@ -36,7 +30,50 @@ void OrderUI::startUI()
 
 void OrderUI::make_order()
 {
+    Order order;
+    cout << "What would you like to add to the Order?" << endl;
+    cout << "1. Pizza " << endl;
+    cout << "2. Sides " << endl;
+    cout << "3. Drinks " << endl;
+    cout << "4. Make pizza" << endl;
 
+    char choise;
+    try{
+    cin >> choice;
+
+    if(cin.fail()) {
+        cin.clear();
+        throw InvalidIdException();
+    }
+    switch (choice) {
+    case '1':
+    case '2':
+    case '3':
+    case '4':
+    default:
+
+
+    }
+
+
+    } catch (InvalidIdException) {
+        cout << "Error: Invalid id" << endl;
+    }
+}
+
+void add_pizza()
+{
+    Pizza pizza;
+
+}
+
+void add_sides()
+{
+
+}
+
+void add_drink()
+{
 
 }
 

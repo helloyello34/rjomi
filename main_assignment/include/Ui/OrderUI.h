@@ -7,6 +7,10 @@
 #include "Order.h"
 #include "OrderService.h"
 
+#include "PizzaUI.h"
+#include "DrinkUI.h"
+//#include "SidesUI.h"
+
 using namespace std;
 
 class OrderUI
@@ -15,11 +19,17 @@ class OrderUI
         OrderUI();
         void startUI();
         void make_order();
+        void add_pizza();
+        void add_sides();
+        void add_drink();
         void show_order();
 
     private:
+        PizzaUI pizza_ui;
+        DrinkUI drink_ui;
+        SidesUI sides_ui;
+
         OrderService order_service;
-        int numberOfOrders;
 };
 
 #endif // ORDERUI_H

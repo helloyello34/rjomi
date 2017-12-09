@@ -2,7 +2,7 @@
 
 ToppingUI::ToppingUI()
 {
-    this->numberOfToppings = 0;
+
 }
 
 

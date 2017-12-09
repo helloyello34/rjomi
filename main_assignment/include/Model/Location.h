@@ -9,6 +9,7 @@
 #include "InvalidNameException.h"
 #include "InvalidIdException.h"
 
+
 using namespace std;
 
 class Location
@@ -18,6 +19,8 @@ class Location
 
         void read(ifstream& file);
         void write(ofstream& file);
+
+        string get_name();
 
         friend istream& operator >> (istream& in, Location& location);
         friend ostream& operator << (ostream& out, const Location& location);

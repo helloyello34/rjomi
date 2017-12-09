@@ -5,7 +5,3 @@ OrderService::OrderService()
     //ctor
 }
 
-OrderService::~OrderService()
-{
-    //dtor
-}

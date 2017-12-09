@@ -2,21 +2,18 @@
 #define MANAGERUI_H
 
 #include <stdlib.h>
-#include <iostream>
-#include <string>
 
-#include "ToppingUI.h"
 
-// Invlude for service classes
+/// Including Ui classes
+#include "LocationUI.h"
 #include "DrinkUI.h"
 #include "SidesUI.h"
 #include "PizzaUI.h"
-#include "LocationService.h"
 #include "ToppingUI.h"
 
 
 
-using namespace std;
+
 
 class ManagerUI
 {
@@ -25,20 +22,18 @@ class ManagerUI
 
         void startUI();
         void editMenuUI();
-        void LocationUI();
+        void Location();
         void pizza();
         void toppings();
         void drinks();
         void sides();
 
     private:
-        LocationService location_service;
-
+        LocationUI location_ui;
         DrinkUI drink_ui;
         SidesUI sides_ui;
         PizzaUI pizza_ui;
         ToppingUI topping_ui;
-//        ToppingService topping_service;
 };
 
 #endif // MANAGERUI_H

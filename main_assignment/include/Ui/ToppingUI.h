@@ -29,7 +29,6 @@ class ToppingUI
         Topping getTopping(size_t id);
     private:
         vector<Topping>toppings;
-        int numberOfToppings;
         ToppingService topping_service;
 };
 

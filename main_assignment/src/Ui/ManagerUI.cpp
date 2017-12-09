@@ -31,7 +31,7 @@ void ManagerUI::startUI()
             editMenuUI();
         } else if(choice == '4') {
             system("CLS");
-            LocationUI();
+            Location();
         } else if (choice == '7') {
 
         }
@@ -283,7 +283,7 @@ void ManagerUI::sides()
     }
 }
 
-void ManagerUI::LocationUI()
+void ManagerUI::Location()
 {
     char input;
 
@@ -304,25 +304,25 @@ void ManagerUI::LocationUI()
         if(input == '1'){
             ///Add Location
             system("CLS");
-            location_service.add_location();
+            location_ui.add_location();
             system("pause");
             system("CLS");
         } else if(input == '2') {
             ///Edit Location
             system("CLS");
-            location_service.edit_location();
+            location_ui.edit_location();
             system("pause");
             system("CLS");
         } else if(input == '3') {
             ///Delete Location
             system("CLS");
-            location_service.delete_location();
+            location_ui.delete_location();
             system("pause");
             system("CLS");
         } else if(input == '4'){
             ///View Location
             system("CLS");
-            location_service.list_location();
+            location_ui.list_location();
             system("pause");
             system("CLS");
         }
