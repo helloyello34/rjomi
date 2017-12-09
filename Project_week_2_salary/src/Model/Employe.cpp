@@ -37,18 +37,18 @@ void Employe::read(fstream& file)
 
 istream& operator >> (istream& in, Employe& employe)
 {
-    cout << "Name: ";
+    cout << "  Name: ";
     in.ignore();
     in.getline(employe.name, 100);
-    cout << "SSN (10): ";
+    cout << "  SSN (10): ";
     in >> employe.ssn;
 
     if(strlen(employe.ssn) != 10 ){
-        throw InvalidSsnExceptions("Error: Ssn should be 10 integers");
+        throw InvalidSsnExceptions("Error: SSN should be 10 integers");
     }
     for(int i = 0; i < 10; i++) {
         if(!(isdigit(employe.ssn[i]))){
-            throw InvalidSsnExceptions("Error: Ssn should only hold integers");
+            throw InvalidSsnExceptions("Error: SSN should only hold integers");
         }
     }
 
@@ -59,9 +59,9 @@ istream& operator >> (istream& in, Employe& employe)
 
 ostream& operator << (ostream& out, const Employe& employe)
 {
-    out << "Name: " << employe.name << endl;
+    out << "    Name: " << employe.name << endl;
 
-    out << "Ssn: " << employe.ssn << endl;
+    out << "  SSN: " << employe.ssn << endl;
 
     return out;
 }

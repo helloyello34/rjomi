@@ -56,48 +56,58 @@
 
 1512563729 D
 
-1512566434 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\main.cpp
+1512739806 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\main.cpp
 	<iostream>
 	"MainUI.h"
 
-1512566434 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\ui\mainui.h
+1512740413 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\ui\mainui.h
 	"Salary.h"
 	"SalaryService.h"
+	<iostream>
+	<string.h>
+	<stdlib.h>
 
-1512566434 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\model\salary.h
+1512739806 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\model\salary.h
 	<iostream>
 	<fstream>
 	<string>
+	<string.h>
+	<cstring>
 	"Employe.h"
+	"InvalidMonthExceptions.h"
+	"InvalidYearExceptions.h"
 
-1512566434 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\model\employe.h
+1512739806 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\model\employe.h
 	<string>
 	<string.h>
 	<fstream>
 	<iostream>
+	"InvalidSsnExceptions.h"
 
-1512566434 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\services\salaryservice.h
+1512742114 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\services\salaryservice.h
 	<vector>
 	<iostream>
+	<string>
+	<stdlib.h>
 	"SalaryRepository.h"
 	"Salary.h"
 
-1512566434 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\repositories\salaryrepository.h
+1512739806 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\repositories\salaryrepository.h
 	<iostream>
 	<vector>
 	<fstream>
 	"Salary.h"
 
-1512566434 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\model\employe.cpp
+1512745433 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\model\employe.cpp
 	"Employe.h"
 
-1512566434 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\model\salary.cpp
+1512745090 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\model\salary.cpp
 	"Salary.h"
 
-1512566434 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\services\salaryservice.cpp
+1512754398 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\services\salaryservice.cpp
 	"SalaryService.h"
 
-1512566434 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\ui\mainui.cpp
+1512750804 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\ui\mainui.cpp
 	"MainUI.h"
 
 1512566434 
@@ -138,4 +148,28 @@
 	"InvalidYearExceptions.h"
 
 1512472591 bd20d518441355d6a318d16a090016afde9d8
+
+1512739806 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\exceptions\invalidssnexceptions.h
+	<iostream>
+	<string>
+
+1512739806 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\exceptions\invalidmonthexceptions.h
+	<iostream>
+	<string>
+
+1512739806 c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\include\exceptions\invalidyearexceptions.h
+	<iostream>
+	<string>
+
+1512739806 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\exceptions\invalidmonthexceptions.cpp
+	"InvalidMonthExceptions.h"
+
+1512739806 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\exceptions\invalidssnexceptions.cpp
+	"InvalidSsnExceptions.h"
+
+1512739806 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\exceptions\invalidyearexceptions.cpp
+	"InvalidYearExceptions.h"
+
+1512739806 source:c:\users\oskar\documents\3vikna\rjomi\project_week_2_salary\src\repositories\salaryrepository.cpp
+	"SalaryRepository.h"
 

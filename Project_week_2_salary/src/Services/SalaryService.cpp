@@ -30,7 +30,9 @@ void SalaryService::add_salary(Salary& salary)
     }
     }
     catch(WrongNameException e){
-        cout << "Error: Wrong name or ssn" << endl;
+        cout << " ==========================================" << endl;
+        cout << endl << "  Error: Wrong name or SSN" << endl;
+        cout << endl << "  ";
     }
 }
 
@@ -41,15 +43,16 @@ void SalaryService::get_salary()
 
 void SalaryService::print_salary(string this_ssn)
 {
+
     get_salary();
-    cout << "=========================================" << endl;
+    cout << " ==========================================";
     for(unsigned int i = 0; i < this->salary.size(); i++) {
         string ssn = this->salary[i].get_employe_ssn();
         if(ssn == this_ssn){
-            cout << this->salary[i] << endl;
+            cout << this->salary[i];
         }
     }
-    cout << "=========================================" << endl;
+
 }
 
 void SalaryService::print_year(string this_ssn, int this_year)
@@ -65,14 +68,14 @@ void SalaryService::print_year(string this_ssn, int this_year)
         }
     }
     if(salaryByYear.get_year() > 0){
-    cout << endl << endl;
-    cout << "=========================================" << endl;
-    cout << "Salary year " << salaryByYear.get_year() << endl;
+    system("CLS");
+    cout << "   Salary for " << salaryByYear.get_year() << endl;
+    cout << " ==========================================" << endl;
     cout << salaryByYear << endl;
-    cout << "=========================================" << endl << endl;
+    cout << " ==========================================" << endl << endl;
     }else{
-        cout << endl << endl;
-        cout << "There are no records of this person the year "
-             << this_year << endl << endl;
+        cout << " ==========================================" << endl;
+        cout << "  There are no records of this person for the year " << this_year << endl;
     }
+    cout << endl << "  ";
 }

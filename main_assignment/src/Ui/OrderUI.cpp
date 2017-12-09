@@ -39,19 +39,18 @@ void OrderUI::make_order()
 
     char choise;
     try{
-    cin >> choice;
+    cin >> choise;
 
     if(cin.fail()) {
         cin.clear();
         throw InvalidIdException();
     }
-    switch (choice) {
-    case '1':
-    case '2':
-    case '3':
-    case '4':
-    default:
-
+    switch (choise) {
+    case '1':break;
+    case '2':break;
+    case '3':break;
+    case '4':break;
+    default:break;
 
     }
 

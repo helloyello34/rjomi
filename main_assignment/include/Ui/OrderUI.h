@@ -9,7 +9,7 @@
 
 #include "PizzaUI.h"
 #include "DrinkUI.h"
-//#include "SidesUI.h"
+#include "SidesUI.h"
 
 using namespace std;
 
