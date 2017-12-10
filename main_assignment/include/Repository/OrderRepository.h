@@ -8,7 +8,8 @@ class OrderRepository
 {
     public:
         OrderRepository();
-
+        void store_order(Order& order);
+        void get_orders(vector<Order>&orders);
     private:
 };
 

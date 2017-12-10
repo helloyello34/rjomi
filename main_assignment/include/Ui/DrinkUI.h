@@ -15,6 +15,9 @@ class DrinkUI
         void edit_drink();
         void view_drinks();
 
+        Drink get_drink(size_t id);
+        size_t get_vector_size();
+
     private:
         vector<Drink>drinks;
         DrinkService drink_service;

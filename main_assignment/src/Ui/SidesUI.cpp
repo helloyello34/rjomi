@@ -114,3 +114,15 @@ void SidesUI::view_sides()
 
 
 }
+
+Sides SidesUI::get_side(size_t id)
+{
+    this->sides = sides_service.get_sides_vector();
+    return this->sides[id-1];
+}
+
+size_t SidesUI::get_vector_size()
+{
+    this->sides = sides_service.get_sides_vector();
+    return this->sides.size();
+}

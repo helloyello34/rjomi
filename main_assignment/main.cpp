@@ -6,12 +6,17 @@
 //#include "MainUI.h"
 #include "UI/MainUI.h"
 
+#include <string.h>
+
+class InvalidPhoneException { };
+
 using namespace std;
 
 void init_folder();
 
 int main()
 {
+
     init_folder();
     //system("pause");
     MainUI mainui;

@@ -17,17 +17,22 @@ class OrderUI
 {
     public:
         OrderUI();
-        void startUI();
-        void make_order();
-        void add_pizza();
-        void add_sides();
-        void add_drink();
-        void show_order();
+        void salesmanUI(Location& staff_location);
+        void make_order(Location& staff_location);
+        void add_pizza(Order& order);
+        void add_sides(Order& order);
+        void add_drink(Order& order);
+        void show_order(Location& location);
+        void look_for_order(Location& location);
+        void erase_other_locations(Location& location);
+        void store_order(Order& order);
 
     private:
         PizzaUI pizza_ui;
         DrinkUI drink_ui;
         SidesUI sides_ui;
+
+        vector<Order>orders;
 
         OrderService order_service;
 };

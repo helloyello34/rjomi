@@ -105,3 +105,16 @@ void DrinkUI::view_drinks()
     }
 }
 
+Drink DrinkUI::get_drink(size_t id)
+{
+    this->drinks.clear();
+    this->drinks = drink_service.get_drinks_vector();
+    return this->drinks[id-1];
+}
+
+size_t DrinkUI::get_vector_size()
+{
+    this->drinks.clear();
+    this->drinks = drink_service.get_drinks_vector();
+    return this->drinks.size();
+}

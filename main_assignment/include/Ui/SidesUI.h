@@ -14,6 +14,9 @@ class SidesUI
         void delete_sides();
         void view_sides();
 
+        Sides get_side(size_t id);
+        size_t get_vector_size();
+
     private:
         vector<Sides>sides;
         SidesService sides_service;

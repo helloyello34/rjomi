@@ -132,3 +132,17 @@ void PizzaUI::input_pizza(Pizza& pizza)
         }
     }
 }
+
+Pizza PizzaUI::get_pizza(size_t id)
+{
+    this->pizzas.clear();
+    pizza_service.retreve_pizza(this->pizzas);
+    return this->pizzas[id-1];
+}
+
+size_t PizzaUI::get_vector_size()
+{
+    this->pizzas.clear();
+    pizza_service.retreve_pizza(this->pizzas);
+    return this->pizzas.size();
+}

@@ -78,6 +78,7 @@
 		<Unit filename="include/Ui/OrderUI.h" />
 		<Unit filename="include/Ui/PizzaUI.h" />
 		<Unit filename="include/Ui/SalesmanUI.h" />
+		<Unit filename="include/Ui/SidesUI.h" />
 		<Unit filename="include/Ui/ToppingUI.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Exception/InvalidIdException.cpp" />
@@ -111,6 +112,7 @@
 		<Unit filename="src/Ui/OrderUI.cpp" />
 		<Unit filename="src/Ui/PizzaUI.cpp" />
 		<Unit filename="src/Ui/SalesmanUI.cpp" />
+		<Unit filename="src/Ui/SidesUI.cpp" />
 		<Unit filename="src/Ui/ToppingUI.cpp" />
 		<Extensions>
 			<code_completion />
