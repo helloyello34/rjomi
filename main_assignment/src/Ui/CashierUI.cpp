@@ -16,14 +16,14 @@ void CashierUI::startUI()
         cout << " --------------------" << endl;
         cout << " 1. choose location  " << endl;
         if(my_location.get_name() != "Nothing") {
-        cout << " 2. Charge order     " << endl;
-        cout << " 3. Back             " << endl;
-        cout << " --------------------" << endl;
-        cout << " (1-3): ";
+            cout << " 2. Charge order     " << endl;
+            cout << " 3. Back             " << endl;
+            cout << " --------------------" << endl;
+            cout << " (1-3): ";
         } else {
-        cout << " 2. Back              " << endl;
-        cout << " --------------------" << endl;
-        cout << " (1-2): ";
+            cout << " 2. Back              " << endl;
+            cout << " --------------------" << endl;
+            cout << " (1-2): ";
         }
 
         cin >> choice;
@@ -37,21 +37,21 @@ void CashierUI::startUI()
             break;
         case '2':
             if(my_location.get_name() != "Nothing"){
-            system("CLS");
-            status_order();
-            system("pause");
-            system("CLS");
+                system("CLS");
+                status_order();
+                system("pause");
+                system("CLS");
             } else {
-            system("CLS");
-            return ;
+                system("CLS");
+                return ;
             }
             break;
 
         case '3':
             if(my_location.get_name() != "Nothing"){
-            return;
+                return;
             } else {
-            cout << "Invalid Input" << endl;
+                cout << "Invalid Input" << endl;
             }
             break;
         default:

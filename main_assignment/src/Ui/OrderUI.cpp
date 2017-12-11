@@ -43,7 +43,7 @@ void OrderUI::salesmanUI(Location& staff_location)
 
 void OrderUI::make_order(Location& staff_location)
 {
-    char choise;
+    char choice;
     Order order;
     order.set_location(staff_location);
     cout << "Please enter a phone number for this order" << endl;
@@ -66,7 +66,7 @@ void OrderUI::make_order(Location& staff_location)
         }
         order.add_phone_number(phone);
 
-    while(choise != '5') {
+    while(choice != '5') {
 
         cout << order << endl;
         cout << "What would you like to add to the Order?" << endl;
@@ -77,13 +77,13 @@ void OrderUI::make_order(Location& staff_location)
 
 
         try {
-            cin >> choise;
+            cin >> choice;
 
             if(cin.fail()) {
                 cin.clear();
                 throw InvalidIdException();
             }
-            switch (choise) {
+            switch (choice) {
             case '1':
                 add_pizza(order);
                 break;
@@ -250,14 +250,14 @@ void OrderUI::look_for_order(Location& location)
             }
         }
 
-    for(size_t i = 0; i < this->orders.size(); i++) {
-        if(search_phone == this->orders[i].get_phone()) {
-                cout << "Order Id. " << i+1 << endl;
-                cout << "=====================" << endl;
-                cout  << this->orders[i] << endl;
+        for(size_t i = 0; i < this->orders.size(); i++) {
+            if(search_phone == this->orders[i].get_phone()) {
+                    cout << "Order Id. " << i+1 << endl;
+                    cout << "=====================" << endl;
+                    cout  << this->orders[i] << endl;
 
+            }
         }
-    }
     } catch (InvalidPhoneNumberException) {
         cout << "Invalid Phone nubmer" << endl;
     }

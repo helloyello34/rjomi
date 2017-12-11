@@ -129,30 +129,24 @@ ostream& operator << (ostream& out, const Order& order)
     cout << "Phone number: " << order.phone << endl << endl;
 
     if(order.pizzas.size() > 0) {
-    cout << "===== Pizzas =====" << endl;
-    for(size_t i = 0; i < order.pizzas.size(); i++){
-//        out << "  Name: " << order.pizzas[i].get_name() << endl;
-//        out << "  Price: " << order.pizzas[i].get_price() << endl;
-        out << order.pizzas[i] << endl;
-    }
+        cout << "===== Pizzas =====" << endl;
+        for(size_t i = 0; i < order.pizzas.size(); i++){
+            out << order.pizzas[i] << endl;
+        }
     }
 
     if(order.drinks.size() > 0) {
-    cout << "===== Drinks =====" << endl;
-    for(size_t i = 0; i < order.drinks.size(); i++){
-//        out << "  Name: " << order.drinks[i].get_name() << endl;
-//        out << "  Price: " << order.drinks[i].get_price() << endl;
-        out << order.drinks[i] << endl;
-    }
+        cout << "===== Drinks =====" << endl;
+        for(size_t i = 0; i < order.drinks.size(); i++){
+            out << order.drinks[i] << endl;
+        }
     }
 
     if(order.sides.size() > 0) {
-    cout << "===== Side dish =====" << endl;
-    for(size_t i = 0; i < order.sides.size(); i++){
-//        out << "  Name: " << order.sides[i].get_name() << endl;
-//        out << "  Price: " << order.sides[i].get_price() << endl;
-        out << order.sides[i] << endl;
-    }
+        cout << "===== Side dish =====" << endl;
+        for(size_t i = 0; i < order.sides.size(); i++){
+            out << order.sides[i] << endl;
+        }
     }
     return out;
 }
