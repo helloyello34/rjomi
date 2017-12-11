@@ -31,15 +31,14 @@ double Sides::get_price() const
 
 ostream& operator << (ostream& out, const Sides& side)
 {
-    out << "Name: " << side.name << endl;
-    out << "Price: " << side.price << endl;
+    out << "     Name: " << side.name << endl;
+    out << "     Price: " << side.price << endl;
     return out;
 }
 
 istream& operator >> (istream& in, Sides& side)
 {
-    cout << "===== Writing new side dish =====" << endl;
-    cout << "Name: ";
+    cout << "  Name: ";
     in.getline(side.name, 32);
     if(strlen(side.name) == 0){
         throw InvalidNameException();
@@ -51,7 +50,7 @@ istream& operator >> (istream& in, Sides& side)
             }
         }
     }
-    cout << "Price: ";
+    cout << "  Price: ";
     in >> side.price;
     if(in.fail()){
         in.clear();

@@ -23,9 +23,7 @@ string Location::get_name()
 
 istream& operator >> (istream& in, Location& location)
 {
-    cout << "===== New Location =====" << endl;
-
-    cout << "Name: ";
+    cout << "  Name: ";
     in.getline(location.name, 32);
 
     if(strlen(location.name) == 0){
@@ -44,7 +42,7 @@ istream& operator >> (istream& in, Location& location)
 
 ostream& operator << (ostream& out, const Location& location)
 {
-    out << location.name << endl;
+    out << "  " << location.name << endl;
 
     return out;
 }

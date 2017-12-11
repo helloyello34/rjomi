@@ -57,7 +57,7 @@ void MainUI::startUI()
         cout << "  4. Cashier" << endl;
         cout << "  5. Quit" << endl;
         cout << " ====================" << endl;
-        cout << " (1-5):";
+        cout << " (1-5): ";
         cin >> user;
 
         if(user == '1'){

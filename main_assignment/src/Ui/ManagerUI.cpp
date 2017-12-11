@@ -212,6 +212,9 @@ void ManagerUI::drinks()
             system("CLS");
             drink_ui.add_drink();
 //            this->drink_service.addDrink();
+            cout << endl << "  ";
+            system("pause");
+            system("CLS");
         } else if(input == '2') {
             /// Edit drink
             system("CLS");
@@ -277,10 +280,11 @@ void ManagerUI::sides()
             system("pause");
             system("CLS");
         } else if(input == '4'){
-            /// List up all sides
+            /// View sides
 
             system("CLS");
             this->sides_ui.view_sides();
+            cout << "  ";
             system("pause");
             system("CLS");
         } else {
@@ -329,6 +333,7 @@ void ManagerUI::Location()
             ///View Location
             system("CLS");
             location_ui.list_location();
+            cout << endl << "  ";
             system("pause");
             system("CLS");
         }

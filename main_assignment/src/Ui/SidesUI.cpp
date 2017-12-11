@@ -10,9 +10,11 @@ void SidesUI::add_sides()
     Sides newSide;
     try{
     cin.ignore();
+    cout << "   Add Sides" << endl;
+    cout << " ===================" << endl;
     cin >> newSide;
     this->sides_service.add_sides(newSide);
-    cout << "Side succsessfully added" << endl;
+    cout << " ===================" << endl << endl << "  ";
     }
     catch(InvalidNameException){
         cout << "Error: Invalid name" << endl;
@@ -29,6 +31,7 @@ void SidesUI::edit_sides()
 {
 
     cout << "   Edit sides" << endl;
+    cout << " ===================" << endl;
     view_sides();
     unsigned int id;
     cout << "  Which drink would you like to edit? " << endl;
@@ -37,6 +40,7 @@ void SidesUI::edit_sides()
 
     try{
     cin >> id;
+    system("CLS");
     if(cin.fail()){
         throw InvalidIdException();
     }
@@ -47,7 +51,10 @@ void SidesUI::edit_sides()
         throw InvalidIdException();
     }
     cin.ignore();
+    cout << "   Edit Sides" << endl;
+    cout << " ==================" << endl;
     cin >> this->sides[id-1];
+    cout << " ==================" << endl << endl << "  ";
     sides_service.overwrite_sides(sides);
     }
     catch(InvalidIdException){
@@ -65,6 +72,7 @@ void SidesUI::edit_sides()
 void SidesUI::delete_sides()
 {
     cout << "   Delete sides" << endl;
+    cout << " =====================" << endl;
     view_sides();
     unsigned int id;
     cout << "  Which drink would you like to delete? " << endl;
@@ -86,6 +94,9 @@ void SidesUI::delete_sides()
     cin.ignore();
     this->sides.erase(this->sides.begin()+(id-1));
     sides_service.overwrite_sides(sides);
+    system("CLS");
+    cout << "  Side successfully deleted" << endl;
+    cout << endl << "  ";
     }
     catch(InvalidIdException){
         cout << "Error: Invalid id" << endl;
@@ -103,15 +114,13 @@ void SidesUI::view_sides()
     this->sides.clear();
     this->sides = sides_service.get_sides_vector();
 
-    cout << "   Sides" << endl;
-    cout << " -------------------" << endl;
+    cout << "    Sides" << endl;
+    cout << "  -------------------" << endl;
     for (size_t i = 0; i < this->sides.size(); i++) {
-        cout << "Id: " << i+1 << endl;
+        cout << "   Id: " << i+1 << endl;
         cout << this->sides[i];
-        cout << " -------------------" << endl;
+        cout << "  -------------------" << endl;
     }
-    cout << endl;
-
 
 }
 

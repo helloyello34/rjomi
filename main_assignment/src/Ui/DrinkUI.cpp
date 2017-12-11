@@ -9,9 +9,10 @@ void DrinkUI::add_drink()
 {
     Drink newDrink;
     try {
+        cout << "   Add Drink" << endl;
+        cout << " =====================" << endl;
         cin >> newDrink;
         drink_service.add_drink(newDrink);
-        cout << "new Drink successfully added" << endl;
     } catch (InvalidNameException) {
         cout << "Error: Invalid name!" << endl;
     } catch (InvalidPriceException) {
@@ -44,7 +45,8 @@ void DrinkUI::delete_drink()
     }
     this->drinks.erase(this->drinks.begin()+(id-1));
     drink_service.overwrtie_drinks(this->drinks);
-    cout << "Drink succsessflully deleted" << endl;
+    system("CLS");
+    cout << "  Drink succsessflully deleted" << endl << endl << "  ";
     }
     catch (InvalidIdException){
         cout << "  Error: Invalid id!" << endl;
@@ -55,6 +57,7 @@ void DrinkUI::delete_drink()
 void DrinkUI::edit_drink()
 {
     cout << "  Edit drinks" << endl;
+    cout << " =======================" << endl;
     view_drinks();
     unsigned int id;
     cout << "  Which drink would you like to edit? " << endl;
@@ -93,12 +96,12 @@ void DrinkUI::view_drinks()
     try {
         this->drinks.clear();
         this->drinks = drink_service.get_drinks_vector();
-        cout << "   Drinks" << endl;
-        cout << " -------------------" << endl;
+        cout << "    Drinks" << endl;
+        cout << "  -------------------" << endl;
         for(unsigned int i = 0; i < this->drinks.size(); i++) {
-            cout << "  Id: " << i+1 << endl;
+            cout << "   Id: " << i+1 << endl;
             cout << this->drinks[i];
-            cout << " -------------------" << endl;
+            cout << "  -------------------" << endl;
         }
     } catch(UnableToOpenFileException) {
         cout << "Error: could not open file! " << endl;
