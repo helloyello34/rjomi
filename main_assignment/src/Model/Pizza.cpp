@@ -68,8 +68,9 @@ void Pizza::clear_toppings()
 
 ostream& operator << (ostream& out, const Pizza& pizza)
 {
-    out << "   " << pizza.name << endl;
-    out << "   " << pizza.price << " kr." << endl;
+    out << pizza.name << endl;
+    out << "      " << pizza.price << " kr." << endl;
+    out << " ------------------" << endl;
     out << "  Topping: " << endl;
     for(size_t i = 0; i < pizza.toppings.size(); i++ ) {
         out << "    " << pizza.toppings[i] << endl;
@@ -79,7 +80,7 @@ ostream& operator << (ostream& out, const Pizza& pizza)
 
 istream& operator >> (istream& in, Pizza& pizza)
 {
-    cout << "Name: ";
+    cout << "  Name: ";
     in.getline(pizza.name, 32);
 
     if(strlen(pizza.name) == 0){
