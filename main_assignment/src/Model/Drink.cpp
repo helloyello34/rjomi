@@ -40,7 +40,7 @@ istream& operator >> (istream& in, Drink& drink)
     for(unsigned int i = 0; i < strlen(drink.name); i++){
         if(!(isalnum(drink.name[i]))){
             if(drink.name[i] != ' '){
-            throw InvalidNameException();
+                throw InvalidNameException();
             }
         }
     }

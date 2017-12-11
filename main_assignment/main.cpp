@@ -2,21 +2,16 @@
 #include <fstream>
 #include <stdlib.h>
 #include <direct.h>
-
-//#include "MainUI.h"
-#include "UI/MainUI.h"
-
 #include <string.h>
 
-class InvalidPhoneException { };
+#include "UI/MainUI.h"
+
 
 using namespace std;
 
 void init_folder();
 
-int main()
-{
-
+int main(){
     init_folder();
     //system("pause");
     MainUI mainui;
