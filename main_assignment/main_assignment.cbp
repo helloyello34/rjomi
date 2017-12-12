@@ -48,6 +48,7 @@
 		</Compiler>
 		<Unit filename="include/Exception/InvalidIdException.h" />
 		<Unit filename="include/Exception/InvalidNameException.h" />
+		<Unit filename="include/Exception/InvalidPhoneNumberException.h" />
 		<Unit filename="include/Exception/InvalidPriceException.h" />
 		<Unit filename="include/Exception/UnableToOpenFileException.h" />
 		<Unit filename="include/Model/Drink.h" />
@@ -83,6 +84,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Exception/InvalidIdException.cpp" />
 		<Unit filename="src/Exception/InvalidNameException.cpp" />
+		<Unit filename="src/Exception/InvalidPhoneNumberException.cpp" />
 		<Unit filename="src/Exception/InvalidPriceException.cpp" />
 		<Unit filename="src/Exception/UnableToOpenFileException.cpp" />
 		<Unit filename="src/Model/Drink.cpp" />
