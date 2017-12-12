@@ -9,32 +9,41 @@ ManagerUI::ManagerUI()
 void ManagerUI::startUI()
 {
     char choice = '\0';
-    while(choice != '5') {
-        system("CLS");
+    while(choice != '4')
+    {
         cout << "   Manager " << endl;
         cout << " ====================" << endl;
-        cout << "  1. Current orders" << endl;
-        cout << "  2. orders" << endl;
-        cout << "  3. Edit menu" << endl;
-        cout << "  4. Location" << endl;
-        cout << "  5. Back" << endl;
+        cout << "  1. orders" << endl;
+        cout << "  2. Edit menu" << endl;
+        cout << "  3. Location" << endl;
+        cout << "  4. Back" << endl;
         cout << " ====================" << endl;
         cout << " (1-5): ";
 
         cin >> choice;
 
-        if(choice == '1'){
-            ///Current orders
-        } else if(choice == '2') {
-
+        switch(choice)
+        {
+        case '1':
+            /// Orders
+            system("CLS");
             order_ui.managerUI();
-        } else if(choice == '3') {
+            break;
+        case '2':
             editMenuUI();
-        } else if(choice == '4') {
+            break;
+        case '3':
             system("CLS");
             Location();
-        } else if (choice == '7') {
-
+            break;
+        case '4':
+            system("CLS");
+            return ;
+        default:
+            system("CLS");
+            cout << "Invalid Input!!" << endl;
+            system("pause");
+            system("CLS");
         }
     }
 }
@@ -56,21 +65,36 @@ void ManagerUI::editMenuUI()
         cout << "  (1-4): ";
         cin >> input;
 
-
-    if(input == '1'){
-        pizza();
-    } else if(input == '2') {
-        system("CLS");
-        drinks();
-    } else if(input == '3') {
-        system("CLS");
-        sides();
-    } else if (input == '7') {
+        switch(input)
+        {
+        case '1':
+            /// add pizza to menu
+            system("CLS");
+            pizza();
+            break;
+        case '2':
+            /// add drinks to menu
+            system("CLS");
+            drinks();
+            break;
+        case '3':
+            /// add sides to menu
+            system("CLS");
+            sides();
+            break;
+        case '4':
+            /// return back to the former function
+            system("CLS");
+            return;
+            break;
+        default :
+            /// id is not declared
+            system("CLS");
+            cout << "Invalid input!" << endl;
+            system("pause");
+            system("CLS");
+        }
     }
-    }
-
-
-
 }
 
 void ManagerUI::pizza()
@@ -92,7 +116,8 @@ void ManagerUI::pizza()
         cout << " (1-6): ";
         cin >> input;
 
-        if(input == '1'){
+        if(input == '1')
+        {
             ///Add Pizza
 
             system("CLS");
@@ -100,7 +125,9 @@ void ManagerUI::pizza()
             system("pause");
             system("CLS");
 
-        } else if(input == '2') {
+        }
+        else if(input == '2')
+        {
             ///Edit Pizza
 
             system("CLS");
@@ -108,7 +135,9 @@ void ManagerUI::pizza()
             system("pause");
             system("CLS");
 
-        } else if(input == '3') {
+        }
+        else if(input == '3')
+        {
             ///Delete Pizza
 
             system("CLS");
@@ -116,7 +145,9 @@ void ManagerUI::pizza()
             system("pause");
             system("CLS");
 
-        } else if(input == '4') {
+        }
+        else if(input == '4')
+        {
             ///View Pizza
 
             system("CLS");
@@ -126,7 +157,9 @@ void ManagerUI::pizza()
             system("pause");
             system("CLS");
 
-        } else if(input == '5') {
+        }
+        else if(input == '5')
+        {
             system("CLS");
             toppings();
         }
@@ -151,7 +184,8 @@ void ManagerUI::toppings()
         cout << " (1-5): ";
         cin >> input;
 
-        if(input == '1'){
+        if(input == '1')
+        {
             ///Add Topping
 
             system("CLS");
@@ -159,7 +193,9 @@ void ManagerUI::toppings()
             system("pause");
             system("CLS");
 
-        } else if(input == '2') {
+        }
+        else if(input == '2')
+        {
             ///Edit Topping
 
             system("CLS");
@@ -167,7 +203,9 @@ void ManagerUI::toppings()
             cout << endl << "  ";
             system("pause");
             system("CLS");
-        } else if(input == '3') {
+        }
+        else if(input == '3')
+        {
             ///Delete Topping
 
             system("CLS");
@@ -175,7 +213,9 @@ void ManagerUI::toppings()
             cout << endl << "  ";
             system("pause");
             system("CLS");
-        } else if(input == '4') {
+        }
+        else if(input == '4')
+        {
             ///View Topping
 
             system("CLS");
@@ -183,7 +223,10 @@ void ManagerUI::toppings()
             cout << endl << "  ";
             system("pause");
             system("CLS");
-        } else {
+        }
+        else
+        {
+            system("CLS");
             return;
         }
     }
@@ -208,7 +251,8 @@ void ManagerUI::drinks()
         cin >> input;
         cin.ignore();
 
-        if(input == '1'){
+        if(input == '1')
+        {
             /// Add drink
             system("CLS");
             drink_ui.add_drink();
@@ -216,26 +260,35 @@ void ManagerUI::drinks()
             cout << endl << "  ";
             system("pause");
             system("CLS");
-        } else if(input == '2') {
+        }
+        else if(input == '2')
+        {
             /// Edit drink
             system("CLS");
             this->drink_ui.edit_drink();
             system("pause");
             system("CLS");
-        } else if(input == '3') {
+        }
+        else if(input == '3')
+        {
             /// Delete drink
             system("CLS");
             this->drink_ui.delete_drink();
             system("pause");
             system("CLS");
-        } else if(input == '4'){
+        }
+        else if(input == '4')
+        {
             /// View drinks
             system("CLS");
             drink_ui.view_drinks();
             cout << endl << "  ";
             system("pause");
             system("CLS");
-        } else {
+        }
+        else
+        {
+            system("CLS");
             break;
         }
     }
@@ -259,28 +312,35 @@ void ManagerUI::sides()
         cout << " (1-5): ";
         cin >> input;
 
-        if(input == '1'){
+        if(input == '1')
+        {
             /// Add Side
 
             system("CLS");
             this->sides_ui.add_sides();
             system("pause");
             system("CLS");
-        } else if(input == '2') {
+        }
+        else if(input == '2')
+        {
             /// Edit Side
 
             system("CLS");
             this->sides_ui.edit_sides();
             system("pause");
             system("CLS");
-        } else if(input == '3') {
+        }
+        else if(input == '3')
+        {
             /// Delete Side
 
             system("CLS");
             this->sides_ui.delete_sides();
             system("pause");
             system("CLS");
-        } else if(input == '4'){
+        }
+        else if(input == '4')
+        {
             /// View sides
 
             system("CLS");
@@ -288,7 +348,10 @@ void ManagerUI::sides()
             cout << "  ";
             system("pause");
             system("CLS");
-        } else {
+        }
+        else
+        {
+            system("CLS");
             break;
         }
     }
@@ -312,31 +375,43 @@ void ManagerUI::Location()
         cout << " (1-5): ";
         cin >> input;
 
-        if(input == '1'){
+        if(input == '1')
+        {
             ///Add Location
             system("CLS");
             location_ui.add_location();
             system("pause");
             system("CLS");
-        } else if(input == '2') {
+        }
+        else if(input == '2')
+        {
             ///Edit Location
             system("CLS");
             location_ui.edit_location();
             system("pause");
             system("CLS");
-        } else if(input == '3') {
+        }
+        else if(input == '3')
+        {
             ///Delete Location
             system("CLS");
             location_ui.delete_location();
             system("pause");
             system("CLS");
-        } else if(input == '4'){
+        }
+        else if(input == '4')
+        {
             ///View Location
             system("CLS");
             location_ui.list_location();
             cout << endl << "  ";
             system("pause");
             system("CLS");
+        }
+        else
+        {
+            system("CLS");
+            return;
         }
     }
 }
