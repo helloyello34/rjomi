@@ -14,7 +14,7 @@ void ManagerUI::startUI()
         cout << "   Manager " << endl;
         cout << " ====================" << endl;
         cout << "  1. Current orders" << endl;
-        cout << "  2. Old orders" << endl;
+        cout << "  2. orders" << endl;
         cout << "  3. Edit menu" << endl;
         cout << "  4. Location" << endl;
         cout << "  5. Back" << endl;
@@ -26,7 +26,8 @@ void ManagerUI::startUI()
         if(choice == '1'){
             ///Current orders
         } else if(choice == '2') {
-            ///Old orders
+
+            order_ui.managerUI();
         } else if(choice == '3') {
             editMenuUI();
         } else if(choice == '4') {

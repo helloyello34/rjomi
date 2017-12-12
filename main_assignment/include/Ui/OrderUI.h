@@ -21,7 +21,7 @@ class OrderUI
         void salesmanUI(Location& staff_location);
         void bakerUI(Location& staff_location);
         void cashierUI(Location& staff_location);
-        void managerUI(Location& staff_location);
+        void managerUI();
 
         void make_order(Location& staff_location);
         void add_pizza(Order& order);
@@ -29,6 +29,8 @@ class OrderUI
         void add_drink(Order& order);
 
         void show_order(Location& location);
+        void show_order();
+        void show_old_orders();
         void look_for_order(Location& location);
         void look_for_order(Location& location, size_t &id);
 

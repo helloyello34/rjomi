@@ -44,6 +44,7 @@ class Order
         string get_phone();
         status get_status();
         bool get_paid();
+        string get_comment();
 
         bool is_order_receved();
 

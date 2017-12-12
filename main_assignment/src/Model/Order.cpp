@@ -152,6 +152,11 @@ string Order::get_phone()
     return (string)this->phone;
 }
 
+string Order::get_comment()
+{
+    return (string)this->comment;
+}
+
 status Order::get_status()
 {
     return this->orderStatus;
@@ -229,6 +234,8 @@ ostream& operator << (ostream& out, const Order& order)
         out << "Comment: ";
         out << order.comment << endl;
     }
+
+    return out;
 }
 
 
