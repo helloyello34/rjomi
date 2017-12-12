@@ -180,11 +180,9 @@ ostream& operator << (ostream& out, const Order& order)
 
     if(order.drinks.size() > 0)
     {
-        out << "===== Drinks =====" << endl;
+        cout << "===== Drinks =====" << endl;
         for(size_t i = 0; i < order.drinks.size(); i++)
         {
-//        out << "  Name: " << order.drinks[i].get_name() << endl;
-//        out << "  Price: " << order.drinks[i].get_price() << endl;
             out << order.drinks[i] << endl;
         }
     }
@@ -199,42 +197,47 @@ ostream& operator << (ostream& out, const Order& order)
             out << order.sides[i] << endl;
         }
     }
+
+    out << "Status: ";
+    switch(order.orderStatus)
+    {
+    case RECEVED:
+        cout << "Order receved" << endl;
+        break;
+    case PREP:
+        cout << "In preperation" << endl;
+        break;
+    case OVEN:
+        cout << "In the oven" << endl;
+        break;
+    case READY:
+        cout << "Ready" << endl;
+        break;
+
+    }
+    out << "Paid: ";
+    if(order.paid)
+    {
+        out << "Yes" << endl;
+    }
+    else
+    {
+        out << "No" << endl;
+    }
     if(strlen(order.comment) > 0)
     {
-        out << "Status: ";
-        switch(order.orderStatus)
-        {
-        case RECEVED:
-            cout << "Order receved" << endl;
-            break;
-        case PREP:
-            cout << "In preperation" << endl;
-            break;
-        case OVEN:
-            cout << "In the oven" << endl;
-            break;
-        case READY:
-            cout << "Ready" << endl;
-            break;
-
-        }
-        out << "Paid: ";
-        if(order.paid)
-        {
-            out << "Yes" << endl;
-        }
-        else
-        {
-            out << "No" << endl;
-        }
         out << "Comment: ";
         out << order.comment << endl;
     }
-    return out;
 }
+
+
+
+
 
 istream& operator >> (istream& in, Order& order)
 {
+
     cout << "Would you like to add comment or change status? " << endl;
     cout << "2. change stats" << endl;
     cout << "0. abort " << endl;
@@ -395,12 +398,7 @@ istream& operator >> (istream& in, Order& order)
                 {
                     cout << "Just needs to be charged" << endl;
                 }
-
-
-
             }
-
-
         }
         else
         {
@@ -431,7 +429,6 @@ istream& operator >> (istream& in, Order& order)
 
 
 }
-
 bool Order::is_order_receved()
 {
     if(this->paid)

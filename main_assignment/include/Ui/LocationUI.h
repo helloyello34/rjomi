@@ -8,6 +8,8 @@
 /// Including Service classes
 #include "LocationService.h"
 
+#include <stdlib.h>
+
 class LocationUI
 {
     public:

@@ -33,19 +33,19 @@ void Drink::write(ofstream& file)
 
 istream& operator >> (istream& in, Drink& drink)
 {
-    cout << "===== Writing new drink =====" << endl;
+
     // Writing in the drink name
-    cout << "Drink Name: ";
+    cout << "  Drink Name: ";
     in.getline(drink.name, 32);
     for(unsigned int i = 0; i < strlen(drink.name); i++){
         if(!(isalnum(drink.name[i]))){
             if(drink.name[i] != ' '){
-            throw InvalidNameException();
+                throw InvalidNameException();
             }
         }
     }
     // Writing in the drink price
-    cout << "Drink Price: ";
+    cout << "  Drink Price: ";
     in >> drink.price;
     if(in.fail()){
         in.clear();
@@ -61,8 +61,8 @@ istream& operator >> (istream& in, Drink& drink)
 ostream& operator << (ostream& out, const Drink& drink)
 {
 
-    out << "  Name: " << drink.name << endl;
-    out << "  Price: " << drink.price << endl;
+    out << "    Name: " << drink.name << endl;
+    out << "    Price: " << drink.price << endl;
 
     return out;
 }

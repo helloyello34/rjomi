@@ -182,7 +182,7 @@ void OrderUI::cashierUI(Location& staff_location)
 void OrderUI::make_order(Location& staff_location)
 {
     this->orders.clear();
-    char choise;
+    char choice;
     Order order;
     order.set_location(staff_location);
     cout << "Please enter a phone number for this order" << endl;
@@ -209,8 +209,8 @@ void OrderUI::make_order(Location& staff_location)
             }
         }
         order.add_phone_number(phone);
-
-        while(choise != '5')
+        cout << "Phone added" << endl;
+        while(choice != '5')
         {
 
             cout << order << endl;
@@ -221,17 +221,16 @@ void OrderUI::make_order(Location& staff_location)
             cout << "4. Add comment" << endl;
             cout << "5. Finish order" << endl;
 
-
             try
             {
-                cin >> choise;
+                cin >> choice;
 
                 if(cin.fail())
                 {
                     cin.clear();
                     throw InvalidIdException();
                 }
-                switch (choise)
+                switch (choice)
                 {
                 case '1':
                     add_pizza(order);
@@ -244,7 +243,7 @@ void OrderUI::make_order(Location& staff_location)
                     break;
                 case '4':
                     comment_order(order);
-                    break;
+                    return;
                 case '5':
                     store_order(order);
                     return;
@@ -264,7 +263,7 @@ void OrderUI::make_order(Location& staff_location)
     }
     catch (InvalidPhoneNumberException)
     {
-        cout << "Error: Invalid Phone number" << endl;
+        cout <<"Error: Invalid phone number!" << endl;
     }
 }
 
@@ -454,58 +453,58 @@ void OrderUI::look_for_order(Location& location)
     }
 }
 
-void OrderUI::look_for_order(Location& location, size_t &id)
-{
-    this->orders.clear();
-    order_service.fill_vector(this->orders);
-
-    erase_other_locations(location);
-
-    char search_phone[8];
-
-    try
-    {
-        cout << "Phone number: ";
-        cin.ignore();
-        cin.getline(search_phone, 8);
-        if(cin.fail())
-        {
-            cin.clear();
-            throw InvalidPhoneNumberException();
-        }
-        if(strlen(search_phone) != 7)
-        {
-            throw InvalidPhoneNumberException();
-        }
-        for(size_t i = 0; i < 7; i++)
-        {
-            if(!isdigit(search_phone[i]))
-            {
-                throw InvalidPhoneNumberException();
-            }
-        }
-
-        for(size_t i = 0; i < this->orders.size(); i++)
-        {
-            if(search_phone == this->orders[i].get_phone())
-            {
-                cout << "Order." << endl;
-                cout << "=====================" << endl;
-                cout  << this->orders[i] << endl;
-                id = i;
-                break;
-            }
-            else
-            {
-                id = -1;
-            }
-        }
-    }
-    catch (InvalidPhoneNumberException)
-    {
-        cout << "Invalid Phone nubmer" << endl;
-    }
-}
+//void OrderUI::look_for_order(Location& location, size_t &id)
+//{
+//    this->orders.clear();
+//    order_service.fill_vector(this->orders);
+//
+//    erase_other_locations(location);
+//
+//    char search_phone[8];
+//
+//    try
+//    {
+//        cout << "Phone number: ";
+//        cin.ignore();
+//        cin.getline(search_phone, 8);
+//        if(cin.fail())
+//        {
+//            cin.clear();
+//            throw InvalidPhoneNumberException();
+//        }
+//        if(strlen(search_phone) != 7)
+//        {
+//            throw InvalidPhoneNumberException();
+//        }
+//        for(size_t i = 0; i < 7; i++)
+//        {
+//            if(!isdigit(search_phone[i]))
+//            {
+//                throw InvalidPhoneNumberException();
+//            }
+//        }
+//
+//        for(size_t i = 0; i < this->orders.size(); i++)
+//        {
+//            if(search_phone == this->orders[i].get_phone())
+//            {
+//                cout << "Order." << endl;
+//                cout << "=====================" << endl;
+//                cout  << this->orders[i] << endl;
+//                id = i;
+//                break;
+//            }
+//            else
+//            {
+//                id = -1;
+//            }
+//        }
+//    }
+//    catch (InvalidPhoneNumberException)
+//    {
+//        cout << "Invalid Phone nubmer" << endl;
+//    }
+//}
 
 void OrderUI::store_order(Order& order)
 {
@@ -689,10 +688,10 @@ void OrderUI::change_status(Order& order)
         try
         {
             if(this->orders[i].is_order_receved())
-        {
-            order_service.store_old_order(this->orders[i]);
-            this->orders.erase(this->orders.begin() + (i));
-        }
+            {
+                order_service.store_old_order(this->orders[i]);
+                this->orders.erase(this->orders.begin() + (i));
+            }
             order_service.overwrite_orders(this->orders);
         }
         catch (UnableToOpenFileException)
@@ -705,50 +704,49 @@ void OrderUI::change_status(Order& order)
         cout << "Error: Invalid id" << endl;
     }
 
+}
 
 
 
 
-    /*
-    look_for_order(location);
-    cout << this->orders.size() << endl;
-    Order temp;
-    if(this->orders.size() > 0)
+
+/*
+look_for_order(location);
+cout << this->orders.size() << endl;
+Order temp;
+if(this->orders.size() > 0)
+{
+    cin >> this->orders[0];
+//        cout << "done cin" << endl;
+    temp = this->orders[0];
+    this->orders.clear();
+    order_service.fill_vector(this->orders);
+    for(size_t i = 0; i < this->orders.size(); i++)
     {
-        cin >> this->orders[0];
-    //        cout << "done cin" << endl;
-        temp = this->orders[0];
-        this->orders.clear();
-        order_service.fill_vector(this->orders);
-        for(size_t i = 0; i < this->orders.size(); i++)
+        if(temp == this->orders[i])
         {
-            if(temp == this->orders[i])
-            {
-                this->orders[i] = temp;
-                break;
-            }
+            this->orders[i] = temp;
+            break;
         }
-        try
-        {
-            order_service.overwrite_orders(this->orders);
-        }
-        catch (UnableToOpenFileException)
-        {
-            cout << "Unable to open file!" << endl;
-        }
-
-
     }
-    else
+    try
     {
-        cout << "There is no order by this phone number!" << endl;
+        order_service.overwrite_orders(this->orders);
     }
-
-
-    */
+    catch (UnableToOpenFileException)
+    {
+        cout << "Unable to open file!" << endl;
+    }
 
 
 }
+else
+{
+    cout << "There is no order by this phone number!" << endl;
+}
+
+
+*/
 
 void OrderUI::comment_order(Order& order)
 {

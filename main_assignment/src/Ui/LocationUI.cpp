@@ -10,9 +10,12 @@ void LocationUI::add_location()
     Location newLocation;
     try{
         cin.ignore();
+        cout << "   Add Location" << endl;
+        cout << " ========================" << endl;
         cin >> newLocation;
+        cout << " ========================" << endl;
         location_service.store_location(newLocation);
-        cout << " Location stored successfully" << endl;
+        cout << endl << "  ";
     }
     catch(InvalidNameException) {
         cout << " Error: Invalid Name !" << endl;
@@ -25,26 +28,28 @@ void LocationUI::add_location()
 void LocationUI::list_location()
 {
     fill_vector();
-    cout << "   Locations" << endl;
-    cout << "-----------------------------" << endl;
+    cout << "    Locations" << endl;
+    cout << "  -----------------------------" << endl;
     for(size_t i = 0; i < this->locations.size(); i++) {
-        cout << " " << i+1 << ". " << this->locations[i] << endl;
-        cout << "-----------------------------" << endl;
+        cout << "   " << i+1 << ". " << this->locations[i] << endl;
+        cout << "  -----------------------------" << endl;
     }
 }
 
 void LocationUI::edit_location()
 {
+    cout << "   Edit location" << endl;
+    cout << " ===================================" << endl;
     list_location();
+    cout << " ===================================" << endl;
     unsigned int id;
-    cout << "  Edit location" << endl;
-    cout << " ------------------------------------------" << endl;
     cout << "  Whitch location would you like to edit? " << endl;
     cout << "  Press '0' To exit" << endl;
     cout << "  Id: ";
     try{
 
         cin >> id;
+        system("CLS");
 
         if(cin.fail()){
             cin.clear();
@@ -57,10 +62,12 @@ void LocationUI::edit_location()
             throw InvalidIdException();
         }
         cin.ignore();
+        cout << "   Edit Location" << endl;
+        cout << " =========================" << endl;
         cin >> locations[id-1];
-
+        cout << " =========================" << endl;
+        cout << endl << "  ";
         location_service.overwrite_locations(this->locations);
-        cout << "Location Edited successfully" << endl;
     }
     catch(InvalidIdException) {
         cout << "Error: Invalid id! " << endl;
@@ -78,14 +85,15 @@ void LocationUI::delete_location()
 {
     list_location();
     unsigned int id;
-    cout << "  Delete location" << endl;
-    cout << "------------------------------------------" << endl;
+    cout << "   Delete location" << endl;
+    cout << " ===============================================" << endl;
     cout << "  Whitch location would you like to delete? " << endl;
     cout << "  Press '0' To exit" << endl;
     cout << "  Id: ";
     try{
 
         cin >> id;
+        system("CLS");
 
         if(cin.fail()){
             cin.clear();
@@ -100,13 +108,13 @@ void LocationUI::delete_location()
         locations.erase(locations.begin() + (id-1));
 
         location_service.overwrite_locations(this->locations);
-        cout << "Location Deleted successfully" << endl;
+        cout << "  Location Deleted successfully" << endl << endl << "  ";
     }
     catch(InvalidIdException) {
-        cout << "Error: Invalid id! " << endl;
+        cout << "  Error: Invalid id! " << endl;
     }
     catch(UnableToOpenFileException) {
-        cout << "Error: Unable to edit location!" << endl;
+        cout << "  Error: Unable to edit location!" << endl;
     }
 }
 

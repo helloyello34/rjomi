@@ -57,7 +57,9 @@ ostream& operator << (ostream& out, const Topping& topping)
 
 istream& operator >> (istream& in, Topping& topping)
 {
-    cout << "Name : ";
+    //cout << "   Add Topping" << endl;
+    cout << " ======================" << endl;
+    cout << "  Name : ";
     in.getline(topping.name, 32);
     if(strlen(topping.name) == 0) {
         throw InvalidNameException();
@@ -70,7 +72,7 @@ istream& operator >> (istream& in, Topping& topping)
         }
     }
 
-    cout << "Price: ";
+    cout << "  Price: ";
     in >> topping.price;
 
     if(in.fail()) {

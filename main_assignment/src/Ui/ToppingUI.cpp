@@ -13,7 +13,9 @@ void ToppingUI::add_topping()
     Topping newTop;
     try{
     cin.ignore();
+    cout << "   Add Topping" << endl;
     cin >> newTop;
+    cout << endl << "  ";
     topping_service.add_topping(newTop);
     } catch (InvalidNameException) {
         cout << "Error: Invalid name" << endl;
@@ -27,6 +29,7 @@ void ToppingUI::add_topping()
 void ToppingUI::delete_topping()
 {
     cout << "  Delete toppings" << endl;
+    cout << " =========================" << endl;
     view_topping();
     unsigned int id;
     cout << "  Which topping would you like to delete? " << endl;
@@ -34,6 +37,7 @@ void ToppingUI::delete_topping()
     cout << "  Id: ";
     try{
     cin >> id;
+    system("CLS");
     if(cin.fail()){
         throw InvalidIdException();
     }
@@ -45,6 +49,8 @@ void ToppingUI::delete_topping()
     }
     this->toppings.erase(this->toppings.begin()+(id-1));
     topping_service.overwrite_topping(this->toppings);
+    cout << "  Topping Deleted" << endl;
+
 
 
     }
@@ -57,23 +63,26 @@ void ToppingUI::view_topping()
 {
     fill_topping_vector();
     cout << "   Toppings" << endl;
-    cout << "---------------------------" << endl;
+    cout << "  ---------------------------" << endl;
     for(size_t i = 0; i < this->toppings.size(); i++) {
-        cout << i+1 << ". " << this->toppings[i] << endl;
-        cout << "---------------------------" << endl;
+        cout << "   " << i+1 << ". " << this->toppings[i] << endl;
+        cout << "  ---------------------------" << endl;
     }
 }
 
 void ToppingUI::edit_topping()
 {
     cout << "  Edit toppings" << endl;
+    cout << " ========================" << endl;
     view_topping();
+    cout << " ========================" << endl;
     unsigned int id;
     cout << "  Which topping would you like to edit? " << endl;
     cout << "  '0' To exit" << endl;
     cout << "  Id: ";
     try{
     cin >> id;
+    system("CLS");
     if(cin.fail()){
         throw InvalidIdException();
     }
@@ -84,6 +93,7 @@ void ToppingUI::edit_topping()
         throw InvalidIdException();
     }
     cin.ignore();
+    cout << "   Edit Topping" << endl;
     cin >> this->toppings[id-1];
     topping_service.overwrite_topping(this->toppings);
 
