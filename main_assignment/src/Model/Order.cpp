@@ -169,12 +169,12 @@ bool Order::get_paid()
 
 ostream& operator << (ostream& out, const Order& order)
 {
-    out << "Location: " << order.location;
-    out << "Phone number: " << order.phone << endl << endl;
+    out << "   Location: " << order.location;
+    out << "   Phone number: " << order.phone << endl << endl;
 
     if(order.pizzas.size() > 0)
     {
-        out << "===== Pizzas =====" << endl;
+        out << "  ===== Pizzas =====" << endl;
         for(size_t i = 0; i < order.pizzas.size(); i++)
         {
 //        out << "  Name: " << order.pizzas[i].get_name() << endl;
@@ -185,7 +185,7 @@ ostream& operator << (ostream& out, const Order& order)
 
     if(order.drinks.size() > 0)
     {
-        cout << "===== Drinks =====" << endl;
+        cout << "  ===== Drinks =====" << endl;
         for(size_t i = 0; i < order.drinks.size(); i++)
         {
             out << order.drinks[i] << endl;
@@ -194,7 +194,7 @@ ostream& operator << (ostream& out, const Order& order)
 
     if(order.sides.size() > 0)
     {
-        out << "===== Side dish =====" << endl;
+        out << "  ===== Side dish =====" << endl;
         for(size_t i = 0; i < order.sides.size(); i++)
         {
 //        out << "  Name: " << order.sides[i].get_name() << endl;
@@ -203,11 +203,13 @@ ostream& operator << (ostream& out, const Order& order)
         }
     }
 
-    out << "Status: ";
+    cout << "  ==========================" << endl;
+
+    out << "   Status: ";
     switch(order.orderStatus)
     {
     case RECEVED:
-        cout << "Order receved" << endl;
+        cout << "Order recieved" << endl;
         break;
     case PREP:
         cout << "In preperation" << endl;
@@ -220,7 +222,7 @@ ostream& operator << (ostream& out, const Order& order)
         break;
 
     }
-    out << "Paid: ";
+    out << "   Paid: ";
     if(order.paid)
     {
         out << "Yes" << endl;
@@ -231,9 +233,11 @@ ostream& operator << (ostream& out, const Order& order)
     }
     if(strlen(order.comment) > 0)
     {
-        out << "Comment: ";
+        out << "   Comment: ";
         out << order.comment << endl;
     }
+
+    cout << " =============================" << endl;
 
     return out;
 }

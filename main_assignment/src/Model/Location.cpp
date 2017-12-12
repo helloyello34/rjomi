@@ -18,7 +18,11 @@ void Location::write(ofstream& file)
 string Location::get_name()
 {
     return (string)this->name;
+// \fixme (Oskar#1#): out virkar ekki ...
+//
 }
+
+
 
 
 istream& operator >> (istream& in, Location& location)

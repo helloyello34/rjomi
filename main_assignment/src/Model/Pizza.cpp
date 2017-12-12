@@ -68,10 +68,10 @@ void Pizza::clear_toppings()
 
 ostream& operator << (ostream& out, const Pizza& pizza)
 {
-    out << pizza.name << endl;
-    out << "      " << pizza.price << " kr." << endl;
-    out << " ------------------" << endl;
-    out << "  Topping: " << endl;
+    out << "  " << pizza.name << endl;
+    out << "       " << pizza.price << " kr." << endl;
+    out << "  ------------------" << endl;
+    out << "   Topping: " << endl;
     for(size_t i = 0; i < pizza.toppings.size(); i++ ) {
         out << "    " << pizza.toppings[i] << endl;
     }

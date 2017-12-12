@@ -31,7 +31,7 @@ class OrderUI
         void show_order(Location& location);
         void show_order();
         void show_old_orders();
-        void look_for_order(Location& location);
+        void look_for_order();
         void look_for_order(Location& location, size_t &id);
 
         void erase_other_locations(Location& location);

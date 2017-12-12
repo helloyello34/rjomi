@@ -40,7 +40,7 @@ void OrderUI::salesmanUI(Location& staff_location)
         else if (choice == '3')
         {
             system("CLS");
-            look_for_order(staff_location);
+            look_for_order();
             system("pause");
             system("CLS");
         }
@@ -99,7 +99,7 @@ void OrderUI::bakerUI(Location& staff_location)
         else if (choice == '3')
         {
             system("CLS");
-            look_for_order(staff_location);
+            look_for_order();
             system("pause");
             system("CLS");
 
@@ -157,7 +157,7 @@ void OrderUI::cashierUI(Location& staff_location)
         else if (choice == '3')
         {
             system("CLS");
-            look_for_order(staff_location);
+            look_for_order();
             system("pause");
             system("CLS");
 
@@ -185,14 +185,14 @@ void OrderUI::managerUI()
     while(choice != '5')
     {
 
-
-        cout << "cashier: " << endl;
-        cout << " +------------------+" << endl;
-        cout << " |1. Show orders    |" << endl;
-        cout << " |2. Show old orders|" << endl;
-        cout << " |3. look for order |" << endl;
-        cout << " |4. Back           |" << endl;
-        cout << " +------------------+" << endl;
+        system("CLS");
+        cout << "   Orders " << endl;
+        cout << " =========================" << endl;
+        cout << "  1. Show orders          " << endl;
+        cout << "  2. Show old orders      " << endl;
+        cout << "  3. look for order       " << endl;
+        cout << "  4. Back                 " << endl;
+        cout << " =========================" << endl;
         cout << " (1-5): ";
         cin >> choice;
 
@@ -200,6 +200,7 @@ void OrderUI::managerUI()
         {
             system("CLS");
             show_order();
+            cout << endl << "  ";
             system("pause");
             system("CLS");
         }
@@ -213,7 +214,7 @@ void OrderUI::managerUI()
         else if (choice == '3')
         {
             system("CLS");
-            //look_for_order(staff_location);
+            look_for_order();
             system("pause");
             system("CLS");
 
@@ -296,7 +297,7 @@ void OrderUI::make_order(Location& staff_location)
                     break;
                 case '4':
                     comment_order(order);
-                    return;
+                    break;
                 case '5':
                     store_order(order);
                     return;
@@ -446,15 +447,15 @@ void OrderUI::show_order(Location& location)
         for(size_t i = 0; i < this->orders.size(); i++)
         {
 
-            cout << "Order id. " << i+1 << endl;
-            cout << "=====================" << endl;
-            cout  << this->orders[i] << endl;
+            cout << "   Order: " << i+1 << endl;
+            cout << " =====================" << endl;
+            cout << this->orders[i] << endl;
 
         }
     }
     catch (UnableToOpenFileException)
     {
-        cout << "Error: could not open file! " << endl;
+        cout << "  Error: could not open file! " << endl;
     }
 }
 
@@ -465,20 +466,22 @@ void OrderUI::show_order()
         this->orders.clear();
         order_service.fill_old_vector(this->orders);
         //cout << "Order fill vector done!" << endl;
+        cout << "   Show Order" << endl;
+        cout << " ====================" << endl;
 
         for(size_t i = 0; i < this->orders.size(); i++)
         {
 
-            cout << "Order id. " << i+1 << endl;
-            cout << "=====================" << endl;
-            cout  << this->orders[i] << endl;
+            cout << "    Order id. " << i+1 << endl;
+            cout << "  =====================" << endl;
+            cout << this->orders[i] << endl;
 
         }
         this->orders.clear();
     }
     catch (UnableToOpenFileException)
     {
-        cout << "Error: could not open file! " << endl;
+        cout << "  Error: could not open file! " << endl;
     }
 }
 
@@ -494,8 +497,8 @@ void OrderUI::show_old_orders()
         for(size_t i = 0; i < this->orders.size(); i++)
         {
 
-            cout << "Order id. " << i+1 << endl;
-            cout << "=====================" << endl;
+            cout << "   Order " << i+1 << endl;
+            cout << " =====================" << endl;
             cout  << this->orders[i] << endl;
 
         }
@@ -503,16 +506,16 @@ void OrderUI::show_old_orders()
     }
     catch (UnableToOpenFileException)
     {
-        cout << "Error: could not open file! " << endl;
+        cout << "  Error: could not open file! " << endl;
     }
 }
 
-void OrderUI::look_for_order(Location& location)
+void OrderUI::look_for_order()
 {
     this->orders.clear();
     order_service.fill_vector(this->orders);
 
-    erase_other_locations(location);
+//    erase_other_locations(location);
 
     char search_phone[8];
 
