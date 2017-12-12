@@ -61,12 +61,16 @@ void MainUI::startUI()
         cin >> user;
 
         if(user == '1'){
+            system("CLS");
             ManagerUI managerui;
         } else if (user == '2') {
+            system("CLS");
             SalesmanUI salesmanui;
         } else if (user == '3') {
+            system("CLS");
             BakerUI bakerui;
         } else if (user == '4') {
+            system("CLS");
             CashierUI cashierui;
         }
 

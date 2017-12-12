@@ -6,6 +6,7 @@
 
 /// Include ui classes
 #include "LocationUI.h"
+#include "OrderUI.h"
 
 using namespace std;
 
@@ -26,6 +27,7 @@ class CashierUI
     private:
         Location my_location;
         LocationUI location_ui;
+        OrderUI order_ui;
 };
 
 #endif // CASHIERUI_H
