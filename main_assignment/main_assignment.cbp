@@ -46,6 +46,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Exception/InvalidCommentException.h" />
 		<Unit filename="include/Exception/InvalidIdException.h" />
 		<Unit filename="include/Exception/InvalidNameException.h" />
 		<Unit filename="include/Exception/InvalidPhoneNumberException.h" />
@@ -82,6 +83,7 @@
 		<Unit filename="include/Ui/SidesUI.h" />
 		<Unit filename="include/Ui/ToppingUI.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Exception/InvalidCommentException.cpp" />
 		<Unit filename="src/Exception/InvalidIdException.cpp" />
 		<Unit filename="src/Exception/InvalidNameException.cpp" />
 		<Unit filename="src/Exception/InvalidPhoneNumberException.cpp" />
@@ -121,6 +123,15 @@
 			<envvars />
 			<debugger />
 			<lib_finder disable_auto="1" />
+			<DoxyBlocks>
+				<comment_style block="4" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

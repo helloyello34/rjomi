@@ -19,8 +19,11 @@
 #include "InvalidPriceException.h"
 #include "UnableToOpenFileException.h"
 #include "InvalidPhoneNumberException.h"
+#include "InvalidCommentException.h"
 
 using namespace std;
+
+enum status {RECEVED = 1, PREP, OVEN, READY};
 
 class Order
 {
@@ -31,20 +34,32 @@ class Order
         void add_pizza(Pizza& pizza);
         void add_drink(Drink& drink);
         void add_sides(Sides& side);
+
+        void set_comment(char* comment);
         void set_location(Location& location);
+        void set_paid(bool paid);
+        void set_status(status orderstatus);
 
         string get_location();
         string get_phone();
+        status get_status();
+        bool get_paid();
+
+        bool is_order_receved();
 
         void read(ifstream& file);
         void write(ofstream& file);
 
         friend istream& operator >> (istream& in, Order& order);
         friend ostream& operator << (ostream& out, const Order& order);
+        friend bool operator == (Order& order1, Order& order2);
     private:
         Location location;
         char phone[8];
+        char comment[255];
         double price;
+        status orderStatus;
+        bool paid;
         vector<Pizza>pizzas;
         vector<Drink>drinks;
         vector<Sides>sides;
