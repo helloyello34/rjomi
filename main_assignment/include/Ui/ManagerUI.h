@@ -10,6 +10,7 @@
 #include "SidesUI.h"
 #include "PizzaUI.h"
 #include "ToppingUI.h"
+#include "OrderUI.h"
 
 
 
@@ -34,6 +35,7 @@ class ManagerUI
         SidesUI sides_ui;
         PizzaUI pizza_ui;
         ToppingUI topping_ui;
+        OrderUI order_ui;
 };
 
 #endif // MANAGERUI_H
