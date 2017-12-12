@@ -10,6 +10,9 @@ class OrderRepository
         OrderRepository();
         void store_order(Order& order);
         void get_orders(vector<Order>&orders);
+        void overwrite_orders(vector<Order>&orders);
+        void store_receved_orders(Order& order);
+        void get_old_orders(vector<Order>&orders);
     private:
 };
 
