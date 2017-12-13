@@ -28,6 +28,7 @@ void ManagerUI::startUI()
             /// Orders
             system("CLS");
             order_ui.managerUI();
+            system("CLS");
             break;
         case '2':
             editMenuUI();

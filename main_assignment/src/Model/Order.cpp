@@ -207,6 +207,9 @@ ostream& operator << (ostream& out, const Order& order)
             out << order.sides[i] << endl;
         }
     }
+    cout << "   =======================" << endl;
+    cout << "    Total price: ";
+    out << order.price << endl << endl;
 
     cout << "  ==========================" << endl;
 
@@ -241,8 +244,7 @@ ostream& operator << (ostream& out, const Order& order)
         out << "   Comment: ";
         out << order.comment << endl;
     }
-    cout << "Total price: ";
-    out << order.price << endl;
+
 
     cout << " =============================" << endl;
 
@@ -257,7 +259,7 @@ istream& operator >> (istream& in, Order& order)
 {
 
     cout << "Would you like to add comment or change status? " << endl;
-    cout << "2. change stats" << endl;
+    cout << "2. change status" << endl;
     cout << "0. abort " << endl;
     char choice;
 

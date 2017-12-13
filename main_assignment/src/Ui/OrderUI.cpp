@@ -12,14 +12,14 @@ void OrderUI::salesmanUI(Location& staff_location)
     {
 
 
-        cout << "Salesman: " << endl;
-        cout << " +------------------+" << endl;
-        cout << " |1. Show orders    |" << endl;
-        cout << " |2. Make orders    |" << endl;
-        cout << " |3. look for order |" << endl;
-        cout << " |4. Change comment |" << endl;
-        cout << " |5. Back           |" << endl;
-        cout << " +------------------+" << endl;
+        cout << "   Salesman " << endl;
+        cout << " ====================" << endl;
+        cout << "  1. Show orders     " << endl;
+        cout << "  2. Make orders     " << endl;
+        cout << "  3. look for order  " << endl;
+        cout << "  4. Change comment  " << endl;
+        cout << "  5. Back            " << endl;
+        cout << " ====================" << endl;
         cout << " (1-5): ";
         cin >> choice;
 
@@ -27,6 +27,7 @@ void OrderUI::salesmanUI(Location& staff_location)
         {
             system("CLS");
             show_order(staff_location);
+            cout << endl << "  ";
             system("pause");
             system("CLS");
         }
@@ -52,14 +53,14 @@ void OrderUI::salesmanUI(Location& staff_location)
             system("pause");
             system("CLS");
         }
-        else
-        {
-            system("CLS");
-            bakerUI(staff_location);
-//            cout << "Invalid Input" << endl;
-            system("pause");
-            system("CLS");
-        }
+//        else
+//        {
+//            system("CLS");
+//            bakerUI(staff_location);
+////            cout << "Invalid Input" << endl;
+//            system("pause");
+//            system("CLS");
+//        }
     }
     system("CLS");
 }
@@ -519,6 +520,11 @@ void OrderUI::look_for_order()
 
     char search_phone[8];
 
+    cout << "   Search for order" << endl;
+    cout << " ===========================" << endl;
+    cout << "  Enter corresponding phone number" << endl;
+    cout << "  (Number): ";
+
     try
     {
         cin.ignore();
@@ -542,19 +548,23 @@ void OrderUI::look_for_order()
 
         vector<Order>phoneNumberOrder;
 
+        system("CLS");
+        cout << "   Search for order" << endl;
+        cout << " ===========================" << endl;
+
         for(size_t i = 0; i < this->orders.size(); i++)
         {
             if(search_phone == this->orders[i].get_phone())
             {
-                cout << "Order Id. " << i+1 << endl;
-                cout << "=====================" << endl;
+                cout << "  Order Id. " << i+1 << endl;
+                cout << "  =====================" << endl;
                 cout  << this->orders[i] << endl;
             }
         }
     }
     catch (InvalidPhoneNumberException)
     {
-        cout << "Invalid Phone nubmer" << endl;
+        cout << "  Invalid Phone nubmer" << endl;
     }
 }
 
@@ -765,7 +775,7 @@ void OrderUI::comment_order(Order& order)
     try
     {
         cin.ignore();
-        cout << "Comment: ";
+        cout << "  Comment: ";
         cin.getline(comment, 256);
         if(cin.fail())
         {
@@ -818,7 +828,7 @@ void OrderUI::find_order_status(Location& location)
 void OrderUI::find_order_comment(Location& location)
 {
     show_order(location);
-    cout << "What order would you like to change comment? " << endl;
+    cout << "For what order would you like to change the comment? " << endl;
     cout << "Id: ";
     size_t id;
     try
@@ -837,6 +847,8 @@ void OrderUI::find_order_comment(Location& location)
         {
             throw InvalidIdException();
         }
+        system("CLS");
+        cout << this->orders[id-1];
         comment_order(this->orders[id-1]);
         order_service.overwrite_orders(this->orders);
     }
