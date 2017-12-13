@@ -5,11 +5,6 @@ MainUI::MainUI()
     welcom_screen();
 }
 
-MainUI::~MainUI()
-{
-    //dtor
-}
-
 
 void MainUI::welcom_screen()
 {

@@ -5,10 +5,6 @@ ToppingRepo::ToppingRepo()
     //ctor
 }
 
-ToppingRepo::~ToppingRepo()
-{
-    //dtor
-}
 
 void ToppingRepo::store_toppings(Topping& newTop)
 {

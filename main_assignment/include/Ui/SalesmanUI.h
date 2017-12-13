@@ -13,10 +13,13 @@ using namespace std;
 class SalesmanUI
 {
     public:
-        SalesmanUI();
-        virtual ~SalesmanUI();
 
+        /// Constructor for salesmanUI
+        SalesmanUI();
+
+        /// Start screen for salesman
         void startUI();
+        /// Choose location for the salesman
         void choose_location();
 
     private:

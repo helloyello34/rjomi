@@ -21,12 +21,25 @@ class ManagerUI
     public:
         ManagerUI();
 
+        /// Start up UI
         void startUI();
+
+        /// Edit menu UI
         void editMenuUI();
+
+        /// menu to edit locations
         void Location();
+
+        /// menu to edit pizzas
         void pizza();
+
+        /// menu to edit toppings
         void toppings();
+
+        /// menu to edit drinks
         void drinks();
+
+        /// menu to edit sides
         void sides();
 
     private:

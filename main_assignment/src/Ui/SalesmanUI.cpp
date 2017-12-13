@@ -7,11 +7,6 @@ SalesmanUI::SalesmanUI()
     startUI();
 }
 
-SalesmanUI::~SalesmanUI()
-{
-    //dtor
-}
-
 void SalesmanUI::startUI()
 {
 

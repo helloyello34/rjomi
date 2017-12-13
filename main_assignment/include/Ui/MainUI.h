@@ -14,10 +14,13 @@ using namespace std;
 class MainUI
 {
     public:
+        /// constructor for mainUI
         MainUI();
-        virtual ~MainUI();
 
+        /// Welcom screen for the program
         void welcom_screen();
+
+        /// Login screen
         void startUI();
     private:
 };
