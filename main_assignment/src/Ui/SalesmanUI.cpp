@@ -6,15 +6,9 @@ SalesmanUI::SalesmanUI()
 {
     //startUI();
     choose_location();
-    system("CLS");
-    order_ui.salesmanUI(this->my_location);
+//    system("CLS");
+//    order_ui.salesmanUI(this->my_location);
 }
-
-SalesmanUI::~SalesmanUI()
-{
-    //dtor
-}
-
 
 void SalesmanUI::choose_location()
 {
@@ -39,6 +33,8 @@ void SalesmanUI::choose_location()
             throw InvalidIdException();
         }
         my_location = location_ui.get_location(id);
+        system("CLS");
+        order_ui.salesmanUI(this->my_location);
 
     } catch(InvalidIdException) {
         cout << "Error: Invalid id" << endl;

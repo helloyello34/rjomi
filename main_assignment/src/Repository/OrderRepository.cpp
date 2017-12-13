@@ -93,6 +93,7 @@ void OrderRepository::get_old_orders(vector<Order>&orders)
             temp.read(file);
             orders.push_back(temp);
         }
+        orders.pop_back();
         file.close();
     }
     else

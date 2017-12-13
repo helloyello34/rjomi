@@ -27,12 +27,14 @@ void BakerUI::startUI()
             case '1':
                 system("CLS");
                 order_ui.show_order(my_location);
+                cout << endl << "  ";
                 system("pause");
                 system("CLS");
                 break;
             case '2':
                 system("CLS");
                 order_ui.find_order_status(my_location);
+                cout << endl << "  ";
                 system("pause");
                 system("CLS");
                 break;
@@ -42,6 +44,7 @@ void BakerUI::startUI()
             default:
                 system("CLS");
                 cout << "Invalid input!" << endl;
+                cout << endl << "  ";
                 system("pause");
                 system("CLS");
                 break;
