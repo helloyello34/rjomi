@@ -23,7 +23,8 @@ void Pizza::write(ofstream& file)
     file.write((char*)(&this->price), sizeof(this->price));
     size_t topping_size = this->toppings.size();
     file.write((char*)(&topping_size), sizeof(topping_size));
-    for(size_t i = 0; i < topping_size; i++) {
+    for(size_t i = 0; i < topping_size; i++)
+    {
         this->toppings[i].write(file);
     }
 }
@@ -40,8 +41,10 @@ void Pizza::read(ifstream& file)
 //    cout << "topping" << endl;
     this->toppings.clear();
     Topping temp;
-    for(size_t i = 0; i < topping_size; i++) {
-        if(topping_size > 40) {
+    for(size_t i = 0; i < topping_size; i++)
+    {
+        if(topping_size > 40)
+        {
             return;
         }
 //        cout << "topping no, " << i << endl;
@@ -72,7 +75,8 @@ ostream& operator << (ostream& out, const Pizza& pizza)
     out << "       " << pizza.price << " kr." << endl;
     out << "  ------------------" << endl;
     out << "   Topping: " << endl;
-    for(size_t i = 0; i < pizza.toppings.size(); i++ ) {
+    for(size_t i = 0; i < pizza.toppings.size(); i++ )
+    {
         out << "    " << pizza.toppings[i] << endl;
     }
     return out;
@@ -83,12 +87,16 @@ istream& operator >> (istream& in, Pizza& pizza)
     cout << "  Name: ";
     in.getline(pizza.name, 32);
 
-    if(strlen(pizza.name) == 0){
+    if(strlen(pizza.name) == 0)
+    {
         throw InvalidNameException();
     }
-    for(size_t i = 0; i < strlen(pizza.name); i++) {
-        if(!isalnum(pizza.name[i])) {
-            if(!(pizza.name[i] == ' ')) {
+    for(size_t i = 0; i < strlen(pizza.name); i++)
+    {
+        if(!isalnum(pizza.name[i]))
+        {
+            if(!(pizza.name[i] == ' '))
+            {
                 throw InvalidNameException();
             }
         }

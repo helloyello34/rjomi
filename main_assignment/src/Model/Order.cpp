@@ -7,6 +7,7 @@ Order::Order()
     this->orderStatus = RECEVED;
     this->phone[0] = '\0';
     this->paid = false;
+    this->price = 0;
 }
 
 void Order::add_phone_number(char* number)
@@ -17,17 +18,20 @@ void Order::add_phone_number(char* number)
 void Order::add_pizza(Pizza& pizza)
 {
     this->pizzas.push_back(pizza);
+    this->price += pizza.get_price();
     //this->price += pizza.get_price();
 }
 
 void Order::add_drink(Drink& drink)
 {
     this->drinks.push_back(drink);
+    this->price += drink.get_price();
 }
 
 void Order::add_sides(Sides& side)
 {
     this->sides.push_back(side);
+    this->price += side.get_price();
 }
 
 void Order::set_location(Location& location)
@@ -54,6 +58,7 @@ void Order::read(ifstream& file)
     file.read(this->comment, sizeof(this->comment));
     file.read((char*)(&this->orderStatus), sizeof(this->orderStatus));
     file.read((char*)(&this->paid), sizeof(this->paid));
+    file.read((char*)(&this->price), sizeof(this->price));
 
     size_t pizza_num;
     size_t drinks_num;
@@ -97,7 +102,6 @@ void Order::read(ifstream& file)
         this->drinks.push_back(tempDrink);
     }
 
-
     this->sides.clear();
     Sides tempSide;
     for(size_t i = 0; i < sides_num; i++)
@@ -115,6 +119,7 @@ void Order::write(ofstream& file)
     file.write(this->comment, sizeof(this->comment));
     file.write((char*)(&this->orderStatus), sizeof(this->orderStatus));
     file.write((char*)(&this->paid), sizeof(this->paid));
+    file.write((char*)(&this->price), sizeof(this->price));
 
     size_t pizza_num = this->pizzas.size();
     size_t drinks_num = this->drinks.size();
@@ -236,6 +241,8 @@ ostream& operator << (ostream& out, const Order& order)
         out << "   Comment: ";
         out << order.comment << endl;
     }
+    cout << "Total price: ";
+    out << order.price << endl;
 
     cout << " =============================" << endl;
 

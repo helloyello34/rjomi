@@ -300,7 +300,7 @@ void OrderUI::make_order(Location& staff_location)
                     break;
                 case '5':
                     store_order(order);
-                    return;
+                    break;
                 default:
                     break;
 
