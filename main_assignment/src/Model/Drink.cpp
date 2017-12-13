@@ -39,7 +39,7 @@ istream& operator >> (istream& in, Drink& drink)
     in.getline(drink.name, 32);
     for(unsigned int i = 0; i < strlen(drink.name); i++){
         if(!(isalnum(drink.name[i]))){
-            if(drink.name[i] != ' '){
+            if(drink.name[i] != ' ' && drink.name[i] != '.'){
                 throw InvalidNameException();
             }
         }

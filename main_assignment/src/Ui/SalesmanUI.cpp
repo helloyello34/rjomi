@@ -10,10 +10,6 @@ SalesmanUI::SalesmanUI()
     order_ui.salesmanUI(this->my_location);
 }
 
-SalesmanUI::~SalesmanUI()
-{
-    //dtor
-}
 
 
 void SalesmanUI::choose_location()

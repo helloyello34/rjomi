@@ -61,7 +61,6 @@
 		<Unit filename="include/Repository/DrinkRepository.h" />
 		<Unit filename="include/Repository/LocationRepository.h" />
 		<Unit filename="include/Repository/OrderRepository.h" />
-		<Unit filename="include/Repository/PizzaRepo.h" />
 		<Unit filename="include/Repository/PizzaRepository.h" />
 		<Unit filename="include/Repository/SidesRepository.h" />
 		<Unit filename="include/Repository/ToppingRepo.h" />
