@@ -8,6 +8,7 @@ Order::Order()
     this->phone[0] = '\0';
     this->paid = false;
     this->price = 0;
+    this->comment[0] = '\0';
 }
 
 void Order::add_phone_number(char* number)

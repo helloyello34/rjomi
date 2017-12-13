@@ -15,12 +15,13 @@ void CashierUI::startUI()
     while(choice != '3')
     {
         system("CLS");
-        cout << "Cashier: " << endl;
-        cout << " --------------------" << endl;
-        cout << " 1. Charge order     " << endl;
-        cout << " 2. Back             " << endl;
-        cout << " --------------------" << endl;
-        cout << " (1-2): ";
+        cout << "   Cashier " << endl;
+        cout << " ====================" << endl;
+        cout << "  1. Charge order    " << endl;
+        cout << "  2. Show orders     " << endl;
+        cout << "  3. Back            " << endl;
+        cout << " ====================" << endl;
+        cout << " (1-3): ";
 
 
         cin >> choice;
@@ -31,10 +32,18 @@ void CashierUI::startUI()
             /// changes order status as paid
             system("CLS");
             order_ui.find_order_paid(this->my_location);
+            cout << endl << "  ";
             system("pause");
             system("CLS");
             break;
         case '2':
+            system("CLS");
+            order_ui.show_order(my_location);
+            cout << endl << "  ";
+            system("pause");
+            system("CLS");
+            break;
+        case '3':
             system("CLS");
             return ;
             break;
@@ -52,10 +61,10 @@ void CashierUI::choose_location()
     size_t id;
     if(!(my_location.get_name() == "Nothing"))
     {
-        cout << "Your current location is " << my_location.get_name() << endl;
-        cout << "Press '0' to exit" << endl;
+        cout << "  Your current location is " << my_location.get_name() << endl;
+        cout << "  Press '0' to exit" << endl;
     }
-    cout << "Please choose your location" << endl;
+    cout << "  Please choose your location" << endl;
     try
     {
         cin >> id;
@@ -77,7 +86,7 @@ void CashierUI::choose_location()
     }
     catch(InvalidIdException)
     {
-        cout << "Error: Invalid id" << endl;
+        cout << "  Error: Invalid id" << endl;
     }
 }
 
