@@ -415,5 +415,3 @@ void ManagerUI::Location()
         }
     }
 }
-
-

@@ -33,7 +33,7 @@ class LocationUI
         /// Returns the number of locations in the file
         size_t vector_size();
 
-        /// Return spesific location
+        /// Return specific location
         Location get_location(size_t id);
     private:
         LocationService location_service;

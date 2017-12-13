@@ -2,7 +2,7 @@
 
 InvalidCommentException::InvalidCommentException()
 {
-    //ctor
+    ///constructor for InvalidCommentException
 }
 
 InvalidCommentException::~InvalidCommentException()
