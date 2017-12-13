@@ -13,19 +13,28 @@ using namespace std;
 class ToppingUI
 {
     public:
+        /// Constructor for toppingUI
         ToppingUI();
-        void add_topping();
-        void view_topping();
-        void delete_topping();
-        void edit_topping();
-        void fill_topping_vector();
-        size_t get_topping_size();
-//        void delete_topping();
-//        void store_topping(Topping& newTop);
-//        void retrive_topping();
-//        void view_toppings();
-//        void list_toppings();
 
+        /// Add new topping to menu
+        void add_topping();
+
+        /// View all avaliable toppings
+        void view_topping();
+
+        /// Delete toppings from menu
+        void delete_topping();
+
+        /// Edit/change abaliable toppings
+        void edit_topping();
+
+        /// Get toppings from file to vector
+        void fill_topping_vector();
+
+        /// Get the number of toppings in menu
+        size_t get_topping_size();
+
+        /// return topping in the seat id
         Topping getTopping(size_t id);
     private:
         vector<Topping>toppings;

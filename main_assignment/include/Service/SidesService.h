@@ -14,14 +14,18 @@ using namespace std;
 class SidesService
 {
     public:
+        /// Constructor for Side Service
         SidesService();
 
+        /// Send a side dish to the Repository
         void add_sides(Sides& newSide);
-        void delete_sides(vector<Sides>&sides);
+
+        /// Sends vector to Repository and overwrites the data in file
         void overwrite_sides(vector<Sides>&sides);
+
+        /// Reads data from Repository and fills the vector
         vector<Sides> get_sides_vector();
 
-        Sides get_sides();
 
     private:
         SidesRepository sides_repo;

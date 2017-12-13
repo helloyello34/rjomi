@@ -10,15 +10,30 @@
 class DrinkUI
 {
     public:
+        /// Constructor for DrinkUI
         DrinkUI();
 
+        /////////////////////////////////////////////////////
+        /// Add drink to the menu
         void add_drink();
-        void delete_drink();
-        void edit_drink();
-        void view_drinks();
 
+        /// Delete drink from the menu
+        void delete_drink();
+
+        /// Edit/Change drink from the menu
+        void edit_drink();
+
+        /// View drink from menu
+        void view_drinks();
+        /////////////////////////////////////////////////////
+
+        /////////////////////////////////////////////////////
+        /// Returns a specific drink
         Drink get_drink(size_t id);
+
+        /// Returns the number of drinks in menu
         size_t get_vector_size();
+        /////////////////////////////////////////////////////
 
     private:
         vector<Drink>drinks;

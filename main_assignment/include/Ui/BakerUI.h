@@ -12,9 +12,13 @@ using namespace std;
 class BakerUI
 {
     public:
+        /// Constructor for Baker UI
         BakerUI();
+
+        /// Choose location for the baker
         void choose_location();
 
+        /// UI for the baker
         void startUI();
 
     private:

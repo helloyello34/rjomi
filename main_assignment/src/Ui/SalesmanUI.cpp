@@ -15,61 +15,6 @@ SalesmanUI::~SalesmanUI()
     //dtor
 }
 
-//void SalesmanUI::startUI()
-//{
-//
-//    char choise = '\0';
-//
-//    choose_location();
-//
-//    while(true) {
-//    if(this->my_location.get_name() != "Nothing") {
-//        while(choise != '3') {
-//            system("CLS");
-//            cout << "   Salesman: " << endl;
-//            cout << " =====================" << endl;
-//            cout << "  1. Orders           " << endl;
-//            cout << "  2. Comments         " << endl;
-//            cout << "  3. Back             " << endl;
-//            cout << " =====================" << endl;
-//            cout << " (1-4): ";
-//            cin >> choise;
-//
-//            if(choise == '1') {
-//                system("CLS");
-//                order_ui.salesmanUI(this->my_location);
-//        } else if(choise == '2') {
-//
-//        } else if (choise == '3') {
-//            return;
-//        }
-//
-//    }
-////    } else {
-////    while(choise != '2') {
-////        system("CLS");
-////        cout << "   Salesman: " << endl;
-////        cout << " =====================" << endl;
-////        cout << "  1. choose location  " << endl;
-////        cout << "  2. Back             " << endl;
-////        cout << " =====================" << endl;
-////        cout << " (1-4): ";
-////        cin >> choise;
-////
-////        if(choise == '1') {
-////            system("CLS");
-////            choose_location();
-////            break;
-////        } else if(choise == '2') {
-////            return ;
-////        } else {
-////            cout << "Invalid input" << endl;
-////        }
-////
-////    }
-//    }
-//    }
-//}
 
 void SalesmanUI::choose_location()
 {

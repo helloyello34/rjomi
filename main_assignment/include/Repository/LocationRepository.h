@@ -13,9 +13,16 @@
 class LocationRepository
 {
     public:
+        /// Location Repository cunstroctor
         LocationRepository();
+
+        /// Store location to location file
         void store_location(Location& location);
+
+        /// reads to locations from location file
         void retreve_locations(vector<Location>&locations);
+
+        /// Writes over data from location file
         void overwrite_locations(vector<Location>&locations);
     private:
 };
