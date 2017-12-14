@@ -12,15 +12,16 @@ using namespace std;
 void init_folder();
 
 int main(){
+    //initializes folders and the UI
+    //Entire program is nested within the startUI function
     init_folder();
-    //system("pause");
     MainUI mainui;
     mainui.startUI();
 
     return 0;
 }
 
-
+//File structure of binaries
 /*
 \binaries
 \-Menu
@@ -39,6 +40,7 @@ int main(){
 
 void init_folder()
 {
+    //Creates correct folders for binary files
     mkdir("binaries");
     mkdir("binaries\\Menu");
     mkdir("binaries\\Menu\\toppings");
