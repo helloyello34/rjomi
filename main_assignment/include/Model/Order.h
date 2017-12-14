@@ -27,7 +27,7 @@
 using namespace std;
 
 /// Enum for status on the order!
-enum status {RECEVED = 1, PREP, OVEN, READY};
+enum status {RECEIVED = 1, PREP, OVEN, READY};
 
 class Order
 {
