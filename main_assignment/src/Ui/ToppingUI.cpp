@@ -101,6 +101,10 @@ void ToppingUI::view_topping()
             cout << "  ---------------------------" << endl;
         }
     }
+    else
+    {
+        cout << " There is nothing stored" << endl;
+    }
 }
 
 /// Edit/change abaliable toppings
