@@ -32,6 +32,11 @@ void LocationUI::list_location()
 {
     // Fill the vector to be listed
     fill_vector();
+    if(this->locations.size() == 0)
+    {
+        cout << "  There is nothing stored! " << endl;
+        return;
+    }
     cout << "    Locations" << endl;
     cout << "  -----------------------------" << endl;
     for(size_t i = 0; i < this->locations.size(); i++) {
@@ -43,6 +48,12 @@ void LocationUI::list_location()
 
 void LocationUI::edit_location()
 {
+    fill_vector();
+    if(this->locations.size() == 0)
+    {
+        cout << "  There is nothing stored! " << endl;
+        return;
+    }
     cout << "   Edit location" << endl;
     cout << " ===================================" << endl;
     // List up the avaliable locations
@@ -94,6 +105,12 @@ void LocationUI::delete_location()
 {
     // List up the avaliable locations
     list_location();
+    fill_vector();
+    if(this->locations.size() == 0)
+    {
+//        cout << "  There is nothing stored! " << endl;
+        return;
+    }
     unsigned int id;
     cout << "   Delete location" << endl;
     cout << " ===============================================" << endl;
@@ -134,8 +151,14 @@ void LocationUI::delete_location()
 void LocationUI::fill_vector()
 {
     // Fill up the locations
+    try{
     this->locations.clear();
     this->location_service.retreve_locations(this->locations);
+    }
+    catch (UnableToOpenFileException)
+    {
+        cout << "  Error: Unable to open file! " << endl;
+    }
 }
 
 size_t LocationUI::vector_size()
