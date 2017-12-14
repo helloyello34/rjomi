@@ -160,16 +160,10 @@ void SidesUI::view_sides()
 
 Sides SidesUI::get_side(size_t id)
 {
-    try{
     // Read data from file to the vector
     this->sides = sides_service.get_sides_vector();
     // Return the side dish at index id
     return this->sides[id-1];
-    }
-    catch (UnableToOpenFileException)
-    {
-        cout << "Error: Unable to open file!" << endl;
-    }
 }
 
 size_t SidesUI::get_vector_size()
@@ -184,4 +178,5 @@ size_t SidesUI::get_vector_size()
     {
         cout << "Error: Unable to open file!" << endl;
     }
+    return 0;
 }
