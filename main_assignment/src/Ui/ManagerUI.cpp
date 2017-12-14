@@ -31,14 +31,17 @@ void ManagerUI::startUI()
             system("CLS");
             break;
         case '2':
+            /// Edit menu
             editMenuUI();
             break;
         case '3':
+            /// Locations
             system("CLS");
             Location();
             break;
         case '4':
             system("CLS");
+            // Return out of the function
             return ;
         default:
             system("CLS");
@@ -64,6 +67,7 @@ void ManagerUI::editMenuUI()
         cout << "  4. Back" << endl;
         cout << " ====================" << endl;
         cout << "  (1-4): ";
+        // Input the index
         cin >> input;
 
         switch(input)

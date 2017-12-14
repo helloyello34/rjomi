@@ -7,16 +7,19 @@ LocationService::LocationService()
 
 void LocationService::store_location(Location& location)
 {
+    // Call to the repository to store the new location
     location_repo.store_location(location);
 }
 
 void LocationService::retreve_locations(vector<Location>&locations)
 {
+    // Call to the repository to read the data to the vector
     location_repo.retreve_locations(locations);
 }
 
 void LocationService::overwrite_locations(vector<Location>&locations)
 {
+    // Call to the repository to write over the data
     location_repo.overwrite_locations(locations);
 }
 

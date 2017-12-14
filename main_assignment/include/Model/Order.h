@@ -27,7 +27,7 @@
 using namespace std;
 
 /// Enum for status on the order!
-enum status {RECEVED = 1, PREP, OVEN, READY};
+enum status {RECEIVED = 1, PREP, OVEN, READY};
 
 class Order
 {
@@ -71,7 +71,7 @@ class Order
 
         ///////////////////////////////////////////////////////
         /// checks if order is both paid and is ready!
-        bool is_order_receved();
+        bool is_order_received();
         ///////////////////////////////////////////////////////
 
         ///////////////////////////////////////////////////////

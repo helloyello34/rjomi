@@ -4,8 +4,12 @@ using namespace std;
 
 Order::Order()
 {
+<<<<<<< HEAD
     // Initializes default order
     this->orderStatus = RECEVED;
+=======
+    this->orderStatus = RECEIVED;
+>>>>>>> 73d17f20318fa0e5bb0169c84fc2b9dc302a6699
     this->phone[0] = '\0';
     this->paid = false;
     this->price = 0;
@@ -242,7 +246,7 @@ ostream& operator << (ostream& out, const Order& order)
     out << "   Status: ";
     switch(order.orderStatus)
     {
-    case RECEVED:
+    case RECEIVED:
         cout << "Order recieved" << endl;
         break;
     case PREP:
@@ -279,7 +283,209 @@ ostream& operator << (ostream& out, const Order& order)
     return out;
 }
 
+<<<<<<< HEAD
 bool Order::is_order_receved()
+=======
+
+
+
+
+istream& operator >> (istream& in, Order& order)
+{
+
+    cout << "Would you like to add comment or change status? " << endl;
+    cout << "2. change status" << endl;
+    cout << "0. abort " << endl;
+    char choice;
+
+    try
+    {
+        in >> choice;
+        if(choice == '2')
+        {
+            cout << "Status is: ";
+            switch(order.orderStatus)
+            {
+            case RECEIVED:
+                cout << "Order received" << endl;
+                break;
+            case PREP:
+                cout << "In preparation" << endl;
+                break;
+            case OVEN:
+                cout << "In the oven" << endl;
+                break;
+            case READY:
+                cout << "Ready" << endl;
+                break;
+
+            }
+            cout << "What would you like to status it as?" << endl;
+            int status;
+            switch(order.orderStatus)
+            {
+            case RECEIVED:
+                cout << "1. In preperation" << endl;
+                cout << "2. In the oven" << endl;
+                cout << "3. Ready" << endl;
+                cout << "0. abort" << endl;
+                cout << "id: ";
+                try
+                {
+                    in >> status;
+                    if(in.fail())
+                    {
+                        in.clear();
+                        throw InvalidIdException();
+                    }
+                    if(status == 0)
+                    {
+                        return in;
+                    }
+                    if (status < 0)
+                    {
+                        throw InvalidIdException();
+                    }
+                    if(status > 3)
+                    {
+                        throw InvalidIdException();
+                    }
+                    switch(status)
+                    {
+                    case 1:
+                        order.orderStatus = PREP;
+                        break;
+                    case 2:
+                        order.orderStatus = OVEN;
+                        break;
+                    case 3:
+                        order.orderStatus = READY;
+                        break;
+                    }
+                }
+                catch (InvalidIdException)
+                {
+                    cout << "Invalid id" << endl;
+                }
+                break;
+            case PREP:
+                cout << "1. In the oven" << endl;
+                cout << "2. Ready" << endl;
+                cout << "0. abort" << endl;
+                cout << "id: ";
+                try
+                {
+                    in >> status;
+                    if(in.fail())
+                    {
+                        in.clear();
+                        throw InvalidIdException();
+                    }
+                    if(status == 0)
+                    {
+                        return in;
+                    }
+                    if (status < 0)
+                    {
+                        throw InvalidIdException();
+                    }
+                    if(status > 2)
+                    {
+                        throw InvalidIdException();
+                    }
+                    switch(status)
+                    {
+                    case 1:
+                        order.orderStatus = OVEN;
+                        break;
+                    case 2:
+                        order.orderStatus = READY;
+                        break;
+                    }
+                }
+                catch (InvalidIdException)
+                {
+                    cout << "Invalid id" << endl;
+                }
+                break;
+            case OVEN:
+                cout << "1. Ready" << endl;
+                cout << "0. abort" << endl;
+                cout << "id: ";
+                try
+                {
+                    in >> status;
+                    if(in.fail())
+                    {
+                        in.clear();
+                        throw InvalidIdException();
+                    }
+                    if(status == 0)
+                    {
+                        return in;
+                    }
+                    if (status < 0)
+                    {
+                        throw InvalidIdException();
+                    }
+                    if(status > 1)
+                    {
+                        throw InvalidIdException();
+                    }
+                    switch(status)
+                    {
+                    case 1:
+                        order.orderStatus = READY;
+                        break;
+                    }
+                }
+                catch (InvalidIdException)
+                {
+                    cout << "Invalid id" << endl;
+                }
+                break;
+            case READY:
+                if(order.paid)
+                {
+                    cout << "Should not be here" << endl;
+                }
+                else
+                {
+                    cout << "Just needs to be charged" << endl;
+                }
+            }
+        }
+        else
+        {
+            throw InvalidIdException();
+        }
+    }
+    catch (InvalidIdException)
+    {
+        cout << "Error: Invalid id" << endl;
+    }
+
+    return in;
+    /*
+
+    cout << "===== Writing new order =====" << endl;
+    for(unsigned int i = 0; i < order.pizzas.size(); i++){
+        in >> order.pizzas[i];
+    }
+    for(unsigned int i = 0; i < order.drinks.size(); i++){
+        in >> order.drinks[i];
+    }
+    for(unsigned int i = 0; i < order.sides.size(); i++){
+        in >> order.sides[i];
+    }
+
+    */
+
+
+
+}
+bool Order::is_order_received()
+>>>>>>> 73d17f20318fa0e5bb0169c84fc2b9dc302a6699
 {
     // Checks if order is paid or not
     if(this->paid)
