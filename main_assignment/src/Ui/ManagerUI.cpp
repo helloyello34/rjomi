@@ -18,7 +18,7 @@ void ManagerUI::startUI()
         cout << "  3. Location" << endl;
         cout << "  4. Back" << endl;
         cout << " ====================" << endl;
-        cout << " (1-5): ";
+        cout << " (1-4): ";
 
         cin >> choice;
 
