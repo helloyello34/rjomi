@@ -17,11 +17,11 @@ void DrinkUI::add_drink()
         // Send the new drink to be stored
         drink_service.add_drink(newDrink);
     } catch (InvalidNameException) {
-        cout << "Error: Invalid name!" << endl;
+        cout << "  Error: Invalid name!" << endl;
     } catch (InvalidPriceException) {
-        cout << "Error: Invalid price!" << endl;
+        cout << "  Error: Invalid price!" << endl;
     } catch (UnableToOpenFileException) {
-        cout << "Unable to successfully add drink" << endl;
+        cout << "  Unable to successfully add drink" << endl;
     }
 }
 
@@ -39,6 +39,7 @@ void DrinkUI::delete_drink()
     if(this->drinks.size() == 0)
     {
         cout << "  There is nothing stored in the file!" << endl;
+        cout << endl << "  ";
         return;
     }
     // View all avaliable drinks
@@ -90,6 +91,7 @@ void DrinkUI::edit_drink()
     if(this->drinks.size() == 0)
     {
         cout << "  There is nothing stored in the file!" << endl;
+        cout << endl << "  ";
         return;
     }
     cout << "  Edit drinks" << endl;
@@ -138,7 +140,7 @@ void DrinkUI::view_drinks()
         this->drinks = drink_service.get_drinks_vector();
         if (this->drinks.size() == 0)
         {
-            cout << "There is nothing stored in the file " << endl;
+            cout << "  There is nothing stored in the file " << endl;
             return ;
         }
         cout << "    Drinks" << endl;

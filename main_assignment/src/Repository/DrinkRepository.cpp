@@ -23,7 +23,7 @@ void DrinkRepository::store_drink(Drink& drink)
     }
 }
 
-void DrinkRepository::retreve_drink(vector<Drink>&drinks)
+void DrinkRepository::retreive_drink(vector<Drink>&drinks)
 {
     // Open file to read from
     ifstream file;

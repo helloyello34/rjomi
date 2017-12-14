@@ -43,7 +43,7 @@ void SidesUI::edit_sides()
     catch (UnableToOpenFileException)
     {
         cout << "  Unable to open file!" << endl;
-        cout << "  ";
+        cout << endl << "  ";
         return;
     }
     if(this->sides.size() == 0){
@@ -108,6 +108,7 @@ void SidesUI::delete_sides()
     catch(UnableToOpenFileException)
     {
         cout << "  Error: Unable to open file" << endl;
+        cout << endl << "  ";
         return;
     }
     cout << "   Delete sides" << endl;
@@ -176,6 +177,7 @@ void SidesUI::view_sides()
     catch (UnableToOpenFileException)
     {
         cout << "  Error: Unable to open file!" << endl;
+        cout << endl;
     }
 }
 
