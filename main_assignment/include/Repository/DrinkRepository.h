@@ -19,7 +19,7 @@ class DrinkRepository
         void store_drink(Drink& drink);
 
         /// reads to drinks from drink file
-        void retreve_drink(vector<Drink>&drinks);
+        void retreive_drink(vector<Drink>&drinks);
 
         /// Write over drink file
         void overwrite_drink(vector<Drink>&drinks);

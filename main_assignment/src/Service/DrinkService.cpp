@@ -15,7 +15,7 @@ vector<Drink> DrinkService::get_drinks_vector()
 {
     // Call to the repository class to read data from file to vector
     vector<Drink>temp;
-    drink_repo.retreve_drink(temp);
+    drink_repo.retreive_drink(temp);
     return temp;
 }
 

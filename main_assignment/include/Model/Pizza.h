@@ -48,7 +48,7 @@ class Pizza
         /// Friend function to read out pizza
         friend ostream& operator << (ostream& out, const Pizza& pizza);
 
-        /// Friend functin to write to pizza
+        /// Friend function to write to pizza
         friend istream& operator >> (istream& in, Pizza& pizza);
         ////////////////////////////////////////////////////////////////////
     private:
