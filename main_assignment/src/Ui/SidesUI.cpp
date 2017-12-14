@@ -46,6 +46,10 @@ void SidesUI::edit_sides()
         cout << "  ";
         return;
     }
+    if(this->sides.size() == 0){
+        cout << "  There is nothing stored in the file!";
+        return;
+    }
     cout << "   Edit sides" << endl;
     cout << " ===================" << endl;
     // View all avaliable side dishes
@@ -92,6 +96,20 @@ void SidesUI::edit_sides()
 
 void SidesUI::delete_sides()
 {
+    try{
+    this->sides.clear();
+    // Read the data from
+    this->sides = sides_service.get_sides_vector();
+    if(this->sides.size() == 0){
+        cout << "  There is nothing stored in the file!";
+        return;
+    }
+    }
+    catch(UnableToOpenFileException)
+    {
+        cout << "  Error: Unable to open file" << endl;
+        return;
+    }
     cout << "   Delete sides" << endl;
     cout << " =====================" << endl;
     // View all avaliable side dishes
@@ -142,7 +160,10 @@ void SidesUI::view_sides()
     this->sides.clear();
     // Read the data from
     this->sides = sides_service.get_sides_vector();
-
+    if(this->sides.size() == 0){
+        cout << "  There is nothing stored in the file!";
+        return;
+    }
     cout << "    Sides" << endl;
     cout << "  -------------------" << endl;
     for (size_t i = 0; i < this->sides.size(); i++) {
