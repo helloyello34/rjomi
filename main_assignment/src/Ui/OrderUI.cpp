@@ -334,7 +334,7 @@ void OrderUI::add_pizza(Order& order)
     Pizza pizza;
     pizza_ui.view_pizza();
     size_t id;
-    cout << "Which side would you like to add? " << endl;
+    cout << "Which pizza would you like to add? " << endl;
     cout << "Id: ";
     try
     {
@@ -398,7 +398,7 @@ void OrderUI::add_drink(Order& order)
     Drink drink;
     drink_ui.view_drinks();
     size_t id;
-    cout << "Which side would you like to add? " << endl;
+    cout << "Which drink would you like to add? " << endl;
     cout << "Id: ";
     try
     {
