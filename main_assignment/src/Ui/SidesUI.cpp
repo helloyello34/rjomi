@@ -5,14 +5,18 @@ SidesUI::SidesUI()
     //ctor
 }
 
+/// Add side dish to the menu
 void SidesUI::add_sides()
 {
+    // Construct an instance of a side dish
     Sides newSide;
     try{
     cin.ignore();
     cout << "   Add Sides" << endl;
     cout << " ===================" << endl;
+    // Write into the new side dish
     cin >> newSide;
+    // Send the side dish to the Service class
     this->sides_service.add_sides(newSide);
     cout << " ===================" << endl << endl << "  ";
     }
@@ -27,10 +31,13 @@ void SidesUI::add_sides()
     }
 }
 
+/// Edit/Change side dish on the menu
 void SidesUI::edit_sides()
 {
     try {
+    // Clear everything in the vector
     this->sides.clear();
+    // Read data from file to the vector
     this->sides = this->sides_service.get_sides_vector();
     }
     catch (UnableToOpenFileException)
@@ -41,6 +48,7 @@ void SidesUI::edit_sides()
     }
     cout << "   Edit sides" << endl;
     cout << " ===================" << endl;
+    // View all avaliable side dishes
     view_sides();
     unsigned int id;
     cout << "  Which drink would you like to edit? " << endl;
@@ -48,8 +56,10 @@ void SidesUI::edit_sides()
     cout << "  Id: ";
 
     try{
+    // Input the index of the side dish to be changed
     cin >> id;
     system("CLS");
+    // Error check
     if(cin.fail()){
         throw InvalidIdException();
     }
@@ -62,8 +72,10 @@ void SidesUI::edit_sides()
     cin.ignore();
     cout << "   Edit Sides" << endl;
     cout << " ==================" << endl;
+    // Writing into the side dish at the index
     cin >> this->sides[id-1];
     cout << " ==================" << endl << endl << "  ";
+    // Overwrite the data on the file
     sides_service.overwrite_sides(sides);
     }
     catch(InvalidIdException){
@@ -82,6 +94,7 @@ void SidesUI::delete_sides()
 {
     cout << "   Delete sides" << endl;
     cout << " =====================" << endl;
+    // View all avaliable side dishes
     view_sides();
     unsigned int id;
     cout << "  Which drink would you like to delete? " << endl;
@@ -89,7 +102,9 @@ void SidesUI::delete_sides()
     cout << "  Id: ";
 
     try{
+    // Input the index of the side dish to be deleted
     cin >> id;
+    // Error check
     if(cin.fail()){
         cin.clear();
         throw InvalidIdException();
@@ -101,7 +116,9 @@ void SidesUI::delete_sides()
         throw InvalidIdException();
     }
     cin.ignore();
+    // Delete the side dish at the index id
     this->sides.erase(this->sides.begin()+(id-1));
+    // Overwrite the data on the file
     sides_service.overwrite_sides(sides);
     system("CLS");
     cout << "  Side successfully deleted" << endl;
@@ -121,13 +138,16 @@ void SidesUI::delete_sides()
 void SidesUI::view_sides()
 {
     try {
+    // Clear the data on the vector
     this->sides.clear();
+    // Read the data from
     this->sides = sides_service.get_sides_vector();
 
     cout << "    Sides" << endl;
     cout << "  -------------------" << endl;
     for (size_t i = 0; i < this->sides.size(); i++) {
         cout << "   Id: " << i+1 << endl;
+        // print out the side dish at index i
         cout << this->sides[i];
         cout << "  -------------------" << endl;
     }
@@ -141,7 +161,9 @@ void SidesUI::view_sides()
 Sides SidesUI::get_side(size_t id)
 {
     try{
+    // Read data from file to the vector
     this->sides = sides_service.get_sides_vector();
+    // Return the side dish at index id
     return this->sides[id-1];
     }
     catch (UnableToOpenFileException)
@@ -153,7 +175,9 @@ Sides SidesUI::get_side(size_t id)
 size_t SidesUI::get_vector_size()
 {
     try{
+    // Read data from file to the vector
     this->sides = sides_service.get_sides_vector();
+    // Return the number of side dishes
     return this->sides.size();
     }
     catch (UnableToOpenFileException)
