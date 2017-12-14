@@ -59,6 +59,11 @@ void OrderUI::salesmanUI(Location& staff_location)
             system("pause");
             system("CLS");
         }
+        else if (choice == '5')
+        {
+            system ("CLS");
+            return;
+        }
         else
         {
             system("CLS");

@@ -68,6 +68,11 @@ istream& operator >> (istream& in, Topping& topping)
     cout << "  Name : ";
     in.getline(topping.name, 32);
     // If name is length 0. Throw a fault
+    if(in.fail())
+    {
+        in.clear();
+        throw InvalidNameException();
+    }
     if(strlen(topping.name) == 0) {
         throw InvalidNameException();
     }

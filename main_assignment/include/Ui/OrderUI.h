@@ -91,7 +91,7 @@ class OrderUI
         /////////////////////////////////////////////////////
 
         /////////////////////////////////////////////////////
-        /// if the order is both ready and paid it goes to old orders
+        /// if the order is both ready and paid it goes to old ordersw
         void order_receved(Order& order);
         /////////////////////////////////////////////////////
     private:

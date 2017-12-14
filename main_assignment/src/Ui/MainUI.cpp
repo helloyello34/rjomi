@@ -59,29 +59,21 @@ void MainUI::startUI()
             ///Manager UI
             system("CLS");
             ManagerUI managerui;
-            cout << endl << "  ";
-            system("pause");
             system("CLS");
         } else if (user == '2') {
             ///Salesman UI
             system("CLS");
             SalesmanUI salesmanui;
-            cout << endl << "  ";
-            system("pause");
             system("CLS");
         } else if (user == '3') {
             ///Baker UI
             system("CLS");
             BakerUI bakerui;
-            cout << endl << "  ";
-            system("pause");
             system("CLS");
         } else if (user == '4') {
             ///Cashier UI
             system("CLS");
             CashierUI cashierui;
-            cout << endl << "  ";
-            system("pause");
             system("CLS");
         }
 
