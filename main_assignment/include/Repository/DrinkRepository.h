@@ -18,7 +18,7 @@ class DrinkRepository
         /// Store drink to drink file
         void store_drink(Drink& drink);
 
-        /// reads to drinks from frink file
+        /// reads to drinks from drink file
         void retreve_drink(vector<Drink>&drinks);
 
         /// Write over drink file
