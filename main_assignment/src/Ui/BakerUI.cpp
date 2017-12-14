@@ -7,6 +7,7 @@ BakerUI::BakerUI()
 
 void BakerUI::startUI()
 {
+    // Choose location
     choose_location();
     if(my_location.get_name() != "Nothing")
     {
@@ -55,16 +56,13 @@ void BakerUI::startUI()
 
 void BakerUI::choose_location()
 {
+    // List up avaliable locations
     location_ui.list_location();
     size_t id;
-    if(!(my_location.get_name() == "Nothing"))
-    {
-        cout << "Your current location is " << my_location.get_name() << endl;
-        cout << "Press '0' to exit" << endl;
-    }
     cout << "Please choose your location" << endl;
     try
     {
+        // Input the index of the location you're at
         cin >> id;
         if(cin.fail())
         {
@@ -79,6 +77,7 @@ void BakerUI::choose_location()
         {
             throw InvalidIdException();
         }
+        // Set my location to the chosen location
         this->my_location = location_ui.get_location(id);
 
     }
