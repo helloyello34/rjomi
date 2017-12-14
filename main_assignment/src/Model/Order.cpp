@@ -4,7 +4,7 @@ using namespace std;
 
 Order::Order()
 {
-    this->orderStatus = RECEVED;
+    this->orderStatus = RECEIVED;
     this->phone[0] = '\0';
     this->paid = false;
     this->price = 0;
@@ -217,7 +217,7 @@ ostream& operator << (ostream& out, const Order& order)
     out << "   Status: ";
     switch(order.orderStatus)
     {
-    case RECEVED:
+    case RECEIVED:
         cout << "Order recieved" << endl;
         break;
     case PREP:
@@ -272,7 +272,7 @@ istream& operator >> (istream& in, Order& order)
             cout << "Status is: ";
             switch(order.orderStatus)
             {
-            case RECEVED:
+            case RECEIVED:
                 cout << "Order receved" << endl;
                 break;
             case PREP:
@@ -290,7 +290,7 @@ istream& operator >> (istream& in, Order& order)
             int status;
             switch(order.orderStatus)
             {
-            case RECEVED:
+            case RECEIVED:
                 cout << "1. In preperation" << endl;
                 cout << "2. In the oven" << endl;
                 cout << "3. Ready" << endl;

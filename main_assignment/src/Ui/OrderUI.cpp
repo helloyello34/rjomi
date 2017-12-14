@@ -562,65 +562,70 @@ void OrderUI::show_old_orders()
 
 void OrderUI::look_for_order()
 {
+    try{
+        this->orders.clear();
+        order_service.fill_vector(this->orders);
 
-    this->orders.clear();
-    order_service.fill_vector(this->orders);
+    //    erase_other_locations(location);
 
-//    erase_other_locations(location);
-
-    if(orders.size() == 0)
-    {
-        cout << " No active orders" << endl;
-        return;
-    }
-
-    char search_phone[8];
-
-    cout << "   Search for order" << endl;
-    cout << " ===========================" << endl;
-    cout << "  Enter corresponding phone number" << endl;
-    cout << "  (Number): ";
-
-    try
-    {
-        cin.ignore();
-        cin.getline(search_phone, 8);
-        if(cin.fail())
+        if(orders.size() == 0)
         {
-            cin.clear();
-            throw InvalidPhoneNumberException();
+            cout << " No active orders" << endl;
+            return;
         }
-        if(strlen(search_phone) != 7)
+
+        char search_phone[8];
+
+        cout << "   Search for order" << endl;
+        cout << " ===========================" << endl;
+        cout << "  Enter corresponding phone number" << endl;
+        cout << "  (Number): ";
+
+        try
         {
-            throw InvalidPhoneNumberException();
-        }
-        for(size_t i = 0; i < 7; i++)
-        {
-            if(!isdigit(search_phone[i]))
+            cin.ignore();
+            cin.getline(search_phone, 8);
+            if(cin.fail())
+            {
+                cin.clear();
+                throw InvalidPhoneNumberException();
+            }
+            if(strlen(search_phone) != 7)
             {
                 throw InvalidPhoneNumberException();
             }
-        }
-
-        vector<Order>phoneNumberOrder;
-
-        system("CLS");
-        cout << "   Search for order" << endl;
-        cout << " ===========================" << endl;
-
-        for(size_t i = 0; i < this->orders.size(); i++)
-        {
-            if(search_phone == this->orders[i].get_phone())
+            for(size_t i = 0; i < 7; i++)
             {
-                cout << "  Order Id. " << i+1 << endl;
-                cout << "  =====================" << endl;
-                cout  << this->orders[i] << endl;
+                if(!isdigit(search_phone[i]))
+                {
+                    throw InvalidPhoneNumberException();
+                }
+            }
+
+            vector<Order>phoneNumberOrder;
+
+            system("CLS");
+            cout << "   Search for order" << endl;
+            cout << " ===========================" << endl;
+
+            for(size_t i = 0; i < this->orders.size(); i++)
+            {
+                if(search_phone == this->orders[i].get_phone())
+                {
+                    cout << "  Order Id. " << i+1 << endl;
+                    cout << "  =====================" << endl;
+                    cout  << this->orders[i] << endl;
+                }
             }
         }
+        catch (InvalidPhoneNumberException)
+        {
+            cout << "  Invalid Phone nubmer" << endl;
+        }
     }
-    catch (InvalidPhoneNumberException)
+    catch (UnableToOpenFileException)
     {
-        cout << "  Invalid Phone nubmer" << endl;
+        cout << "  Error: could not open file! " << endl;
     }
 }
 
@@ -638,188 +643,193 @@ void OrderUI::store_order(Order& order)
 
 void OrderUI::change_status(Order& order)
 {
-
-    this->orders.clear();
-    order_service.fill_vector(this->orders);
-    size_t i = 0;
-    for(; i < this->orders.size(); i++)
-    {
-        if(order == this->orders[i])
+    try{
+        this->orders.clear();
+        order_service.fill_vector(this->orders);
+        size_t i = 0;
+        for(; i < this->orders.size(); i++)
         {
-            break;
-        }
-    }
-    try
-    {
-        cout << "  Status: ";
-        switch(orders[i].get_status())
-        {
-        case RECEVED:
-            cout << "  Order receved" << endl;
-            break;
-        case PREP:
-            cout << "  In preperation" << endl;
-            break;
-        case OVEN:
-            cout << "  In the oven" << endl;
-            break;
-        case READY:
-            cout <<   "Ready" << endl;
-            break;
-
-        }
-        cout << "  What would you like to set the status as?" << endl;
-        int status;
-        switch(orders[i].get_status())
-        {
-        case RECEVED:
-            cout << "  1. In preperation" << endl;
-            cout << "  2. In the oven" << endl;
-            cout << "  3. Ready" << endl;
-            cout << "  0. abort" << endl;
-            cout << "  id: ";
-            try
+            if(order == this->orders[i])
             {
-                cin >> status;
-                if(cin.fail())
-                {
-                    cin.clear();
-                    throw InvalidIdException();
-                }
-                if(status == 0)
-                {
-                    return;
-                }
-                if (status < 0)
-                {
-                    throw InvalidIdException();
-                }
-                if(status > 3)
-                {
-                    throw InvalidIdException();
-                }
-                switch(status)
-                {
-                case 1:
-                    orders[i].set_status(PREP);
-                    break;
-                case 2:
-                    orders[i].set_status(OVEN);
-                    break;
-                case 3:
-                    orders[i].set_status(READY);
-                    break;
-                }
-            }
-            catch (InvalidIdException)
-            {
-                cout << "  Invalid id" << endl;
-            }
-            break;
-        case PREP:
-            cout << "  1. In the oven" << endl;
-            cout << "  2. Ready" << endl;
-            cout << "  0. abort" << endl;
-            cout << "  id: ";
-            try
-            {
-                cin >> status;
-                if(cin.fail())
-                {
-                    cin.clear();
-                    throw InvalidIdException();
-                }
-                if(status == 0)
-                {
-                    return;
-                }
-                if (status < 0)
-                {
-                    throw InvalidIdException();
-                }
-                if(status > 2)
-                {
-                    throw InvalidIdException();
-                }
-                switch(status)
-                {
-                case 1:
-                    orders[i].set_status(OVEN);
-                    break;
-                case 2:
-                    orders[i].set_status(READY);
-                    break;
-                }
-            }
-            catch (InvalidIdException)
-            {
-                cout << "  Invalid id" << endl;
-            }
-            break;
-        case OVEN:
-            cout << "  1. Ready" << endl;
-            cout << "  0. abort" << endl;
-            cout << "  id: ";
-            try
-            {
-                cin >> status;
-                if(cin.fail())
-                {
-                    cin.clear();
-                    throw InvalidIdException();
-                }
-                if(status == 0)
-                {
-                    return;
-                }
-                if (status < 0)
-                {
-                    throw InvalidIdException();
-                }
-                if(status > 1)
-                {
-                    throw InvalidIdException();
-                }
-                switch(status)
-                {
-                case 1:
-                    orders[i].set_status(READY);
-                    break;
-                }
-            }
-            catch (InvalidIdException)
-            {
-                cout << "  Invalid id" << endl;
-            }
-            break;
-        case READY:
-            if(orders[i].get_paid())
-            {
-                cout << "  Should not be here" << endl;
-            }
-            else
-            {
-                cout << "  Just needs to be charged" << endl;
+                break;
             }
         }
-
         try
         {
-            if(this->orders[i].is_order_receved())
+            cout << "  Status: ";
+            switch(orders[i].get_status())
             {
-                order_service.store_old_order(this->orders[i]);
-                this->orders.erase(this->orders.begin() + (i));
+            case RECEIVED:
+                cout << "  Order received" << endl;
+                break;
+            case PREP:
+                cout << "  In preparation" << endl;
+                break;
+            case OVEN:
+                cout << "  In the oven" << endl;
+                break;
+            case READY:
+                cout <<   "Ready" << endl;
+                break;
+
             }
-            order_service.overwrite_orders(this->orders);
+            cout << "  What would you like to set the status as?" << endl;
+            int status;
+            switch(orders[i].get_status())
+            {
+            case RECEIVED:
+                cout << "  1. In preparation" << endl;
+                cout << "  2. In the oven" << endl;
+                cout << "  3. Ready" << endl;
+                cout << "  0. abort" << endl;
+                cout << "  id: ";
+                try
+                {
+                    cin >> status;
+                    if(cin.fail())
+                    {
+                        cin.clear();
+                        throw InvalidIdException();
+                    }
+                    if(status == 0)
+                    {
+                        return;
+                    }
+                    if (status < 0)
+                    {
+                        throw InvalidIdException();
+                    }
+                    if(status > 3)
+                    {
+                        throw InvalidIdException();
+                    }
+                    switch(status)
+                    {
+                    case 1:
+                        orders[i].set_status(PREP);
+                        break;
+                    case 2:
+                        orders[i].set_status(OVEN);
+                        break;
+                    case 3:
+                        orders[i].set_status(READY);
+                        break;
+                    }
+                }
+                catch (InvalidIdException)
+                {
+                    cout << "  Invalid id" << endl;
+                }
+                break;
+            case PREP:
+                cout << "  1. In the oven" << endl;
+                cout << "  2. Ready" << endl;
+                cout << "  0. abort" << endl;
+                cout << "  id: ";
+                try
+                {
+                    cin >> status;
+                    if(cin.fail())
+                    {
+                        cin.clear();
+                        throw InvalidIdException();
+                    }
+                    if(status == 0)
+                    {
+                        return;
+                    }
+                    if (status < 0)
+                    {
+                        throw InvalidIdException();
+                    }
+                    if(status > 2)
+                    {
+                        throw InvalidIdException();
+                    }
+                    switch(status)
+                    {
+                    case 1:
+                        orders[i].set_status(OVEN);
+                        break;
+                    case 2:
+                        orders[i].set_status(READY);
+                        break;
+                    }
+                }
+                catch (InvalidIdException)
+                {
+                    cout << "  Invalid id" << endl;
+                }
+                break;
+            case OVEN:
+                cout << "  1. Ready" << endl;
+                cout << "  0. abort" << endl;
+                cout << "  id: ";
+                try
+                {
+                    cin >> status;
+                    if(cin.fail())
+                    {
+                        cin.clear();
+                        throw InvalidIdException();
+                    }
+                    if(status == 0)
+                    {
+                        return;
+                    }
+                    if (status < 0)
+                    {
+                        throw InvalidIdException();
+                    }
+                    if(status > 1)
+                    {
+                        throw InvalidIdException();
+                    }
+                    switch(status)
+                    {
+                    case 1:
+                        orders[i].set_status(READY);
+                        break;
+                    }
+                }
+                catch (InvalidIdException)
+                {
+                    cout << "  Invalid id" << endl;
+                }
+                break;
+            case READY:
+                if(orders[i].get_paid())
+                {
+                    cout << "  Should not be here" << endl;
+                }
+                else
+                {
+                    cout << "  Just needs to be charged" << endl;
+                }
+            }
+
+            try
+            {
+                if(this->orders[i].is_order_receved())
+                {
+                    order_service.store_old_order(this->orders[i]);
+                    this->orders.erase(this->orders.begin() + (i));
+                }
+                order_service.overwrite_orders(this->orders);
+            }
+            catch (UnableToOpenFileException)
+            {
+                cout << "  Unable to overwrite file" << endl;
+            }
         }
-        catch (UnableToOpenFileException)
+        catch (InvalidIdException)
         {
-            cout << "  Unable to overwrite file" << endl;
+            cout << "  Error: Invalid id" << endl;
         }
-    }
-    catch (InvalidIdException)
+        }
+    catch (UnableToOpenFileException)
     {
-        cout << "  Error: Invalid id" << endl;
+        cout << "  Error: could not open file! " << endl;
     }
 
 }
