@@ -2,10 +2,5 @@
 
 UnableToOpenFileException::UnableToOpenFileException()
 {
-    //ctor
-}
-
-UnableToOpenFileException::~UnableToOpenFileException()
-{
-    //dtor
+    ///constructor for InvalidFileException
 }

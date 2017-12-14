@@ -6,11 +6,6 @@ class UnableToOpenFileException
 {
     public:
         UnableToOpenFileException();
-        virtual ~UnableToOpenFileException();
-
-    protected:
-
-    private:
 };
 
 #endif // UNABLETOOPENFILEEXCEPTION_H

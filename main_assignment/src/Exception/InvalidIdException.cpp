@@ -2,10 +2,5 @@
 
 InvalidIdException::InvalidIdException()
 {
-    //ctor
-}
-
-InvalidIdException::~InvalidIdException()
-{
-    //dtor
+    ///constructor for InvalidIDException
 }

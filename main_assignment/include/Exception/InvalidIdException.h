@@ -6,11 +6,6 @@ class InvalidIdException
 {
     public:
         InvalidIdException();
-        virtual ~InvalidIdException();
-
-    protected:
-
-    private:
 };
 
 #endif // INVALIDIDEXCEPTION_H

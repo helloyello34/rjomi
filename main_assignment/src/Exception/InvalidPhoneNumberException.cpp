@@ -2,10 +2,5 @@
 
 InvalidPhoneNumberException::InvalidPhoneNumberException()
 {
-    //ctor
-}
-
-InvalidPhoneNumberException::~InvalidPhoneNumberException()
-{
-    //dtor
+    ///constructor for InvalidNumberException
 }

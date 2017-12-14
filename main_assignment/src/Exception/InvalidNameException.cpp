@@ -2,10 +2,5 @@
 
 InvalidNameException::InvalidNameException()
 {
-    //ctor
-}
-
-InvalidNameException::~InvalidNameException()
-{
-    //dtor
+    ///constructor for InvalidNameException
 }

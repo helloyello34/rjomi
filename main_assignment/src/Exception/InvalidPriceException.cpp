@@ -2,10 +2,5 @@
 
 InvalidPriceException::InvalidPriceException()
 {
-    //ctor
-}
-
-InvalidPriceException::~InvalidPriceException()
-{
-    //dtor
+    ///constructor for InvalidPriceException
 }
