@@ -875,38 +875,38 @@ void OrderUI::find_order_status(Location& location)
         }
 
 
-    cout << "   Change status" << endl;
-    cout << " =================================================" << endl;
-    show_order(location);
-    cout << "  What order would you like to change status? " << endl;
-    cout << "  Id: ";
-    size_t id;
-    try
-    {
-        cin >> id;
-        if(cin.fail())
-        {
-            cin.clear();
-            throw InvalidIdException();
-        }
-        if(id == 0)
-        {
-            return ;
-        }
-        if (id < 0 || id > this->orders.size())
-        {
-            throw InvalidIdException();
-        }
-        system("CLS");
         cout << "   Change status" << endl;
         cout << " =================================================" << endl;
-        cout << this->orders[id-1];
-        change_status(this->orders[id-1]);
-    }
-    catch (InvalidIdException)
-    {
-        cout << "Invalid id!" << endl;
-    }
+        show_order(location);
+        cout << "  What order would you like to change status? " << endl;
+        cout << "  Id: ";
+        size_t id;
+        try
+        {
+            cin >> id;
+            if(cin.fail())
+            {
+                cin.clear();
+                throw InvalidIdException();
+            }
+            if(id == 0)
+            {
+                return ;
+            }
+            if (id < 0 || id > this->orders.size())
+            {
+                throw InvalidIdException();
+            }
+            system("CLS");
+            cout << "   Change status" << endl;
+            cout << " =================================================" << endl;
+            cout << this->orders[id-1];
+            change_status(this->orders[id-1]);
+        }
+        catch (InvalidIdException)
+        {
+            cout << "Invalid id!" << endl;
+        }
     }
 
     catch (UnableToOpenFileException)
@@ -917,83 +917,94 @@ void OrderUI::find_order_status(Location& location)
 
 void OrderUI::find_order_comment(Location& location)
 {
-    order_service.fill_vector(orders);
-    erase_other_locations(location);
-    if(orders.size() == 0)
-    {
-        cout << "  No active orders" << endl;
-        return;
+    try{
+        order_service.fill_vector(orders);
+        erase_other_locations(location);
+        if(orders.size() == 0)
+        {
+            cout << "  No active orders" << endl;
+            return;
+        }
+        show_order(location);
+        cout << "For what order would you like to change the comment? " << endl;
+        cout << "Id: ";
+        size_t id;
+        try
+        {
+            cin >> id;
+            if(cin.fail())
+            {
+                cin.clear();
+                throw InvalidIdException();
+            }
+            if(id == 0)
+            {
+                return ;
+            }
+            if (id < 0 || id > this->orders.size())
+            {
+                throw InvalidIdException();
+            }
+            system("CLS");
+            cout << this->orders[id-1];
+            comment_order(this->orders[id-1]);
+            order_service.overwrite_orders(this->orders);
+        }
+        catch (InvalidIdException)
+        {
+            cout << "Invalid id!" << endl;
+        }
     }
-    show_order(location);
-    cout << "For what order would you like to change the comment? " << endl;
-    cout << "Id: ";
-    size_t id;
-    try
-    {
-        cin >> id;
-        if(cin.fail())
-        {
-            cin.clear();
-            throw InvalidIdException();
-        }
-        if(id == 0)
-        {
-            return ;
-        }
-        if (id < 0 || id > this->orders.size())
-        {
-            throw InvalidIdException();
-        }
-        system("CLS");
-        cout << this->orders[id-1];
-        comment_order(this->orders[id-1]);
-        order_service.overwrite_orders(this->orders);
-    }
-    catch (InvalidIdException)
-    {
-        cout << "Invalid id!" << endl;
+    catch(UnableToOpenFileException){
+        cout << "  Could not open file" << endl;
     }
 }
 
 void OrderUI::find_order_paid(Location& location)
 {
-    order_service.fill_vector(orders);
-    erase_other_locations(location);
-    if(orders.size() == 0)
-    {
-        cout << "  No orders in progress" << endl;
-        return;
+    try{
+        order_service.fill_vector(orders);
+        erase_other_locations(location);
+        if(orders.size() == 0)
+        {
+            cout << "  No orders in progress" << endl;
+            return;
+        }
+        show_order(location);
+        cout << "  What order would you like to change comment? " << endl;
+        cout << "  Id: ";
+        size_t id;
+        try
+        {
+            cin >> id;
+            if(cin.fail())
+            {
+                cin.clear();
+                throw InvalidIdException();
+            }
+            if(id == 0)
+            {
+                return ;
+            }
+            if (id < 0 || id > this->orders.size())
+            {
+                throw InvalidIdException();
+            }
+            set_order_paid(this->orders[id-1]);
+            if(this->orders[id-1].is_order_receved())
+            {
+                order_service.store_old_order(this->orders[id-1]);
+                this->orders.erase(this->orders.begin() + (id-1));
+            }
+            order_service.overwrite_orders(this->orders);
+        }
+        catch (InvalidIdException)
+        {
+            cout << "Invalid id!" << endl;
+        }
     }
-    show_order(location);
-    cout << "  What order would you like to change comment? " << endl;
-    cout << "  Id: ";
-    size_t id;
-    try
+    catch (UnableToOpenFileException)
     {
-        cin >> id;
-        if(cin.fail())
-        {
-            cin.clear();
-            throw InvalidIdException();
-        }
-        if(id == 0)
-        {
-            return ;
-        }
-        if (id < 0 || id > this->orders.size())
-        {
-            throw InvalidIdException();
-        }
-        set_order_paid(this->orders[id-1]);
-        if(this->orders[id-1].is_order_receved())
-        {
-            order_service.store_old_order(this->orders[id-1]);
-            this->orders.erase(this->orders.begin() + (id-1));
-        }
-        order_service.overwrite_orders(this->orders);
-    }
-    catch (InvalidIdException)
-    {
-        cout << "Invalid id!" << endl;
+        cout << "  Could not open file" << endl;
     }
 }
