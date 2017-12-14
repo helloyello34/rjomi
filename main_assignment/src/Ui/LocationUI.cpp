@@ -104,13 +104,14 @@ void LocationUI::edit_location()
 void LocationUI::delete_location()
 {
     // List up the avaliable locations
-    list_location();
+
     fill_vector();
     if(this->locations.size() == 0)
     {
-//        cout << "  There is nothing stored! " << endl;
+        cout << "  There is nothing stored! " << endl;
         return;
     }
+    list_location();
     unsigned int id;
     cout << "   Delete location" << endl;
     cout << " ===============================================" << endl;

@@ -383,6 +383,7 @@ void ManagerUI::Location()
             ///Add Location
             system("CLS");
             location_ui.add_location();
+            cout << endl << "  ";
             system("pause");
             system("CLS");
         }
@@ -391,6 +392,7 @@ void ManagerUI::Location()
             ///Edit Location
             system("CLS");
             location_ui.edit_location();
+            cout << endl << "  ";
             system("pause");
             system("CLS");
         }
@@ -399,6 +401,7 @@ void ManagerUI::Location()
             ///Delete Location
             system("CLS");
             location_ui.delete_location();
+            cout << endl << "  ";
             system("pause");
             system("CLS");
         }
