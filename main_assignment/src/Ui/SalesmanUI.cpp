@@ -6,6 +6,7 @@ SalesmanUI::SalesmanUI()
 {
     //startUI();
     try {
+    // Choose the location for the salesman
     choose_location();
     }
     catch (UnableToOpenFileException)
@@ -18,16 +19,15 @@ SalesmanUI::SalesmanUI()
 
 void SalesmanUI::choose_location()
 {
+    // List upp all avaliable locations
     location_ui.list_location();
     size_t id;
-    if(!(my_location.get_name() == "Nothing")) {
-        cout << "  Your current location is " << my_location.get_name() << endl;
-        cout << "  Press '0' to exit" << endl;
-    }
     cout << "  Please choose your location" << endl;
     cout << "  id: ";
     try {
+        // Input the index of the location you are at
         cin >> id;
+        // Error check
         if(cin.fail()) {
             cin.clear();
             throw InvalidIdException();
@@ -38,8 +38,10 @@ void SalesmanUI::choose_location()
         if(id < 1 || id > location_ui.vector_size()) {
             throw InvalidIdException();
         }
+        // Set salseman at the chosen location
         my_location = location_ui.get_location(id);
         system("CLS");
+        // Go to orderUI with the location
         order_ui.salesmanUI(this->my_location);
 
     } catch(InvalidIdException) {
