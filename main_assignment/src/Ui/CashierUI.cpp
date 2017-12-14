@@ -51,7 +51,7 @@ void CashierUI::startUI()
             return ;
             break;
         default:
-            cout << "Invalid Input" << endl;
+            cout << "  Invalid Input" << endl;
             break;
 
         }
@@ -91,9 +91,4 @@ void CashierUI::choose_location()
     {
         cout << "  Error: Invalid id" << endl;
     }
-}
-
-void CashierUI::status_order()
-{
-
 }

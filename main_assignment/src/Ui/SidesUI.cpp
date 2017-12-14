@@ -21,13 +21,13 @@ void SidesUI::add_sides()
     cout << " ===================" << endl << endl << "  ";
     }
     catch(InvalidNameException){
-        cout << "Error: Invalid name" << endl;
+        cout << "  Error: Invalid name" << endl;
     }
     catch(InvalidPriceException){
-        cout << "Error: Invalid price" << endl;
+        cout << "  Error: Invalid price" << endl;
     }
     catch (UnableToOpenFileException) {
-        cout << "Error: Could not open file!" << endl;
+        cout << "  Error: Could not open file!" << endl;
     }
 }
 
@@ -79,7 +79,7 @@ void SidesUI::edit_sides()
     sides_service.overwrite_sides(sides);
     }
     catch(InvalidIdException){
-        cout << "Error: Invalid id" << endl;
+        cout << "  Error: Invalid id" << endl;
     }
     catch (InvalidNameException){
         cout << "  Error: Invalid name" << endl;
@@ -125,7 +125,7 @@ void SidesUI::delete_sides()
     cout << endl << "  ";
     }
     catch(InvalidIdException){
-        cout << "Error: Invalid id" << endl;
+        cout << "  Error: Invalid id" << endl;
     }
     catch (InvalidNameException){
         cout << "  Error: Invalid name" << endl;
@@ -154,7 +154,7 @@ void SidesUI::view_sides()
     }
     catch (UnableToOpenFileException)
     {
-        cout << "Error: Unable to open file!" << endl;
+        cout << "  Error: Unable to open file!" << endl;
     }
 }
 
@@ -176,7 +176,7 @@ size_t SidesUI::get_vector_size()
     }
     catch (UnableToOpenFileException)
     {
-        cout << "Error: Unable to open file!" << endl;
+        cout << "  Error: Unable to open file!" << endl;
     }
     return 0;
 }

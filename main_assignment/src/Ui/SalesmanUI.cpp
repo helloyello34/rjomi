@@ -45,7 +45,7 @@ void SalesmanUI::choose_location()
         order_ui.salesmanUI(this->my_location);
 
     } catch(InvalidIdException) {
-        cout << "Error: Invalid id" << endl;
+        cout << "  Error: Invalid id" << endl;
     }
 }
 

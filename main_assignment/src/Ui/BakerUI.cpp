@@ -59,7 +59,7 @@ void BakerUI::choose_location()
     // List up avaliable locations
     location_ui.list_location();
     size_t id;
-    cout << "Please choose your location" << endl;
+    cout << "  Please choose your location" << endl;
     try
     {
         // Input the index of the location you're at
@@ -83,6 +83,6 @@ void BakerUI::choose_location()
     }
     catch(InvalidIdException)
     {
-        cout << "Error: Invalid id" << endl;
+        cout << "  Error: Invalid id" << endl;
     }
 }

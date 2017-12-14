@@ -22,15 +22,15 @@ void ToppingUI::add_topping()
     }
     catch (InvalidNameException)
     {
-        cout << "Error: Invalid name" << endl;
+        cout << "  Error: Invalid name" << endl;
     }
     catch (InvalidPriceException)
     {
-        cout << "Error: Invalid price" << endl;
+        cout << "  Error: Invalid price" << endl;
     }
     catch (UnableToOpenFileException)
     {
-        cout << "Error: Unable to store the new topping! " << endl;
+        cout << "  Error: Unable to store the new topping! " << endl;
     }
 }
 
@@ -161,7 +161,7 @@ void ToppingUI::fill_topping_vector()
     }
     catch (UnableToOpenFileException)
     {
-        cout << "Error: Unable to open file!" << endl;
+        cout << "  Error: Unable to open file!" << endl;
     }
 }
 

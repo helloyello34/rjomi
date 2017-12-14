@@ -79,13 +79,13 @@ void LocationUI::edit_location()
         location_service.overwrite_locations(this->locations);
     }
     catch(InvalidIdException) {
-        cout << "Error: Invalid id! " << endl;
+        cout << "  Error: Invalid id! " << endl;
     }
     catch(InvalidNameException) {
-        cout << "Error: Invalid name" << endl;
+        cout << "  Error: Invalid name" << endl;
     }
     catch(UnableToOpenFileException) {
-        cout << "Error: Unable to edit location!" << endl;
+        cout << "  Error: Unable to edit location!" << endl;
     }
 }
 

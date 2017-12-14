@@ -30,6 +30,7 @@ void DrinkRepository::retreve_drink(vector<Drink>&drinks)
     file.open("binaries\\Menu\\drink.dat", ios::binary);
 
     if(file.is_open()){
+
         // Clear the vector
         drinks.clear();
 

@@ -142,7 +142,7 @@ void OrderUI::make_order(Location& staff_location)
     char choice;
     Order order;
     order.set_location(staff_location);
-    cout << "Please enter a phone number for this order" << endl;
+    cout << "  Please enter a phone number for this order" << endl;
     cout <<" Phone (7 digits): ";
     char phone[8];
     try
@@ -166,17 +166,17 @@ void OrderUI::make_order(Location& staff_location)
             }
         }
         order.add_phone_number(phone);
-        cout << "Phone added" << endl;
+        cout << "  Phone added" << endl;
         while(choice != '5')
         {
 
             cout << order << endl;
-            cout << "What would you like to add to the Order?" << endl;
-            cout << "1. Pizza " << endl;
-            cout << "2. Sides " << endl;
-            cout << "3. Drinks " << endl;
-            cout << "4. Add comment" << endl;
-            cout << "5. Finish order" << endl;
+            cout << "  What would you like to add to the Order?" << endl;
+            cout << "  1. Pizza " << endl;
+            cout << "  2. Sides " << endl;
+            cout << "  3. Drinks " << endl;
+            cout << "  4. Add comment" << endl;
+            cout << "  5. Finish order" << endl;
 
             try
             {
@@ -244,13 +244,13 @@ void OrderUI::make_order(Location& staff_location)
             }
             catch (InvalidIdException)
             {
-                cout << "Error: Invalid id" << endl;
+                cout << "  Error: Invalid id" << endl;
             }
         }
     }
     catch (InvalidPhoneNumberException)
     {
-        cout <<"Error: Invalid phone number!" << endl;
+        cout <<"  Error: Invalid phone number!" << endl;
     }
 }
 
@@ -260,8 +260,8 @@ void OrderUI::add_pizza(Order& order)
     Pizza pizza;
     pizza_ui.view_pizza();
     size_t id;
-    cout << "Which pizza would you like to add? " << endl;
-    cout << "Id: ";
+    cout << "  Which pizza would you like to add? " << endl;
+    cout << "  Id: ";
     try
     {
         ///Read which pizza you want
@@ -286,7 +286,7 @@ void OrderUI::add_pizza(Order& order)
     }
     catch (InvalidIdException)
     {
-        cout << "Error: Invalid Id" << endl;
+        cout << "  Error: Invalid Id" << endl;
     }
 }
 
@@ -296,8 +296,8 @@ void OrderUI::add_sides(Order& order)
     Sides side;
     sides_ui.view_sides();
     size_t id;
-    cout << "Which side would you like to add? " << endl;
-    cout << "Id: ";
+    cout << "  Which side would you like to add? " << endl;
+    cout << "  Id: ";
     try
     {
         cin >> id;
@@ -320,7 +320,7 @@ void OrderUI::add_sides(Order& order)
     }
     catch (InvalidIdException)
     {
-        cout << "Error: Invalid Id" << endl;
+        cout << "  Error: Invalid Id" << endl;
     }
 }
 
@@ -330,8 +330,8 @@ void OrderUI::add_drink(Order& order)
     Drink drink;
     drink_ui.view_drinks();
     size_t id;
-    cout << "Which drink would you like to add? " << endl;
-    cout << "Id: ";
+    cout << "  Which drink would you like to add? " << endl;
+    cout << "  Id: ";
     try
     {
         cin >> id;
@@ -354,7 +354,7 @@ void OrderUI::add_drink(Order& order)
     }
     catch (InvalidIdException)
     {
-        cout << "Error: Invalid Id" << endl;
+        cout << "  Error: Invalid Id" << endl;
     }
 }
 
@@ -545,7 +545,7 @@ void OrderUI::store_order(Order& order)
     }
     catch (UnableToOpenFileException)
     {
-        cout << "Error: unable to open file" << endl;
+        cout << "  Error: unable to open file" << endl;
     }
 }
 
@@ -821,7 +821,7 @@ void OrderUI::find_order_status(Location& location)
         }
         catch (InvalidIdException)
         {
-            cout << "Invalid id!" << endl;
+            cout << "  Invalid id!" << endl;
         }
     }
 
@@ -869,7 +869,7 @@ void OrderUI::find_order_comment(Location& location)
         }
         catch (InvalidIdException)
         {
-            cout << "Invalid id!" << endl;
+            cout << "  Invalid id!" << endl;
         }
     }
     catch(UnableToOpenFileException){
@@ -919,7 +919,7 @@ void OrderUI::find_order_paid(Location& location)
         }
         catch (InvalidIdException)
         {
-            cout << "Invalid id!" << endl;
+            cout << "  Invalid id!" << endl;
         }
     }
     catch (UnableToOpenFileException)

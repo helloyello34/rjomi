@@ -261,7 +261,6 @@ void ManagerUI::drinks()
             /// Add drink
             system("CLS");
             drink_ui.add_drink();
-//            this->drink_service.addDrink();
             cout << endl << "  ";
             system("pause");
             system("CLS");

@@ -18,11 +18,11 @@ void PizzaUI::add_pizza()
         pizza_service.add_pizza(newPizza);
 
     } catch (InvalidNameException) {
-        cout << "Error: Invalid name" << endl;
+        cout << "  Error: Invalid name" << endl;
     } catch (InvalidIdException) {
-        cout << "Error: Input shoudl only hold integers! " << endl;
+        cout << "  Error: Input shoudl only hold integers! " << endl;
     } catch (UnableToOpenFileException) {
-        cout << "Error: Could not write to file" << endl;
+        cout << "  Error: Could not write to file" << endl;
     }
 }
 
@@ -40,7 +40,7 @@ void PizzaUI::view_pizza()
             cout << " ====================" << endl;
         }
     } catch (UnableToOpenFileException) {
-        cout << "Error: Could not read from file" << endl;
+        cout << "  Error: Could not read from file" << endl;
     }
 }
 
@@ -76,13 +76,13 @@ void PizzaUI::edit_pizza()
 
     } catch (InvalidNameException) {
         // If there was thrown an invalid name exception
-        cout << "Error: Invalid name" << endl;
+        cout << "  Error: Invalid name" << endl;
     } catch (InvalidIdException) {
         // If there was thrown an invalid id exception
-        cout << "Error: Input shoudl only hold integers! " << endl;
+        cout << "  Error: Input shoudl only hold integers! " << endl;
     } catch (UnableToOpenFileException) {
         // If repository class could not open file
-        cout << "Error: Could not write to file" << endl;
+        cout << "  Error: Could not write to file" << endl;
     }
 }
 
@@ -117,11 +117,11 @@ void PizzaUI::delete_pizza()
         pizza_service.overwrite_pizza(this->pizzas);
 
     } catch (InvalidNameException) {
-        cout << "Error: Invalid name" << endl;
+        cout << "  Error: Invalid name" << endl;
     } catch (InvalidIdException) {
-        cout << "Error: Input shoudl only hold integers! " << endl;
+        cout << "  Error: Input shoudl only hold integers! " << endl;
     } catch (UnableToOpenFileException) {
-        cout << "Error: Could not write to file" << endl;
+        cout << "  Error: Could not write to file" << endl;
     }
 }
 

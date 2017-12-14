@@ -116,7 +116,7 @@ void DrinkUI::view_drinks()
             cout << "  -------------------" << endl;
         }
     } catch(UnableToOpenFileException) {
-        cout << "Error: could not open file! " << endl;
+        cout << "  Error: could not open file! " << endl;
     }
 }
 
