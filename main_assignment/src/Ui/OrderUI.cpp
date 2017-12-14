@@ -295,20 +295,50 @@ void OrderUI::make_order(Location& staff_location)
                 switch (choice)
                 {
                 case '1':
-                    add_pizza(order);
-                    break;
+                    try{
+                        add_pizza(order);
+                        break;
+                    }
+                    catch(UnableToOpenFileException)
+                    {
+                        cout << "  Error: could not open file! " << endl;
+                    }
                 case '2':
-                    add_sides(order);
-                    break;
+                    try{
+                        add_sides(order);
+                        break;
+                    }
+                    catch(UnableToOpenFileException)
+                    {
+                        cout << "  Error: could not open file! " << endl;
+                    }
                 case '3':
-                    add_drink(order);
-                    break;
+                    try{
+                        add_drink(order);
+                        break;
+                    }
+                    catch(UnableToOpenFileException)
+                    {
+                        cout << "  Error: could not open file! " << endl;
+                    }
                 case '4':
-                    comment_order(order);
-                    break;
+                    try{
+                        comment_order(order);
+                        break;
+                    }
+                    catch(UnableToOpenFileException)
+                    {
+                        cout << "  Error: could not open file! " << endl;
+                    }
                 case '5':
-                    store_order(order);
-                    break;
+                    try{
+                        store_order(order);
+                        break;
+                    }
+                    catch(UnableToOpenFileException)
+                    {
+                        cout << "  Error: could not open file! " << endl;
+                    }
                 default:
                     break;
 

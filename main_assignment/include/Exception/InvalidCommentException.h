@@ -7,11 +7,6 @@ class InvalidCommentException
 {
     public:
         InvalidCommentException();
-        virtual ~InvalidCommentException();
-
-    protected:
-
-    private:
 };
 
 #endif // INVALIDCOMMENTEXCEPTION_H

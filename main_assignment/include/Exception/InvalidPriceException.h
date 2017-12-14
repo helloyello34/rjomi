@@ -6,11 +6,6 @@ class InvalidPriceException
 {
     public:
         InvalidPriceException();
-        virtual ~InvalidPriceException();
-
-    protected:
-
-    private:
 };
 
 #endif // INVALIDPRICEEXCEPTION_H
