@@ -13,7 +13,7 @@ void ManagerUI::startUI()
     {
         cout << "   Manager " << endl;
         cout << " ====================" << endl;
-        cout << "  1. orders" << endl;
+        cout << "  1. Orders" << endl;
         cout << "  2. Edit menu" << endl;
         cout << "  3. Location" << endl;
         cout << "  4. Back" << endl;
