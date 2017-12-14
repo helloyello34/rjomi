@@ -5,8 +5,8 @@
 
 class InvalidCommentException
 {
-    public:
-        InvalidCommentException();
+public:
+    InvalidCommentException();
 };
 
 #endif // INVALIDCOMMENTEXCEPTION_H

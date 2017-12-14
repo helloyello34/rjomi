@@ -4,7 +4,7 @@
 
 class InvalidNameException
 {
-    public:
-        InvalidNameException();
+public:
+    InvalidNameException();
 };
 #endif // INVALIDNAMEEXCEPTION_H

@@ -40,9 +40,12 @@ istream& operator >> (istream& in, Drink& drink)
     // Writing in the drink name
     cout << "  Drink Name: ";
     in.getline(drink.name, 32);
-    for(unsigned int i = 0; i < strlen(drink.name); i++){
-        if(!(isalnum(drink.name[i]))){
-            if(drink.name[i] != ' ' && drink.name[i] != '.'){
+    for(unsigned int i = 0; i < strlen(drink.name); i++)
+    {
+        if(!(isalnum(drink.name[i])))
+        {
+            if(drink.name[i] != ' ' && drink.name[i] != '.')
+            {
                 throw InvalidNameException();
             }
         }
@@ -50,12 +53,14 @@ istream& operator >> (istream& in, Drink& drink)
     // Writing in the drink price
     cout << "  Drink Price: ";
     in >> drink.price;
-    if(in.fail()){
+    if(in.fail())
+    {
         in.clear();
         throw InvalidPriceException();
     }
     // Price cap on drinks
-    if(drink.price > 1000 || drink.price < 0){
+    if(drink.price > 1000 || drink.price < 0)
+    {
         throw InvalidPriceException();
     }
 

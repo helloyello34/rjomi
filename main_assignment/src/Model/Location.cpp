@@ -34,13 +34,17 @@ istream& operator >> (istream& in, Location& location)
     in.getline(location.name, 32);
 
     // if nothing is input as a name. throw a fault
-    if(strlen(location.name) == 0){
+    if(strlen(location.name) == 0)
+    {
         throw InvalidNameException();
     }
     // If any character is not alphanumeric or a space. Throw a fault
-    for(size_t i = 0; i < strlen(location.name); i++) {
-        if(!isalnum(location.name[i])) {
-            if(location.name[i] != ' ') {
+    for(size_t i = 0; i < strlen(location.name); i++)
+    {
+        if(!isalnum(location.name[i]))
+        {
+            if(location.name[i] != ' ')
+            {
                 throw InvalidNameException();
             }
         }

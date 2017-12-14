@@ -35,9 +35,12 @@ void Topping::write(ofstream& file)
 bool Topping::valid_topping() const
 {
     // Checks if name of topping is valid
-    if(strcmp(this->name, "nothing")) {
+    if(strcmp(this->name, "nothing"))
+    {
         return true;
-    } else {
+    }
+    else
+    {
         return false;
     }
 }
@@ -73,13 +76,17 @@ istream& operator >> (istream& in, Topping& topping)
         in.clear();
         throw InvalidNameException();
     }
-    if(strlen(topping.name) == 0) {
+    if(strlen(topping.name) == 0)
+    {
         throw InvalidNameException();
     }
     // If name is not alphanumeric or a space. Throw a fault
-    for(size_t i = 0; i < strlen(topping.name); i++) {
-        if(!(isalpha(topping.name[i]))){
-            if(!(topping.name[i] == ' ')) {
+    for(size_t i = 0; i < strlen(topping.name); i++)
+    {
+        if(!(isalpha(topping.name[i])))
+        {
+            if(!(topping.name[i] == ' '))
+            {
                 throw InvalidNameException();
             }
         }
@@ -89,12 +96,14 @@ istream& operator >> (istream& in, Topping& topping)
     in >> topping.price;
 
     // If price is not a number. Throw a fault
-    if(in.fail()) {
+    if(in.fail())
+    {
         in.clear();
         throw InvalidPriceException();
     }
     // Price cap for toppings
-    if(topping.price < 0 || topping.price > 5000) {
+    if(topping.price < 0 || topping.price > 5000)
+    {
         throw InvalidPriceException();
     }
 

@@ -10,23 +10,27 @@ void SidesUI::add_sides()
 {
     // Construct an instance of a side dish
     Sides newSide;
-    try{
-    cin.ignore();
-    cout << "   Add Sides" << endl;
-    cout << " ===================" << endl;
-    // Write into the new side dish
-    cin >> newSide;
-    // Send the side dish to the Service class
-    this->sides_service.add_sides(newSide);
-    cout << " ===================" << endl << endl << "  ";
+    try
+    {
+        cin.ignore();
+        cout << "   Add Sides" << endl;
+        cout << " ===================" << endl;
+        // Write into the new side dish
+        cin >> newSide;
+        // Send the side dish to the Service class
+        this->sides_service.add_sides(newSide);
+        cout << " ===================" << endl << endl << "  ";
     }
-    catch(InvalidNameException){
+    catch(InvalidNameException)
+    {
         cout << "  Error: Invalid name" << endl;
     }
-    catch(InvalidPriceException){
+    catch(InvalidPriceException)
+    {
         cout << "  Error: Invalid price" << endl;
     }
-    catch (UnableToOpenFileException) {
+    catch (UnableToOpenFileException)
+    {
         cout << "  Error: Could not open file!" << endl;
     }
 }
@@ -34,11 +38,12 @@ void SidesUI::add_sides()
 /// Edit/Change side dish on the menu
 void SidesUI::edit_sides()
 {
-    try {
-    // Clear everything in the vector
-    this->sides.clear();
-    // Read data from file to the vector
-    this->sides = this->sides_service.get_sides_vector();
+    try
+    {
+        // Clear everything in the vector
+        this->sides.clear();
+        // Read data from file to the vector
+        this->sides = this->sides_service.get_sides_vector();
     }
     catch (UnableToOpenFileException)
     {
@@ -46,7 +51,8 @@ void SidesUI::edit_sides()
         cout << endl << "  ";
         return;
     }
-    if(this->sides.size() == 0){
+    if(this->sides.size() == 0)
+    {
         cout << "  There is nothing stored in the file!";
         return;
     }
@@ -59,36 +65,43 @@ void SidesUI::edit_sides()
     cout << "  '0' To exit" << endl;
     cout << "  Id: ";
 
-    try{
-    // Input the index of the side dish to be changed
-    cin >> id;
-    system("CLS");
-    // Error check
-    if(cin.fail()){
-        throw InvalidIdException();
+    try
+    {
+        // Input the index of the side dish to be changed
+        cin >> id;
+        system("CLS");
+        // Error check
+        if(cin.fail())
+        {
+            throw InvalidIdException();
+        }
+        if(id == 0)
+        {
+            return;
+        }
+        if(id > this->sides.size())
+        {
+            throw InvalidIdException();
+        }
+        cin.ignore();
+        cout << "   Edit Sides" << endl;
+        cout << " ==================" << endl;
+        // Writing into the side dish at the index
+        cin >> this->sides[id-1];
+        cout << " ==================" << endl << endl << "  ";
+        // Overwrite the data on the file
+        sides_service.overwrite_sides(sides);
     }
-    if(id == 0){
-        return;
-    }
-    if(id > this->sides.size()){
-        throw InvalidIdException();
-    }
-    cin.ignore();
-    cout << "   Edit Sides" << endl;
-    cout << " ==================" << endl;
-    // Writing into the side dish at the index
-    cin >> this->sides[id-1];
-    cout << " ==================" << endl << endl << "  ";
-    // Overwrite the data on the file
-    sides_service.overwrite_sides(sides);
-    }
-    catch(InvalidIdException){
+    catch(InvalidIdException)
+    {
         cout << "  Error: Invalid id" << endl;
     }
-    catch (InvalidNameException){
+    catch (InvalidNameException)
+    {
         cout << "  Error: Invalid name" << endl;
     }
-    catch (InvalidPriceException){
+    catch (InvalidPriceException)
+    {
         cout << "  Error: Invalid price" << endl;
     }
 
@@ -96,14 +109,16 @@ void SidesUI::edit_sides()
 
 void SidesUI::delete_sides()
 {
-    try{
-    this->sides.clear();
-    // Read the data from
-    this->sides = sides_service.get_sides_vector();
-    if(this->sides.size() == 0){
-        cout << "  There is nothing stored in the file!";
-        return;
-    }
+    try
+    {
+        this->sides.clear();
+        // Read the data from
+        this->sides = sides_service.get_sides_vector();
+        if(this->sides.size() == 0)
+        {
+            cout << "  There is nothing stored in the file!";
+            return;
+        }
     }
     catch(UnableToOpenFileException)
     {
@@ -120,59 +135,69 @@ void SidesUI::delete_sides()
     cout << "  '0' To exit" << endl;
     cout << "  Id: ";
 
-    try{
-    // Input the index of the side dish to be deleted
-    cin >> id;
-    // Error check
-    if(cin.fail()){
-        cin.clear();
-        throw InvalidIdException();
+    try
+    {
+        // Input the index of the side dish to be deleted
+        cin >> id;
+        // Error check
+        if(cin.fail())
+        {
+            cin.clear();
+            throw InvalidIdException();
+        }
+        if(id == 0)
+        {
+            return;
+        }
+        if(id > this->sides.size())
+        {
+            throw InvalidIdException();
+        }
+        cin.ignore();
+        // Delete the side dish at the index id
+        this->sides.erase(this->sides.begin()+(id-1));
+        // Overwrite the data on the file
+        sides_service.overwrite_sides(sides);
+        system("CLS");
+        cout << "  Side successfully deleted" << endl;
+        cout << endl << "  ";
     }
-    if(id == 0){
-        return;
-    }
-    if(id > this->sides.size()){
-        throw InvalidIdException();
-    }
-    cin.ignore();
-    // Delete the side dish at the index id
-    this->sides.erase(this->sides.begin()+(id-1));
-    // Overwrite the data on the file
-    sides_service.overwrite_sides(sides);
-    system("CLS");
-    cout << "  Side successfully deleted" << endl;
-    cout << endl << "  ";
-    }
-    catch(InvalidIdException){
+    catch(InvalidIdException)
+    {
         cout << "  Error: Invalid id" << endl;
     }
-    catch (InvalidNameException){
+    catch (InvalidNameException)
+    {
         cout << "  Error: Invalid name" << endl;
     }
-    catch (InvalidPriceException){
+    catch (InvalidPriceException)
+    {
         cout << "  Error: Invalid price" << endl;
     }
 }
 
 void SidesUI::view_sides()
 {
-    try {
-    // Clear the data on the vector
-    this->sides.clear();
-    // Read the data from
-    this->sides = sides_service.get_sides_vector();
-    if(this->sides.size() == 0){
-        cout << "  There is nothing stored in the file!";
-        return;
-    }
-    cout << "    Sides" << endl;
-    cout << "  -------------------" << endl;
-    for (size_t i = 0; i < this->sides.size(); i++) {
-        cout << "   Id: " << i+1 << endl;
-        // print out the side dish at index i
-        cout << this->sides[i];
+    try
+    {
+        // Clear the data on the vector
+        this->sides.clear();
+        // Read the data from
+        this->sides = sides_service.get_sides_vector();
+        if(this->sides.size() == 0)
+        {
+            cout << "  There is nothing stored in the file!";
+            return;
+        }
+        cout << "    Sides" << endl;
         cout << "  -------------------" << endl;
-    }
+        for (size_t i = 0; i < this->sides.size(); i++)
+        {
+            cout << "   Id: " << i+1 << endl;
+            // print out the side dish at index i
+            cout << this->sides[i];
+            cout << "  -------------------" << endl;
+        }
     }
     catch (UnableToOpenFileException)
     {
@@ -191,11 +216,12 @@ Sides SidesUI::get_side(size_t id)
 
 size_t SidesUI::get_vector_size()
 {
-    try{
-    // Read data from file to the vector
-    this->sides = sides_service.get_sides_vector();
-    // Return the number of side dishes
-    return this->sides.size();
+    try
+    {
+        // Read data from file to the vector
+        this->sides = sides_service.get_sides_vector();
+        // Return the number of side dishes
+        return this->sides.size();
     }
     catch (UnableToOpenFileException)
     {

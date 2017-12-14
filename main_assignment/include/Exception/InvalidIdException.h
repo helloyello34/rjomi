@@ -4,8 +4,8 @@
 
 class InvalidIdException
 {
-    public:
-        InvalidIdException();
+public:
+    InvalidIdException();
 };
 
 #endif // INVALIDIDEXCEPTION_H

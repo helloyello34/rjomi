@@ -11,21 +11,21 @@ using namespace std;
 
 class BakerUI
 {
-    public:
-        /// Constructor for Baker UI
-        BakerUI();
+public:
+    /// Constructor for Baker UI
+    BakerUI();
 
-        /// Choose location for the baker
-        void choose_location();
+    /// Choose location for the baker
+    void choose_location();
 
-        /// UI for the baker
-        void startUI();
+    /// UI for the baker
+    void startUI();
 
-    private:
-        LocationUI location_ui;
-        OrderUI order_ui;
+private:
+    LocationUI location_ui;
+    OrderUI order_ui;
 
-        Location my_location;
+    Location my_location;
 };
 
 #endif // BAKERUI_H

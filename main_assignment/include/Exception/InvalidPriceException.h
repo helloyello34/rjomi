@@ -4,8 +4,8 @@
 
 class InvalidPriceException
 {
-    public:
-        InvalidPriceException();
+public:
+    InvalidPriceException();
 };
 
 #endif // INVALIDPRICEEXCEPTION_H

@@ -10,20 +10,20 @@ using namespace std;
 
 class SidesRepository
 {
-    public:
+public:
 
-        /// Side dish Repository constructor
-        SidesRepository();
+    /// Side dish Repository constructor
+    SidesRepository();
 
-        /// Store side to file
-        void store_side(Sides& side);
+    /// Store side to file
+    void store_side(Sides& side);
 
-        /// reads from file to sides
-        void read_side(vector<Sides>&sides);
+    /// reads from file to sides
+    void read_side(vector<Sides>&sides);
 
-        /// writes over former data from sides
-        void overwrite_sides(vector<Sides>&sides);
-    private:
+    /// writes over former data from sides
+    void overwrite_sides(vector<Sides>&sides);
+private:
 };
 
 #endif // SIDESREPOSITORY_H

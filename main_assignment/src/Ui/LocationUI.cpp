@@ -9,7 +9,8 @@ void LocationUI::add_location()
 {
     // Construct a new location
     Location newLocation;
-    try{
+    try
+    {
         cin.ignore();
         cout << "   Add Location" << endl;
         cout << " ========================" << endl;
@@ -20,10 +21,12 @@ void LocationUI::add_location()
         location_service.store_location(newLocation);
         cout << endl << "  ";
     }
-    catch(InvalidNameException) {
+    catch(InvalidNameException)
+    {
         cout << " Error: Invalid Name !" << endl;
     }
-    catch(UnableToOpenFileException) {
+    catch(UnableToOpenFileException)
+    {
         cout << " Error: Could not store data!" << endl;
     }
 }
@@ -39,7 +42,8 @@ void LocationUI::list_location()
     }
     cout << "    Locations" << endl;
     cout << "  -----------------------------" << endl;
-    for(size_t i = 0; i < this->locations.size(); i++) {
+    for(size_t i = 0; i < this->locations.size(); i++)
+    {
         // Print out the location in the list
         cout << "   " << i+1 << ". " << this->locations[i] << endl;
         cout << "  -----------------------------" << endl;
@@ -63,20 +67,24 @@ void LocationUI::edit_location()
     cout << "  Whitch location would you like to edit? " << endl;
     cout << "  Press '0' To exit" << endl;
     cout << "  Id: ";
-    try{
+    try
+    {
         // Input the index of the location to be changed
         cin >> id;
         system("CLS");
 
         // Error check
-        if(cin.fail()){
+        if(cin.fail())
+        {
             cin.clear();
             throw InvalidIdException();
         }
-        if(id == 0){
+        if(id == 0)
+        {
             return;
         }
-        if(id > this->locations.size() || id < 0){
+        if(id > this->locations.size() || id < 0)
+        {
             throw InvalidIdException();
         }
         cin.ignore();
@@ -89,13 +97,16 @@ void LocationUI::edit_location()
         // Send the changed location vector to be stored
         location_service.overwrite_locations(this->locations);
     }
-    catch(InvalidIdException) {
+    catch(InvalidIdException)
+    {
         cout << "  Error: Invalid id! " << endl;
     }
-    catch(InvalidNameException) {
+    catch(InvalidNameException)
+    {
         cout << "  Error: Invalid name" << endl;
     }
-    catch(UnableToOpenFileException) {
+    catch(UnableToOpenFileException)
+    {
         cout << "  Error: Unable to edit location!" << endl;
     }
 }
@@ -118,20 +129,24 @@ void LocationUI::delete_location()
     cout << "  Whitch location would you like to delete? " << endl;
     cout << "  Press '0' To exit" << endl;
     cout << "  Id: ";
-    try{
+    try
+    {
         // Input the index of location to be deleted
         cin >> id;
         system("CLS");
 
         // Error check
-        if(cin.fail()){
+        if(cin.fail())
+        {
             cin.clear();
             throw InvalidIdException();
         }
-        if(id == 0){
+        if(id == 0)
+        {
             return;
         }
-        if(id > this->locations.size() || id < 0){
+        if(id > this->locations.size() || id < 0)
+        {
             throw InvalidIdException();
         }
         // Delete the location at the index inputed
@@ -141,10 +156,12 @@ void LocationUI::delete_location()
         location_service.overwrite_locations(this->locations);
         cout << "  Location Deleted successfully" << endl << endl << "  ";
     }
-    catch(InvalidIdException) {
+    catch(InvalidIdException)
+    {
         cout << "  Error: Invalid id! " << endl;
     }
-    catch(UnableToOpenFileException) {
+    catch(UnableToOpenFileException)
+    {
         cout << "  Error: Unable to edit location!" << endl;
     }
 }
@@ -152,9 +169,10 @@ void LocationUI::delete_location()
 void LocationUI::fill_vector()
 {
     // Fill up the locations
-    try{
-    this->locations.clear();
-    this->location_service.retreve_locations(this->locations);
+    try
+    {
+        this->locations.clear();
+        this->location_service.retreve_locations(this->locations);
     }
     catch (UnableToOpenFileException)
     {
@@ -165,9 +183,10 @@ void LocationUI::fill_vector()
 size_t LocationUI::vector_size()
 {
     // Return the number of locations
-    try {
-    fill_vector();
-    return this->locations.size();
+    try
+    {
+        fill_vector();
+        return this->locations.size();
     }
     catch(UnableToOpenFileException)
     {

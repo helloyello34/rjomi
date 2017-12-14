@@ -6,20 +6,20 @@
 
 class ToppingService
 {
-    public:
-        /// Constructor for Topping Service
-        ToppingService();
+public:
+    /// Constructor for Topping Service
+    ToppingService();
 
-        /// Send topping to the Repository
-        void add_topping(Topping& newTop);
+    /// Send topping to the Repository
+    void add_topping(Topping& newTop);
 
-        /// get toppings from the Repository
-        vector<Topping> get_topping_vector();
+    /// get toppings from the Repository
+    vector<Topping> get_topping_vector();
 
-        /// Overwrites the file in repository
-        void overwrite_topping(vector<Topping>&topping);
-    private:
-        ToppingRepo topping_repo;
+    /// Overwrites the file in repository
+    void overwrite_topping(vector<Topping>&topping);
+private:
+    ToppingRepo topping_repo;
 
 };
 

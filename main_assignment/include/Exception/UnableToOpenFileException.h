@@ -4,8 +4,8 @@
 
 class UnableToOpenFileException
 {
-    public:
-        UnableToOpenFileException();
+public:
+    UnableToOpenFileException();
 };
 
 #endif // UNABLETOOPENFILEEXCEPTION_H

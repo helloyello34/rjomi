@@ -10,20 +10,20 @@ using namespace std;
 
 class DrinkRepository
 {
-    public:
+public:
 
-        /// Drink Repository constructor
-        DrinkRepository();
+    /// Drink Repository constructor
+    DrinkRepository();
 
-        /// Store drink to drink file
-        void store_drink(Drink& drink);
+    /// Store drink to drink file
+    void store_drink(Drink& drink);
 
-        /// reads to drinks from drink file
-        void retreive_drink(vector<Drink>&drinks);
+    /// reads to drinks from drink file
+    void retreive_drink(vector<Drink>&drinks);
 
-        /// Write over drink file
-        void overwrite_drink(vector<Drink>&drinks);
-    private:
+    /// Write over drink file
+    void overwrite_drink(vector<Drink>&drinks);
+private:
 };
 
 #endif // DRINKREPOSITORY_H

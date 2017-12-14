@@ -12,19 +12,19 @@
 
 class LocationRepository
 {
-    public:
-        /// Location Repository cunstroctor
-        LocationRepository();
+public:
+    /// Location Repository cunstroctor
+    LocationRepository();
 
-        /// Store location to location file
-        void store_location(Location& location);
+    /// Store location to location file
+    void store_location(Location& location);
 
-        /// reads to locations from location file
-        void retreve_locations(vector<Location>&locations);
+    /// reads to locations from location file
+    void retreve_locations(vector<Location>&locations);
 
-        /// Writes over data from location file
-        void overwrite_locations(vector<Location>&locations);
-    private:
+    /// Writes over data from location file
+    void overwrite_locations(vector<Location>&locations);
+private:
 };
 
 #endif // LOCATIONREPOSITORY_H

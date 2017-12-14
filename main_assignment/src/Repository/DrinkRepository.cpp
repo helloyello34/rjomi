@@ -12,13 +12,16 @@ void DrinkRepository::store_drink(Drink& drink)
     file.open("binaries\\Menu\\drink.dat", ios::binary|ios::app);
 
     // Check if the file is open
-    if(file.is_open()){
+    if(file.is_open())
+    {
 
         drink.write(file);
 
         // Close file
         file.close();
-    } else {
+    }
+    else
+    {
         throw UnableToOpenFileException();
     }
 }
@@ -29,7 +32,8 @@ void DrinkRepository::retreive_drink(vector<Drink>&drinks)
     ifstream file;
     file.open("binaries\\Menu\\drink.dat", ios::binary);
 
-    if(file.is_open()){
+    if(file.is_open())
+    {
 
         // Clear the vector
         drinks.clear();
@@ -38,7 +42,8 @@ void DrinkRepository::retreive_drink(vector<Drink>&drinks)
         Drink drink;
 
         // While it is not end of file run
-        while(!(file.eof())){
+        while(!(file.eof()))
+        {
 
             //Read to the temporary drink from file and store it in a vector
             drink.read(file);
@@ -48,7 +53,9 @@ void DrinkRepository::retreive_drink(vector<Drink>&drinks)
 
         // close the file
         file.close();
-    } else {
+    }
+    else
+    {
         throw UnableToOpenFileException();
     }
 }
@@ -59,14 +66,18 @@ void DrinkRepository::overwrite_drink(vector<Drink>&drinks)
     ofstream file;
     file.open("binaries\\Menu\\drink.dat", ios::binary);
 
-    if(file.is_open()){
+    if(file.is_open())
+    {
 
-        for(unsigned int i = 0; i < drinks.size(); i++) {
+        for(unsigned int i = 0; i < drinks.size(); i++)
+        {
             drinks[i].write(file);
         }
 
         file.close();
-    } else {
+    }
+    else
+    {
         cout << "'Drink.dat' file could not open! " << endl;
     }
 }

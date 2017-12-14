@@ -4,8 +4,8 @@
 
 class InvalidPhoneNumberException
 {
-    public:
-        InvalidPhoneNumberException();
+public:
+    InvalidPhoneNumberException();
 };
 
 #endif // INVALIDPHONENUMBEREXCEPTION_H

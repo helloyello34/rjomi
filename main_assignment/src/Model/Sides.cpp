@@ -48,13 +48,17 @@ istream& operator >> (istream& in, Sides& side)
     cout << "  Name: ";
     in.getline(side.name, 32);
     // If name is length 0. Throw a fault
-    if(strlen(side.name) == 0){
+    if(strlen(side.name) == 0)
+    {
         throw InvalidNameException();
     }
     // If name is not alphanumeric or a space. Throw a fault
-    for(unsigned int i = 0; i < strlen(side.name); i++){
-        if(!(isalnum(side.name[i]))){
-            if(side.name[i] != ' '){
+    for(unsigned int i = 0; i < strlen(side.name); i++)
+    {
+        if(!(isalnum(side.name[i])))
+        {
+            if(side.name[i] != ' ')
+            {
                 throw InvalidNameException();
             }
         }
@@ -62,12 +66,14 @@ istream& operator >> (istream& in, Sides& side)
     cout << "  Price: ";
     in >> side.price;
     // if price is not a number. throw a fault
-    if(in.fail()){
+    if(in.fail())
+    {
         in.clear();
         throw InvalidPriceException();
     }
     // Price cap for sides
-    if(side.price > 5000 || side.price < 0){
+    if(side.price > 5000 || side.price < 0)
+    {
         throw InvalidPriceException();
     }
 

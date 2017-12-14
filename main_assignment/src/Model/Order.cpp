@@ -204,7 +204,7 @@ ostream& operator << (ostream& out, const Order& order)
         out << "  ===== Pizzas =====" << endl;
         for(size_t i = 0; i < order.pizzas.size(); i++)
         {
-           out << order.pizzas[i] << endl;
+            out << order.pizzas[i] << endl;
         }
     }
 

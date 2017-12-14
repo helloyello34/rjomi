@@ -190,7 +190,8 @@ void OrderUI::make_order(Location& staff_location)
                 switch (choice)
                 {
                 case '1':
-                    try{
+                    try
+                    {
                         add_pizza(order);
                         break;
                     }
@@ -199,7 +200,8 @@ void OrderUI::make_order(Location& staff_location)
                         cout << "  Error: could not open file! " << endl;
                     }
                 case '2':
-                    try{
+                    try
+                    {
                         add_sides(order);
                         break;
                     }
@@ -208,7 +210,8 @@ void OrderUI::make_order(Location& staff_location)
                         cout << "  Error: could not open file! " << endl;
                     }
                 case '3':
-                    try{
+                    try
+                    {
                         add_drink(order);
                         break;
                     }
@@ -217,7 +220,8 @@ void OrderUI::make_order(Location& staff_location)
                         cout << "  Error: could not open file! " << endl;
                     }
                 case '4':
-                    try{
+                    try
+                    {
                         comment_order(order);
                         break;
                     }
@@ -226,7 +230,8 @@ void OrderUI::make_order(Location& staff_location)
                         cout << "  Error: could not open file! " << endl;
                     }
                 case '5':
-                    try{
+                    try
+                    {
                         store_order(order);
                         break;
                     }
@@ -467,11 +472,12 @@ void OrderUI::show_old_orders()
 void OrderUI::look_for_order()
 {
     ///Look for orders by phone number
-    try{
+    try
+    {
         this->orders.clear();
         order_service.fill_vector(this->orders);
 
-    //    erase_other_locations(location);
+        //    erase_other_locations(location);
 
         if(orders.size() == 0)
         {
@@ -552,7 +558,8 @@ void OrderUI::store_order(Order& order)
 void OrderUI::change_status(Order& order)
 {
     ///Set the order status
-    try{
+    try
+    {
         this->orders.clear();
         order_service.fill_vector(this->orders);
         size_t i = 0;
@@ -740,7 +747,7 @@ void OrderUI::change_status(Order& order)
         {
             cout << "  Error: Invalid id" << endl;
         }
-        }
+    }
     catch (UnableToOpenFileException)
     {
         cout << "  Error: could not open file! " << endl;
@@ -834,7 +841,8 @@ void OrderUI::find_order_status(Location& location)
 void OrderUI::find_order_comment(Location& location)
 {
     ///change comments on orders on the specified location
-    try{
+    try
+    {
         order_service.fill_vector(orders);
         erase_other_locations(location);
         if(orders.size() == 0)
@@ -872,7 +880,8 @@ void OrderUI::find_order_comment(Location& location)
             cout << "  Invalid id!" << endl;
         }
     }
-    catch(UnableToOpenFileException){
+    catch(UnableToOpenFileException)
+    {
         cout << "  Could not open file" << endl;
     }
 }
@@ -881,7 +890,8 @@ void OrderUI::find_order_comment(Location& location)
 void OrderUI::find_order_paid(Location& location)
 {
     ///set order as paid
-    try{
+    try
+    {
         order_service.fill_vector(orders);
         erase_other_locations(location);
         if(orders.size() == 0)

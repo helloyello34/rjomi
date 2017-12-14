@@ -20,49 +20,50 @@ void CashierUI::startUI()
     // choose location
     choose_location();
     char choice = '\0';
-    if(!(my_location.get_name() == "Nothing")){
-    while(choice != '3')
+    if(!(my_location.get_name() == "Nothing"))
     {
-        system("CLS");
-        cout << "   Cashier " << endl;
-        cout << " ====================" << endl;
-        cout << "  1. Charge order    " << endl;
-        cout << "  2. Show orders     " << endl;
-        cout << "  3. Back            " << endl;
-        cout << " ====================" << endl;
-        cout << " (1-3): ";
-
-
-        cin >> choice;
-
-        switch(choice)
+        while(choice != '3')
         {
-        case '1':
-            /// changes order status as paid
             system("CLS");
-            order_ui.find_order_paid(this->my_location);
-            cout << endl << "  ";
-            system("pause");
-            system("CLS");
-            break;
-        case '2':
-            /// Show all orders at the samt location
-            system("CLS");
-            order_ui.show_order(my_location);
-            cout << endl << "  ";
-            system("pause");
-            system("CLS");
-            break;
-        case '3':
-            system("CLS");
-            return ;
-            break;
-        default:
-            cout << "  Invalid Input" << endl;
-            break;
+            cout << "   Cashier " << endl;
+            cout << " ====================" << endl;
+            cout << "  1. Charge order    " << endl;
+            cout << "  2. Show orders     " << endl;
+            cout << "  3. Back            " << endl;
+            cout << " ====================" << endl;
+            cout << " (1-3): ";
 
+
+            cin >> choice;
+
+            switch(choice)
+            {
+            case '1':
+                /// changes order status as paid
+                system("CLS");
+                order_ui.find_order_paid(this->my_location);
+                cout << endl << "  ";
+                system("pause");
+                system("CLS");
+                break;
+            case '2':
+                /// Show all orders at the samt location
+                system("CLS");
+                order_ui.show_order(my_location);
+                cout << endl << "  ";
+                system("pause");
+                system("CLS");
+                break;
+            case '3':
+                system("CLS");
+                return ;
+                break;
+            default:
+                cout << "  Invalid Input" << endl;
+                break;
+
+            }
         }
-    }
     }
 }
 

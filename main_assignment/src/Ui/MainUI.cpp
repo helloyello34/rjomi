@@ -42,7 +42,8 @@ void MainUI::startUI()
 
     char user = '\0';
 
-    while(user != '5') {
+    while(user != '5')
+    {
         system("CLS");
         cout << "   Please login" << endl;
         cout << " ====================" << endl;
@@ -55,22 +56,29 @@ void MainUI::startUI()
         cout << " (1-5): ";
         cin >> user;
 
-        if(user == '1'){
+        if(user == '1')
+        {
             ///Manager UI
             system("CLS");
             ManagerUI managerui;
             system("CLS");
-        } else if (user == '2') {
+        }
+        else if (user == '2')
+        {
             ///Salesman UI
             system("CLS");
             SalesmanUI salesmanui;
             system("CLS");
-        } else if (user == '3') {
+        }
+        else if (user == '3')
+        {
             ///Baker UI
             system("CLS");
             BakerUI bakerui;
             system("CLS");
-        } else if (user == '4') {
+        }
+        else if (user == '4')
+        {
             ///Cashier UI
             system("CLS");
             CashierUI cashierui;

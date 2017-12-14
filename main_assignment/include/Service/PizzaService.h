@@ -7,21 +7,21 @@
 
 class PizzaService
 {
-    public:
-        /// Constructor for Pizza Service
-        PizzaService();
+public:
+    /// Constructor for Pizza Service
+    PizzaService();
 
-        /// Send pizza to Repository to store the pizza
-        void add_pizza(Pizza& newPizza);
+    /// Send pizza to Repository to store the pizza
+    void add_pizza(Pizza& newPizza);
 
-        /// Sends vector to Repository and reads from file
-        void retreve_pizza(vector<Pizza>&pizzas);
+    /// Sends vector to Repository and reads from file
+    void retreve_pizza(vector<Pizza>&pizzas);
 
-        /// Sends vector to Repository and writes over all former data
-        void overwrite_pizza(vector<Pizza>&pizzas);
+    /// Sends vector to Repository and writes over all former data
+    void overwrite_pizza(vector<Pizza>&pizzas);
 
-    private:
-        PizzaRepository pizza_repo;
+private:
+    PizzaRepository pizza_repo;
 
 };
 

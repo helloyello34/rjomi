@@ -11,7 +11,8 @@ using namespace std;
 
 void init_folder();
 
-int main(){
+int main()
+{
     //initializes folders and the UI
     //Entire program is nested within the startUI function
     init_folder();

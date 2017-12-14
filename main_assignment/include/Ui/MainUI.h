@@ -13,16 +13,16 @@ using namespace std;
 
 class MainUI
 {
-    public:
-        /// constructor for mainUI
-        MainUI();
+public:
+    /// constructor for mainUI
+    MainUI();
 
-        /// Welcom screen for the program
-        void welcome_screen();
+    /// Welcom screen for the program
+    void welcome_screen();
 
-        /// Login screen
-        void startUI();
-    private:
+    /// Login screen
+    void startUI();
+private:
 };
 
 #endif // MAINUI_H
