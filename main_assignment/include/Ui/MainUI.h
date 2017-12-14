@@ -18,7 +18,7 @@ class MainUI
         MainUI();
 
         /// Welcom screen for the program
-        void welcom_screen();
+        void welcome_screen();
 
         /// Login screen
         void startUI();

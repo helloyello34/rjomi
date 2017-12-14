@@ -2,14 +2,15 @@
 
 MainUI::MainUI()
 {
-    welcom_screen();
+    ///Initializes welcome splash screen
+    welcome_screen();
 }
 
 
-void MainUI::welcom_screen()
+void MainUI::welcome_screen()
 {
+    ///Display splash screen
     system("CLS");
-    //string flush;
     cout << " _____    _   ______   ______        ____                  .       " << endl;
     cout << "|  __ \\  | | |____  / |____  /      / _  |               , /      " << endl;
     cout << "| |__) | | |     / /      / /      / / | |              , /___     " << endl;
@@ -32,13 +33,12 @@ void MainUI::welcom_screen()
     cout << "\tOskar Jorgen Sandholt" << endl;
     cout << "\tSilja Dogg Birgisdottir" << endl;
     cout << endl << endl;
-    //cout << "\t\t Press return to continue" << endl;
-    //getline(cin,flush);
     system("pause");
 }
 
 void MainUI::startUI()
 {
+    ///Main UI
 
     char user = '\0';
 
@@ -56,24 +56,28 @@ void MainUI::startUI()
         cin >> user;
 
         if(user == '1'){
+            ///Manager UI
             system("CLS");
             ManagerUI managerui;
             cout << endl << "  ";
             system("pause");
             system("CLS");
         } else if (user == '2') {
+            ///Salesman UI
             system("CLS");
             SalesmanUI salesmanui;
             cout << endl << "  ";
             system("pause");
             system("CLS");
         } else if (user == '3') {
+            ///Baker UI
             system("CLS");
             BakerUI bakerui;
             cout << endl << "  ";
             system("pause");
             system("CLS");
         } else if (user == '4') {
+            ///Cashier UI
             system("CLS");
             CashierUI cashierui;
             cout << endl << "  ";
