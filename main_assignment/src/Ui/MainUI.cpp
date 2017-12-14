@@ -58,21 +58,25 @@ void MainUI::startUI()
         if(user == '1'){
             system("CLS");
             ManagerUI managerui;
+            cout << endl << "  ";
             system("pause");
             system("CLS");
         } else if (user == '2') {
             system("CLS");
             SalesmanUI salesmanui;
+            cout << endl << "  ";
             system("pause");
             system("CLS");
         } else if (user == '3') {
             system("CLS");
             BakerUI bakerui;
+            cout << endl << "  ";
             system("pause");
             system("CLS");
         } else if (user == '4') {
             system("CLS");
             CashierUI cashierui;
+            cout << endl << "  ";
             system("pause");
             system("CLS");
         }
