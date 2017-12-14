@@ -2,6 +2,7 @@
 
 Drink::Drink()
 {
+    //initializes drink
     strcpy(this->name, "nothing");
     this->price = 0;
 }
@@ -9,11 +10,13 @@ Drink::Drink()
 
 string Drink::get_name() const
 {
+    // Returns the name of the drink
     return (string)this->name;
 }
 
 double Drink::get_price() const
 {
+    // Returns the price of the drink
     return this->price;
 }
 
@@ -51,6 +54,7 @@ istream& operator >> (istream& in, Drink& drink)
         in.clear();
         throw InvalidPriceException();
     }
+    // Price cap on drinks
     if(drink.price > 1000 || drink.price < 0){
         throw InvalidPriceException();
     }
@@ -60,7 +64,7 @@ istream& operator >> (istream& in, Drink& drink)
 
 ostream& operator << (ostream& out, const Drink& drink)
 {
-
+    // Prints the name and price of the drink
     out << "    Name: " << drink.name << endl;
     out << "    Price: " << drink.price << endl;
 
