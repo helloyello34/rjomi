@@ -165,8 +165,14 @@ void LocationUI::fill_vector()
 size_t LocationUI::vector_size()
 {
     // Return the number of locations
+    try {
     fill_vector();
     return this->locations.size();
+    }
+    catch(UnableToOpenFileException)
+    {
+        return 0;
+    }
 }
 
 Location LocationUI::get_location(size_t id)

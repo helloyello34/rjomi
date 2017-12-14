@@ -7,6 +7,13 @@ BakerUI::BakerUI()
 
 void BakerUI::startUI()
 {
+    if(location_ui.vector_size() == 0)
+    {
+        cout << "  Contact Manager" << endl;
+        cout << endl << "  ";
+        system("pause");
+        return ;
+    }
     // Choose location
     choose_location();
     if(my_location.get_name() != "Nothing")
