@@ -156,7 +156,6 @@ void ManagerUI::pizza()
             ///View Pizza
 
             system("CLS");
-            cout << "   View Pizza" << endl;
             pizza_ui.view_pizza();
             cout << endl << "  ";
             system("pause");

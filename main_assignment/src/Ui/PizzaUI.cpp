@@ -25,7 +25,7 @@ void PizzaUI::add_pizza()
     }
     catch (InvalidIdException)
     {
-        cout << "  Error: Input shoudl only hold integers! " << endl;
+        cout << "  Error: Input should only hold integers! " << endl;
     }
     catch (UnableToOpenFileException)
     {
@@ -37,6 +37,7 @@ void PizzaUI::view_pizza()
 {
     try
     {
+
         // Clear the vector of pizzas
         this->pizzas.clear();
         // Reads data from the file to the vector
@@ -46,6 +47,7 @@ void PizzaUI::view_pizza()
             cout << "  There is nothing stored in the file!" << endl;
             return;
         }
+        cout << "   View Pizza" << endl;
         cout << " ==================" << endl;
         for(size_t i = 0; i < this->pizzas.size(); i++)
         {
@@ -71,12 +73,14 @@ void PizzaUI::edit_pizza()
         if(this->pizzas.size() == 0)
         {
             cout << "  There is nothing stored in the file!" << endl;
+            cout << endl << "  ";
             return;
         }
     }
     catch (UnableToOpenFileException)
     {
         cout << "  Error: Unable to open file! " << endl;
+        cout << endl << "  ";
         return;
     }
 
@@ -139,12 +143,14 @@ void PizzaUI::delete_pizza()
         if(this->pizzas.size() == 0)
         {
             cout << "  There is nothing stored in the file!" << endl;
+            cout << endl << "  ";
             return;
         }
     }
     catch (UnableToOpenFileException)
     {
         cout << "  Error: Unable to open file! " << endl;
+        cout << endl << "  ";
         return;
     }
     cout << "   Delete pizza" << endl;
