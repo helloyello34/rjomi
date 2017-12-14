@@ -7,11 +7,13 @@ DrinkService::DrinkService()
 
 void DrinkService::add_drink(Drink& newDrink)
 {
+    // Call to the repository class to store the new drink
     drink_repo.store_drink(newDrink);
 }
 
 vector<Drink> DrinkService::get_drinks_vector()
 {
+    // Call to the repository class to read data from file to vector
     vector<Drink>temp;
     drink_repo.retreve_drink(temp);
     return temp;
@@ -19,5 +21,6 @@ vector<Drink> DrinkService::get_drinks_vector()
 
 void DrinkService::overwrtie_drinks(vector<Drink>&drinks)
 {
+    // Call to the repository to overwrite the exsisting data
     drink_repo.overwrite_drink(drinks);
 }

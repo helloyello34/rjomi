@@ -10,8 +10,10 @@ CashierUI::CashierUI()
 void CashierUI::startUI()
 {
     system("CLS");
+    // choose location
     choose_location();
     char choice = '\0';
+    if(!(my_location.get_name() == "Nothing")){
     while(choice != '3')
     {
         system("CLS");
@@ -37,6 +39,7 @@ void CashierUI::startUI()
             system("CLS");
             break;
         case '2':
+            /// Show all orders at the samt location
             system("CLS");
             order_ui.show_order(my_location);
             cout << endl << "  ";
@@ -53,21 +56,20 @@ void CashierUI::startUI()
 
         }
     }
+    }
 }
 
 void CashierUI::choose_location()
 {
+    // List up all avaliable locations
     location_ui.list_location();
     size_t id;
-    if(!(my_location.get_name() == "Nothing"))
-    {
-        cout << "  Your current location is " << my_location.get_name() << endl;
-        cout << "  Press '0' to exit" << endl;
-    }
     cout << "  Please choose your location" << endl;
     try
     {
+        // Input the index of the location you're in
         cin >> id;
+        // Error check
         if(cin.fail())
         {
             cin.clear();
@@ -81,6 +83,7 @@ void CashierUI::choose_location()
         {
             throw InvalidIdException();
         }
+        // Set my location as the location chosen
         my_location = location_ui.get_location(id);
 
     }
