@@ -37,6 +37,12 @@ void ToppingUI::add_topping()
 /// Delete toppings from menu
 void ToppingUI::delete_topping()
 {
+    fill_topping_vector();
+    if(this->toppings.size() == 0)
+    {
+        cout << "  There is nothing stored " << endl;
+        return;
+    }
     cout << "  Delete toppings" << endl;
     cout << " =========================" << endl;
     // View all avaliable toppings
@@ -100,6 +106,12 @@ void ToppingUI::view_topping()
 /// Edit/change abaliable toppings
 void ToppingUI::edit_topping()
 {
+    fill_topping_vector();
+    if(this->toppings.size() == 0)
+    {
+        cout << "  There is nothing stored " << endl;
+        return;
+    }
     cout << "  Edit toppings" << endl;
     cout << " ========================" << endl;
     // view avaliable toppings
