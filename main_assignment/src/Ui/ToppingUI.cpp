@@ -107,7 +107,7 @@ void ToppingUI::view_topping()
     }
 }
 
-/// Edit/change abaliable toppings
+/// Edit/change available toppings
 void ToppingUI::edit_topping()
 {
     fill_topping_vector();
