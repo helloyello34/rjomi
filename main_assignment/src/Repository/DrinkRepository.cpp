@@ -2,7 +2,7 @@
 
 DrinkRepository::DrinkRepository()
 {
-    //ctor
+    /// Default constructor for DrinkRepository
 }
 
 void DrinkRepository::store_drink(Drink& drink)
@@ -20,7 +20,6 @@ void DrinkRepository::store_drink(Drink& drink)
         file.close();
     } else {
         throw UnableToOpenFileException();
-        //cout << "'Drink.dat' file could not open! " << endl;
     }
 }
 
@@ -55,6 +54,7 @@ void DrinkRepository::retreve_drink(vector<Drink>&drinks)
 
 void DrinkRepository::overwrite_drink(vector<Drink>&drinks)
 {
+    // Overwrites drink file
     ofstream file;
     file.open("binaries\\Menu\\drink.dat", ios::binary);
 
