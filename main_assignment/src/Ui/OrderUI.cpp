@@ -851,8 +851,8 @@ void OrderUI::find_order_comment(Location& location)
             return;
         }
         show_order(location);
-        cout << "For what order would you like to change the comment? " << endl;
-        cout << "Id: ";
+        cout << "  For what order would you like to change the comment? " << endl;
+        cout << "  Id: ";
         size_t id;
         try
         {
