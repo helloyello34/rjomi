@@ -29,7 +29,16 @@ void SidesUI::add_sides()
 
 void SidesUI::edit_sides()
 {
-
+    try {
+    this->sides.clear();
+    this->sides = this->sides_service.get_sides_vector();
+    }
+    catch (UnableToOpenFileException)
+    {
+        cout << "  Unable to open file!" << endl;
+        cout << "  ";
+        return;
+    }
     cout << "   Edit sides" << endl;
     cout << " ===================" << endl;
     view_sides();
@@ -111,6 +120,7 @@ void SidesUI::delete_sides()
 
 void SidesUI::view_sides()
 {
+    try {
     this->sides.clear();
     this->sides = sides_service.get_sides_vector();
 
@@ -121,17 +131,33 @@ void SidesUI::view_sides()
         cout << this->sides[i];
         cout << "  -------------------" << endl;
     }
-
+    }
+    catch (UnableToOpenFileException)
+    {
+        cout << "Error: Unable to open file!" << endl;
+    }
 }
 
 Sides SidesUI::get_side(size_t id)
 {
+    try{
     this->sides = sides_service.get_sides_vector();
     return this->sides[id-1];
+    }
+    catch (UnableToOpenFileException)
+    {
+        cout << "Error: Unable to open file!" << endl;
+    }
 }
 
 size_t SidesUI::get_vector_size()
 {
+    try{
     this->sides = sides_service.get_sides_vector();
     return this->sides.size();
+    }
+    catch (UnableToOpenFileException)
+    {
+        cout << "Error: Unable to open file!" << endl;
+    }
 }

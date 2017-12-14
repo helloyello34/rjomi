@@ -532,6 +532,7 @@ void OrderUI::show_old_orders()
 
 void OrderUI::look_for_order()
 {
+
     this->orders.clear();
     order_service.fill_vector(this->orders);
 

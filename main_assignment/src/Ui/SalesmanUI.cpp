@@ -5,16 +5,18 @@
 SalesmanUI::SalesmanUI()
 {
     //startUI();
+    try {
     choose_location();
+    }
+    catch (UnableToOpenFileException)
+    {
+        cout << "  Error: Unable to find any locations!" << endl << endl;
+        cout << "  ";
+    }
 //    system("CLS");
 //    order_ui.salesmanUI(this->my_location);
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 2d80c80158f73c2b21ec8a497790f8487e5a409b
 void SalesmanUI::choose_location()
 {
     location_ui.list_location();

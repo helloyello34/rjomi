@@ -113,7 +113,13 @@ void ToppingUI::edit_topping()
 void ToppingUI::fill_topping_vector()
 {
     this->toppings.clear();
-    this->toppings = topping_service.get_topping_vector();
+    try {
+        this->toppings = topping_service.get_topping_vector();
+    }
+    catch (UnableToOpenFileException)
+    {
+        cout << "Error: Unable to open file!" << endl;
+    }
 }
 
 Topping ToppingUI::getTopping(size_t id)
