@@ -102,6 +102,7 @@ void OrderUI::managerUI()
             ///Show old orders
             system("CLS");
             show_old_orders();
+            cout << endl << "  ";
             system("pause");
             system("CLS");
         }
@@ -110,6 +111,7 @@ void OrderUI::managerUI()
             ///Look for order
             system("CLS");
             look_for_order();
+            cout << endl << "  ";
             system("pause");
             system("CLS");
 
