@@ -384,18 +384,19 @@ void OrderUI::erase_other_locations(Location& location)
 void OrderUI::show_order(Location& location)
 {
     /// Show orders that have yet to be carried out on this location
-    if(orders.size() == 0)
-    {
-        cout << "  No active orders" << endl;
-        return;
-    }
     try
     {
         this->orders.clear();
         order_service.fill_vector(this->orders);
+
         //cout << "Order fill vector done!" << endl;
         erase_other_locations(location);
 
+        if(orders.size() == 0)
+        {
+            cout << "  No active orders" << endl;
+            return;
+        }
         for(size_t i = 0; i < this->orders.size(); i++)
         {
 
