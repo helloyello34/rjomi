@@ -273,10 +273,10 @@ istream& operator >> (istream& in, Order& order)
             switch(order.orderStatus)
             {
             case RECEIVED:
-                cout << "Order receved" << endl;
+                cout << "Order received" << endl;
                 break;
             case PREP:
-                cout << "In preperation" << endl;
+                cout << "In preparation" << endl;
                 break;
             case OVEN:
                 cout << "In the oven" << endl;
@@ -450,7 +450,7 @@ istream& operator >> (istream& in, Order& order)
 
 
 }
-bool Order::is_order_receved()
+bool Order::is_order_received()
 {
     if(this->paid)
     {
