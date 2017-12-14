@@ -27,6 +27,20 @@ void DrinkUI::add_drink()
 
 void DrinkUI::delete_drink()
 {
+    try {
+        this->drinks.clear();
+        this->drinks = drink_service.get_drinks_vector();
+    }
+    catch (UnableToOpenFileException)
+    {
+        cout << "  Unable to open file! " << endl;
+        return;
+    }
+    if(this->drinks.size() == 0)
+    {
+        cout << "  There is nothing stored in the file!" << endl;
+        return;
+    }
     // View all avaliable drinks
     view_drinks();
     cout << "  Delete drinks" << endl;
@@ -64,6 +78,20 @@ void DrinkUI::delete_drink()
 
 void DrinkUI::edit_drink()
 {
+    try {
+        this->drinks.clear();
+        this->drinks = drink_service.get_drinks_vector();
+    }
+    catch (UnableToOpenFileException)
+    {
+        cout << "  Unable to open file! " << endl;
+        return;
+    }
+    if(this->drinks.size() == 0)
+    {
+        cout << "  There is nothing stored in the file!" << endl;
+        return;
+    }
     cout << "  Edit drinks" << endl;
     cout << " =======================" << endl;
     // View avaliable drinks
@@ -108,6 +136,11 @@ void DrinkUI::view_drinks()
     try {
         this->drinks.clear();
         this->drinks = drink_service.get_drinks_vector();
+        if (this->drinks.size() == 0)
+        {
+            cout << "There is nothing stored in the file " << endl;
+            return ;
+        }
         cout << "    Drinks" << endl;
         cout << "  -------------------" << endl;
         for(unsigned int i = 0; i < this->drinks.size(); i++) {
